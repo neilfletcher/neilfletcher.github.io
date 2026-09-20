@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neil Fletcher</title>
+<meta name="description" content="Neil Fletcher's build log — personal projects on GitHub.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,380;9..144,560;9..144,680&family=JetBrains+Mono:wght@400;500&family=Work+Sans:wght@400;500&display=swap">
+<style>
+  :root{
+    color-scheme: light dark;
+    --paper: #eef0e7;
+    --paper-raised: #e4e7dc;
+    --ink: #1c2a2c;
+    --ink-soft: #4c5b57;
+    --line: #c7ccbd;
+    --accent: #a3522c;
+    --accent-2: #3c6e63;
+    --focus: #1c2a2c;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --paper: #11181a;
+      --paper-raised: #182121;
+      --ink: #e6e5da;
+      --ink-soft: #a3ada6;
+      --line: #2b3634;
+      --accent: #dd8a5c;
+      --accent-2: #79b3a2;
+      --focus: #e6e5da;
+    }
+  }
+
+  *{ box-sizing:border-box; }
+  html, body{ margin:0; padding:0; }
+  body{
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Work Sans', system-ui, sans-serif;
+    padding-inline: 20px;
+    padding-block: 56px;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 34px 34px;
+    background-position: -1px -1px;
+    background-attachment: local;
+  }
+  img{ max-width:100%; }
+  @media (prefers-reduced-motion: no-preference){
+    .entry{ transition: transform .18s ease, border-color .18s ease; }
+    .entry:hover{ transform: translateX(3px); }
+    a{ transition: color .15s ease; }
+  }
+
+  .page{
+    max-width: 640px;
+    margin-inline: auto;
+  }
+
+  header{
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 40px;
+  }
+  .eyebrow{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .eyebrow::before{
+    content:"";
+    width: 7px; height: 7px;
+    background: var(--accent-2);
+    display:inline-block;
+    border-radius: 1px;
+    transform: rotate(45deg);
+  }
+  h1{
+    font-family: 'Fraunces', serif;
+    font-optical-sizing: auto;
+    font-weight: 560;
+    font-size: clamp(2.4rem, 7vw, 3.4rem);
+    line-height: 1;
+    margin: 0 0 14px;
+    letter-spacing: -0.01em;
+  }
+  header p{
+    font-size: 16px;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    line-height: 1.55;
+    margin: 0;
+  }
+  header p a{ color: var(--ink); }
+
+  h2{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--ink-soft);
+    margin: 0 0 18px;
+    display:flex;
+    align-items:baseline;
+    gap: 10px;
+  }
+  h2 .count{
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--line);
+  }
+
+  .entries{
+    display:flex;
+    flex-direction:column;
+    gap: 14px;
+  }
+
+  .entry{
+    display:grid;
+    grid-template-columns: 44px 1fr;
+    gap: 18px;
+    padding: 22px;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+  }
+  .entry.pending{
+    border-left-color: var(--line);
+    opacity: .82;
+  }
+  .num{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--ink-soft);
+    padding-top: 3px;
+  }
+  .entry-title-row{
+    display:flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+  .entry h3{
+    font-family: 'Fraunces', serif;
+    font-weight: 560;
+    font-size: 21px;
+    margin: 0;
+  }
+  .entry h3 a{
+    color: var(--ink);
+    text-decoration: none;
+    background-image: linear-gradient(var(--accent), var(--accent));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 100% 1px;
+  }
+  .entry h3 a:hover{ color: var(--accent); }
+  .status{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--accent-2);
+    white-space: nowrap;
+  }
+  .entry.pending .status{ color: var(--ink-soft); }
+  .entry p{
+    margin: 0 0 14px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 52ch;
+  }
+  .meta-row{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .stack{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+  }
+  .goto{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 1px;
+  }
+  .goto:hover{ color: var(--accent); border-color: var(--accent); }
+  .soon{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  a:focus-visible, .entry:focus-within{
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  footer{
+    margin-top: 44px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+  }
+  footer a{ color: var(--ink); }
+  footer a:hover{ color: var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header>
+    <div class="eyebrow">Personal &middot; ongoing builds</div>
+    <h1>Neil Fletcher</h1>
+  </header>
+
+  <main>
+    <h2>Build log <span class="count">// 01 of 01 shipped</span></h2>
+    <div class="entries">
+      <div class="entry">
+        <div class="num">01</div>
+        <div>
+          <div class="entry-title-row">
+            <h3><a href="https://github.com/neilfletcher/iron-and-draw" target="_blank" rel="noopener">Iron &amp; Draw</a></h3>
+            <span class="status">Live</span>
+          </div>
+          <p>A 52-week strength programme tracker: session-by-session logging, automatic PR detection, planned-vs-actual progress, and cross-device sync that doesn't quietly overwrite your data.</p>
+          <div class="meta-row">
+            <span class="stack">HTML &middot; vanilla JS &middot; Firebase</span>
+            <a class="goto" href="https://github.com/neilfletcher/iron-and-draw" target="_blank" rel="noopener">View repo &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry pending">
+        <div class="num">02</div>
+        <div>
+          <div class="entry-title-row">
+            <h3>House decoration project</h3>
+            <span class="status">In progress</span>
+          </div>
+          <p>Documenting a renovation, room by room. Not on GitHub yet, repo incoming.</p>
+          <div class="meta-row">
+            <span class="stack">Details TBC</span>
+            <span class="soon">repo pending &middot;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <span id="updated">Updated recently</span>
+    <a href="https://github.com/neilfletcher" target="_blank" rel="noopener">github.com/neilfletcher &rarr;</a>
+  </footer>
+</div>
+
+<script>
+  try{
+    var d = new Date();
+    var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    document.getElementById('updated').textContent = "Viewed " + months[d.getMonth()] + " " + d.getFullYear();
+  }catch(e){}
+</script>
+
+</body>
+</html>
