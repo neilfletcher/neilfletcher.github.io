@@ -9,6 +9,16 @@
   gtag('js', new Date());
   gtag('config', 'G-JF54HQGVLT');
 </script>
+<script>
+  // Usage events for the admin dashboard: what was done here, never who did it.
+  window.ssTrack = function (name, detail) {
+    try { if (window.gtag) gtag('event', name, detail ? { detail: String(detail).slice(0, 60) } : {}); } catch (e) {}
+  };
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest && e.target.closest('[data-tab]');
+    if (t) window.ssTrack('tab_viewed', t.getAttribute('data-tab'));
+  }, true);
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Neil Fletcher</title>
 <meta name="description" content="Neil Fletcher's build log: personal projects on GitHub.">
@@ -502,5 +512,18 @@
   }catch(e){}
 </script>
 
+<script>
+(function () {
+  // Which project people open from this page (links within neilfletcher.github.io).
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a || !window.ssTrack) return;
+    var u; try { u = new URL(a.href, location.href); } catch (err) { return; }
+    if (u.hostname !== location.hostname) return;
+    var seg = u.pathname.split('/')[1];
+    if (seg) window.ssTrack('project_opened', seg);
+  }, true);
+})();
+</script>
 </body>
 </html>
