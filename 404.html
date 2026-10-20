@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Page not found</title>
+<script>
+  // Old Solo Supper links (it used to be served from /meal-planner/) go to the same page on solosupper.co.uk.
+  if (/^\/meal-planner(\/|$)/.test(location.pathname)) location.replace("https://solosupper.co.uk" + location.pathname.replace(/^\/meal-planner/, "") + location.search + location.hash);
+</script>
+<style>body{font-family:system-ui,sans-serif;background:#f5f8f3;color:#1c221d;padding:3rem 1.25rem;max-width:40rem;margin:0 auto}a{color:#3f7d52}</style>
+</head><body><h1>Page not found</h1><p>That page isn't here. Try the <a href="/">build log home page</a>.</p></body></html>
