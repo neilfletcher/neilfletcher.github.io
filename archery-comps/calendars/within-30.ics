@@ -11,7 +11,7 @@ REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
 UID:black-eagle-chocolate-2026@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:The Chocolate Shoot (Souldrop)
@@ -29,53 +29,60 @@ END:VEVENT
 BEGIN:VEVENT
 UID:long-buckby-archery-club-long-buckby-ac-frostbite-202701@neilfletcher.
  github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270109
 DTEND;VALUE=DATE:20270110
 SUMMARY:Long Buckby AC Frostbite Shoot (Daventry)
-LOCATION:Daventry and District Sports Club\, NN11 4ST\, Daventry\, Northam
- ptonshire
-GEO:52.25;-1.17
+LOCATION:Daventry District Sports Club\, Stefen Hill\, Western Avenue\, NN
+ 11 4ST\, Daventry\, Northamptonshire
+GEO:52.2484;-1.1583
 DESCRIPTION:Host: Long Buckby Archery Club\nOutdoor target\, Winter (indoo
  r season)\nRounds: Frostbite\, Single Frostbite\nAbout 25 min drive from 
- Northampton\n3 dozen at 30m. Close to home.\nDetails and entry: https://w
- ww.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ Northampton\n3 dozen at 30m. The listing links to the entry details docum
+ ent.\nDetails and entry: https://www.hl-outdoors.co.uk/event/ses-0luwr0f0
+ jno/long-buckby-ac-frostbite-shoot-2027/
+URL:https://www.hl-outdoors.co.uk/event/ses-0luwr0f0jno/long-buckby-ac-fro
+ stbite-shoot-2027/
 CATEGORIES:Outdoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:aor-48th-indoor-2027@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270117
 DTEND;VALUE=DATE:20270118
 SUMMARY:AoR 48th Annual Indoor Tournament (Raunds)
 LOCATION:Manor School and Sports College\, Mountbatten Way\, NN9 6PA\, Rau
  nds\, Northamptonshire
-GEO:52.343;-0.546
+GEO:52.3441;-0.5296
 DESCRIPTION:Host: Archers of Raunds\nIndoor target\, Winter (indoor season
  )\nRounds: WA 18m\nRecord status: UKRS\nAbout 30 min drive from Northampt
- on\n5th WA18. Home county\, so a good first comp.\nDetails and entry: htt
- ps://www.ncasarchery.org.uk/tournaments_events/ncascalendar/
-URL:https://www.ncasarchery.org.uk/tournaments_events/ncascalendar/
+ on\n5th WA18. £8 per session. Entry is by emailing the organiser\, detai
+ ls on the AoR page. Home county\, so a good first comp.\nDetails and entr
+ y: https://archersofraunds.co.uk/event/aor-48th-annual-indoor-tournament-
+ 5th-wa18-uk-record-status/
+URL:https://archersofraunds.co.uk/event/aor-48th-annual-indoor-tournament-
+ 5th-wa18-uk-record-status/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:targetcraft-annual-worcester-2027@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270207
 DTEND;VALUE=DATE:20270208
 SUMMARY:Targetcraft Annual Worcester (Rothwell)
-LOCATION:Montsaye Community Sports Centre\, Greening Road\, NN14 6BB (last
-  year's venue\, check the prospectus)\, Rothwell\, Northamptonshire
+LOCATION:Montsaye Sports Centre\, Greening Road\, Rothwell\, NN14 6BB (las
+ t year's venue)\, Rothwell\, Northamptonshire
 GEO:52.4205;-0.796
 DESCRIPTION:Host: Targetcraft Archers\nIndoor target\, Winter (indoor seas
  on)\nRounds: Worcester\nRecord status: UKRS\nAbout 25 min drive from Nort
- hampton\nBarebow and longbow friendly round\, 20 yards on the black and w
- hite face.\nDetails and entry: https://www.ncasarchery.org.uk/tournaments
- _events/ncascalendar/
-URL:https://www.ncasarchery.org.uk/tournaments_events/ncascalendar/
+ hampton\nEntry isn't open yet: the date comes from the Brighton Bowmen di
+ ary and the club hasn't put it on its tournaments page. Last year's sold 
+ out\, so watch that page. Barebow and longbow friendly\, 20 yards on the 
+ black and white face.\nDetails and entry: https://targetcraft.co.uk/tourn
+ aments/
+URL:https://targetcraft.co.uk/tournaments/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT

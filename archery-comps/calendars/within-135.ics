@@ -11,7 +11,7 @@ REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
 UID:bcaa-open-indoor-2026@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:BCAA Open Indoor Championships (Bedford)
@@ -20,16 +20,18 @@ GEO:52.145;-0.45
 DESCRIPTION:Host: Clophill AC for the Bedfordshire County Archery Associat
  ion\nIndoor target\, Winter (indoor season)\nRounds: Portsmouth\nRecord s
  tatus: UKRS\nAbout 35 min drive from Northampton\nBedfordshire county cha
- mpionships with open entry.\nDetails and entry: https://www.ianseo.net/To
- urList.php
-URL:https://www.ianseo.net/TourList.php
+ mpionships with open entry.\nDetails and entry: https://www.hl-outdoors.c
+ o.uk/event/ses-2df2s3gc2kz/bedfordshire-county-archery-association-indoor
+ -county-and-open-championships-202/
+URL:https://www.hl-outdoors.co.uk/event/ses-2df2s3gc2kz/bedfordshire-count
+ y-archery-association-indoor-county-and-open-championships-202/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:county-of-oxfordshire-archery-county-of-oxfordshir-202611@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:County of Oxfordshire Indoor Championships (Didcot)
@@ -37,14 +39,16 @@ LOCATION:Didcot Girls School\, Didcot\, Oxfordshire
 GEO:51.606;-1.243
 DESCRIPTION:Host: County of Oxfordshire Archery\nIndoor target\, Winter (i
  ndoor season)\nRounds: WA 18m\nAbout 75 min drive from Northampton\nDetai
- ls and entry: https://www.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ ls and entry: https://www.hl-outdoors.co.uk/event/ses-0zrhes5gpic/county-
+ of-oxfordshire-indoor-championships/
+URL:https://www.hl-outdoors.co.uk/event/ses-0zrhes5gpic/county-of-oxfordsh
+ ire-indoor-championships/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:aca-aca-indoor-tournament-202611@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20261130
 SUMMARY:ACA Indoor Tournament (Maidstone)
@@ -52,15 +56,16 @@ LOCATION:Maidstone Market\, Maidstone\, Kent
 GEO:51.272;0.522
 DESCRIPTION:Host: ACA\nIndoor target\, Winter (indoor season)\nRounds: Por
  tsmouth\nAbout 125 min drive from Northampton\nDetails and entry: https:/
- /www.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ /www.hl-outdoors.co.uk/event/ses-1lt27x1vmu4/aca-indoor-tournament/
+URL:https://www.hl-outdoors.co.uk/event/ses-1lt27x1vmu4/aca-indoor-tournam
+ ent/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bowbrook-archers-bowbrook-archers-wrs-wa18-202611@neilfletcher.github.
  io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20261130
 SUMMARY:Bowbrook Archers WRS WA18 (Shrewsbury)
@@ -68,14 +73,16 @@ LOCATION:Bowbrook Archers\, Withington\, Shrewsbury\, Shropshire
 GEO:52.72;-2.62
 DESCRIPTION:Host: Bowbrook Archers\nIndoor target\, Winter (indoor season)
  \nRounds: WA 18m\nRecord status: WRS\nAbout 110 min drive from Northampto
- n\nDetails and entry: https://www.ianseo.net/TourList.php
-URL:https://www.ianseo.net/TourList.php
+ n\nDetails and entry: https://www.hl-outdoors.co.uk/event/ses-1e8qcs4qbmc
+ /bowbrook-archers-wrs-wa18/
+URL:https://www.hl-outdoors.co.uk/event/ses-1e8qcs4qbmc/bowbrook-archers-w
+ rs-wa18/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:glen-inaugural-indoor-2026@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20261130
 SUMMARY:Bowmen of Glen Inaugural Indoor (Great Glen)
@@ -86,15 +93,17 @@ DESCRIPTION:Host: Bowmen of Glen\nIndoor target\, Winter (indoor season)\n
  Rounds: Portsmouth\nAbout 40 min drive from Northampton\nThe club's first
   indoor open. Entry is only via Archery GB: find it under 29 November on 
  the Find a Competition page and use Enter Now.\nDetails and entry: https:
- //archerygb.org/competitions/find-a-competition
-URL:https://archerygb.org/competitions/find-a-competition
+ //www.hl-outdoors.co.uk/event/ses-1b68jy38ldl/bowmen-of-glen-inaugural-in
+ door-portsmouth/
+URL:https://www.hl-outdoors.co.uk/event/ses-1b68jy38ldl/bowmen-of-glen-ina
+ ugural-indoor-portsmouth/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:braintree-bowmen-braintree-bowmen-open-portsmouth-202611@neilfletcher.
  github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20261130
 SUMMARY:Braintree Bowmen Open Portsmouth (Braintree)
@@ -109,7 +118,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:oakwood-bowmen-christmas-friendly-2-x-20-202611@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20261130
 SUMMARY:Christmas Friendly (2 x 20) (Suffolk)
@@ -126,7 +135,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:panther-field-archery-club-efaa-classification-sho-202611@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20261130
 SUMMARY:EFAA Classification Shoot (Essex)
@@ -142,7 +151,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:agb-national-indoor-2026@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261206
 SUMMARY:Archery GB National Indoor Championships (Kenilworth)
@@ -163,7 +172,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:fraternity-of-st-george-royal-windsor-longbow-chri-202612@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261207
 SUMMARY:Royal Windsor Longbow Christmas Pudding Shoot (Windsor)
@@ -179,7 +188,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:southampton-archery-club-winter-wand-202612@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:Winter Wand (Southampton)
@@ -194,7 +203,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:agb-junior-national-indoor-2026@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
 SUMMARY:Archery GB Junior National Indoor Championships (Kenilworth)
@@ -211,7 +220,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:back2back-2026@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
 SUMMARY:Back2Back 2026 (Kenilworth)
@@ -228,7 +237,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:fraternity-of-st-george-christmas-shoot-in-windsor-202612@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
 SUMMARY:Christmas Shoot in Windsor Park (Windsor)
@@ -244,7 +253,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:kings-forest-bowmen-efaa-christmas-shoot-202612@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
 SUMMARY:EFAA Christmas Shoot (Bury St Edmunds)
@@ -261,7 +270,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:friskney-bowmen-friskney-bowmen-winter-indoor-seri-202612@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
 SUMMARY:Friskney Bowmen Winter Indoor Series (Boston)
@@ -269,16 +278,17 @@ LOCATION:Peter Paine Performance Centre\, Boston\, Lincolnshire
 GEO:52.979;-0.027
 DESCRIPTION:Host: Friskney Bowmen\nIndoor target\, Winter (indoor season)\
  nRounds: WA 18m\nAbout 100 min drive from Northampton\nPart of a monthly 
- winter series.\nDetails and entry: https://www.hl-outdoors.co.uk/events/t
- ype/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ winter series.\nDetails and entry: https://www.hl-outdoors.co.uk/event/se
+ s-1s4rdbua6n1/friskney-bowmen-winter-indoor-series/
+URL:https://www.hl-outdoors.co.uk/event/ses-1s4rdbua6n1/friskney-bowmen-wi
+ nter-indoor-series/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:spirit-of-sherwood-wooden-arrow-field-shoot-202612@neilfletcher.github
  .io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
 SUMMARY:Wooden Arrow Field Shoot (Nottinghamshire)
@@ -294,7 +304,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:wallingford-castle-archers-wallingford-indoor-seri-202612@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261212
 DTEND;VALUE=DATE:20261213
 SUMMARY:Wallingford Indoor Series Leg 3 (Didcot)
@@ -302,34 +312,36 @@ LOCATION:Didcot Girls School\, Didcot\, Oxfordshire
 GEO:51.606;-1.243
 DESCRIPTION:Host: Wallingford Castle Archers\nIndoor target\, Winter (indo
  or season)\nRounds: WA 18m\nRecord status: WRS\nAbout 75 min drive from N
- orthampton\nDetails and entry: https://www.wallingfordcastle.co.uk/tourna
- ments/
-URL:https://www.wallingfordcastle.co.uk/tournaments/
+ orthampton\nDetails and entry: https://www.hl-outdoors.co.uk/event/ses-10
+ 1gvepd49u/wallingford-indoor-series-leg-3/
+URL:https://www.hl-outdoors.co.uk/event/ses-101gvepd49u/wallingford-indoor
+ -series-leg-3/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:archers-of-raunds-aor-portsmouth-double-portsmouth-202612@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:AoR Portsmouth / Double Portsmouth (Raunds)
 LOCATION:Manor School and Sports College\, NN9 6PA\, Raunds\, Northamptons
  hire
-GEO:52.343;-0.546
+GEO:52.3441;-0.5296
 DESCRIPTION:Host: Archers of Raunds\nIndoor target\, Winter (indoor season
  )\nRounds: Portsmouth\, Double Portsmouth\nAbout 35 min drive from Northa
- mpton\nDetails and entry: https://www.ncasarchery.org.uk/tournaments_even
- ts/ncascalendar/
-URL:https://www.ncasarchery.org.uk/tournaments_events/ncascalendar/
+ mpton\nDetails and entry: https://www.hl-outdoors.co.uk/event/ses-19ld2v0
+ 2lf5/archers-of-raunds-round-portsmouth-double-portsmouth/
+URL:https://www.hl-outdoors.co.uk/event/ses-19ld2v02lf5/archers-of-raunds-
+ round-portsmouth-double-portsmouth/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cheltenham-archers-cheltenham-archers-1st-indoor-202612@neilfletcher.g
  ithub.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:Cheltenham Archers 1st Indoor (Cheltenham)
@@ -337,15 +349,17 @@ LOCATION:Cheltenham Archers\, Cheltenham\, Gloucestershire
 GEO:51.9;-2.078
 DESCRIPTION:Host: Cheltenham Archers\nIndoor target\, Winter (indoor seaso
  n)\nRounds: Portsmouth\nAbout 90 min drive from Northampton\nDetails and 
- entry: https://www.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ entry: https://www.hl-outdoors.co.uk/event/ses-0eh5qchs64f/cheltenham-arc
+ hers-1st-indoor/
+URL:https://www.hl-outdoors.co.uk/event/ses-0eh5qchs64f/cheltenham-archers
+ -1st-indoor/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:whitefriars-bowmen-nfas-xmas-shoot-2-x-16-3ds-202612@neilfletcher.gith
  ub.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:NFAS Xmas Shoot (2 x 16 3Ds) (Suffolk)
@@ -360,7 +374,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:black-eagle-chocolate-2026@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:The Chocolate Shoot (Souldrop)
@@ -377,7 +391,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:foxes-worcester-2026@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:The Foxes Worcester (Leicester)
@@ -386,15 +400,17 @@ GEO:52.617;-1.178
 DESCRIPTION:Host: The Foxes\nIndoor target\, Winter (indoor season)\nRound
  s: Worcester\nRecord status: UKRS\nAbout 45 min drive from Northampton\nS
  tage 2 of the Countesthorpe Triple. Stage 3 is the Foresters WA18 in Janu
- ary.\nDetails and entry: https://www.the-foxes.org.uk/
-URL:https://www.the-foxes.org.uk/
+ ary.\nDetails and entry: https://www.hl-outdoors.co.uk/event/ses-25r9jf5n
+ dj6/the-foxes-worcester/
+URL:https://www.hl-outdoors.co.uk/event/ses-25r9jf5ndj6/the-foxes-worceste
+ r/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:deer-park-archers-deer-park-archers-ukrs-vegas-202612@neilfletcher.git
  hub.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261227
 DTEND;VALUE=DATE:20261228
 SUMMARY:Deer Park Archers UKRS Vegas (Cheltenham)
@@ -411,7 +427,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:panther-field-archery-club-efaa-classification-sho-202612@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261227
 DTEND;VALUE=DATE:20261228
 SUMMARY:EFAA Classification Shoot (Marked Precision 3D) (Essex)
@@ -428,7 +444,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:south-wilts-archery-club-the-not-boxing-day-shoot-202612@neilfletcher.
  github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20261227
 DTEND;VALUE=DATE:20261228
 SUMMARY:The NOT Boxing Day Shoot (Salisbury)
@@ -444,7 +460,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:talisman-bowmen-mince-pie-shoot-202701@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Mince Pie Shoot (Fareham)
@@ -460,7 +476,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:friskney-bowmen-friskney-bowmen-winter-indoor-seri-202701@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270103
 DTEND;VALUE=DATE:20270104
 SUMMARY:Friskney Bowmen Winter Indoor Series (Boston)
@@ -468,33 +484,37 @@ LOCATION:Peter Paine Performance Centre\, Boston\, Lincolnshire
 GEO:52.979;-0.027
 DESCRIPTION:Host: Friskney Bowmen\nIndoor target\, Winter (indoor season)\
  nRounds: Portsmouth\nAbout 100 min drive from Northampton\nDetails and en
- try: https://www.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ try: https://www.hl-outdoors.co.uk/event/ses-0ixvucb48ef/friskney-bowmen-
+ winter-indoor-series/
+URL:https://www.hl-outdoors.co.uk/event/ses-0ixvucb48ef/friskney-bowmen-wi
+ nter-indoor-series/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:long-buckby-archery-club-long-buckby-ac-frostbite-202701@neilfletcher.
  github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270109
 DTEND;VALUE=DATE:20270110
 SUMMARY:Long Buckby AC Frostbite Shoot (Daventry)
-LOCATION:Daventry and District Sports Club\, NN11 4ST\, Daventry\, Northam
- ptonshire
-GEO:52.25;-1.17
+LOCATION:Daventry District Sports Club\, Stefen Hill\, Western Avenue\, NN
+ 11 4ST\, Daventry\, Northamptonshire
+GEO:52.2484;-1.1583
 DESCRIPTION:Host: Long Buckby Archery Club\nOutdoor target\, Winter (indoo
  r season)\nRounds: Frostbite\, Single Frostbite\nAbout 25 min drive from 
- Northampton\n3 dozen at 30m. Close to home.\nDetails and entry: https://w
- ww.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ Northampton\n3 dozen at 30m. The listing links to the entry details docum
+ ent.\nDetails and entry: https://www.hl-outdoors.co.uk/event/ses-0luwr0f0
+ jno/long-buckby-ac-frostbite-shoot-2027/
+URL:https://www.hl-outdoors.co.uk/event/ses-0luwr0f0jno/long-buckby-ac-fro
+ stbite-shoot-2027/
 CATEGORIES:Outdoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:wallingford-castle-archers-wallingford-indoor-seri-202701@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270109
 DTEND;VALUE=DATE:20270110
 SUMMARY:Wallingford Indoor Series Leg 4 (Didcot)
@@ -502,16 +522,17 @@ LOCATION:Didcot Girls School\, Didcot\, Oxfordshire
 GEO:51.606;-1.243
 DESCRIPTION:Host: Wallingford Castle Archers\nIndoor target\, Winter (indo
  or season)\nRounds: WA 18m\nRecord status: WRS\nAbout 75 min drive from N
- orthampton\nDetails and entry: https://www.wallingfordcastle.co.uk/tourna
- ments/
-URL:https://www.wallingfordcastle.co.uk/tournaments/
+ orthampton\nDetails and entry: https://www.hl-outdoors.co.uk/event/ses-02
+ zirpix22m/wallingford-indoor-series-leg-4/
+URL:https://www.hl-outdoors.co.uk/event/ses-02zirpix22m/wallingford-indoor
+ -series-leg-4/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:clophill-archery-club-12th-clophill-triple-202701@neilfletcher.github.
  io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270110
 DTEND;VALUE=DATE:20270111
 SUMMARY:12th Clophill Triple (Ampthill)
@@ -519,15 +540,17 @@ LOCATION:Alameda Sports Hall\, Ampthill\, Bedfordshire
 GEO:52.03;-0.493
 DESCRIPTION:Host: Clophill Archery Club\nIndoor target\, Winter (indoor se
  ason)\nRounds: Double Vegas 300\nAbout 45 min drive from Northampton\nDet
- ails and entry: https://www.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ ails and entry: https://www.hl-outdoors.co.uk/event/ses-2goaisftpdd/12th-
+ clophill-triple/
+URL:https://www.hl-outdoors.co.uk/event/ses-2goaisftpdd/12th-clophill-trip
+ le/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:sherwood-archers-sherwood-archers-open-portsmouth-202701@neilfletcher.
  github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270110
 DTEND;VALUE=DATE:20270111
 SUMMARY:Sherwood Archers Open Portsmouth (Rainworth)
@@ -535,15 +558,17 @@ LOCATION:The Joseph Whitaker School\, Rainworth\, Nottinghamshire
 GEO:53.119;-1.122
 DESCRIPTION:Host: Sherwood Archers\nIndoor target\, Winter (indoor season)
  \nRounds: Portsmouth\nAbout 95 min drive from Northampton\nDetails and en
- try: https://www.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ try: https://www.hl-outdoors.co.uk/event/ses-0de0qsukook/sherwood-archers
+ -open-portsmouth/
+URL:https://www.hl-outdoors.co.uk/event/ses-0de0qsukook/sherwood-archers-o
+ pen-portsmouth/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:spelthorne-archers-spelthorne-open-portsmouth-202701@neilfletcher.gith
  ub.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270110
 DTEND;VALUE=DATE:20270111
 SUMMARY:Spelthorne Open Portsmouth (Sunbury-on-Thames)
@@ -559,7 +584,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:evesham-archery-club-wmas-senior-indoor-championsh-202701@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270110
 DTEND;VALUE=DATE:20270111
 SUMMARY:WMAS Senior Indoor Championships (Evesham)
@@ -569,33 +594,37 @@ GEO:52.09;-1.9
 DESCRIPTION:Host: Evesham Archery Club for WMAS\nIndoor target\, Winter (i
  ndoor season)\nRounds: WA 18m\nRecord status: WRS\nAbout 70 min drive fro
  m Northampton\nWest Midlands regional championships\, also run as the Eve
- sham Open.\nDetails and entry: https://www.worcestershirearchery.co.uk/up
- comingshoots
-URL:https://www.worcestershirearchery.co.uk/upcomingshoots
+ sham Open.\nDetails and entry: https://www.hl-outdoors.co.uk/event/ses-1s
+ jkgd3jjm4/wmas-senior-indoor-championships/
+URL:https://www.hl-outdoors.co.uk/event/ses-1sjkgd3jjm4/wmas-senior-indoor
+ -championships/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:aor-48th-indoor-2027@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270117
 DTEND;VALUE=DATE:20270118
 SUMMARY:AoR 48th Annual Indoor Tournament (Raunds)
 LOCATION:Manor School and Sports College\, Mountbatten Way\, NN9 6PA\, Rau
  nds\, Northamptonshire
-GEO:52.343;-0.546
+GEO:52.3441;-0.5296
 DESCRIPTION:Host: Archers of Raunds\nIndoor target\, Winter (indoor season
  )\nRounds: WA 18m\nRecord status: UKRS\nAbout 30 min drive from Northampt
- on\n5th WA18. Home county\, so a good first comp.\nDetails and entry: htt
- ps://www.ncasarchery.org.uk/tournaments_events/ncascalendar/
-URL:https://www.ncasarchery.org.uk/tournaments_events/ncascalendar/
+ on\n5th WA18. £8 per session. Entry is by emailing the organiser\, detai
+ ls on the AoR page. Home county\, so a good first comp.\nDetails and entr
+ y: https://archersofraunds.co.uk/event/aor-48th-annual-indoor-tournament-
+ 5th-wa18-uk-record-status/
+URL:https://archersofraunds.co.uk/event/aor-48th-annual-indoor-tournament-
+ 5th-wa18-uk-record-status/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:whitefriars-bowmen-efaa-classification-shoot-202701@neilfletcher.githu
  b.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270117
 DTEND;VALUE=DATE:20270118
 SUMMARY:EFAA Classification Shoot (Suffolk)
@@ -612,7 +641,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:goldcrest-archers-goldcrest-archers-wrs-wa18-202701@neilfletcher.githu
  b.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270117
 DTEND;VALUE=DATE:20270118
 SUMMARY:Goldcrest Archers WRS WA18 (Cheshire)
@@ -620,15 +649,17 @@ LOCATION:See the entry form for the venue\, Cheshire\, Cheshire
 GEO:53.19;-2.44
 DESCRIPTION:Host: Goldcrest Archers\nIndoor target\, Winter (indoor season
  )\nRounds: WA 18m\nRecord status: WRS\nAbout 125 min drive from Northampt
- on\nDetails and entry: https://www.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ on\nDetails and entry: https://www.hl-outdoors.co.uk/event/ses-094laydz5f
+ 0/goldcrest-archers-wrs-wa18/
+URL:https://www.hl-outdoors.co.uk/event/ses-094laydz5f0/goldcrest-archers-
+ wrs-wa18/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:guildford-archery-club-indoor-wa25-trophy-tourname-202701@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270117
 DTEND;VALUE=DATE:20270118
 SUMMARY:Indoor WA25 Trophy Tournament (Guildford)
@@ -644,7 +675,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:rayleigh-town-archery-club-rayleigh-town-archery-c-202701@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270117
 DTEND;VALUE=DATE:20270118
 SUMMARY:Rayleigh Town Archery Club Open Portsmouth (Thundersley)
@@ -652,15 +683,17 @@ LOCATION:The Deanes Sports Centre\, Thundersley\, Essex
 GEO:51.57;0.58
 DESCRIPTION:Host: Rayleigh Town Archery Club\nIndoor target\, Winter (indo
  or season)\nRounds: Portsmouth\nAbout 110 min drive from Northampton\nDet
- ails and entry: https://www.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ ails and entry: https://www.hl-outdoors.co.uk/event/ses-0qbtiozhz8u/rayle
+ igh-town-archery-club-open-portsmouth-2027/
+URL:https://www.hl-outdoors.co.uk/event/ses-0qbtiozhz8u/rayleigh-town-arch
+ ery-club-open-portsmouth-2027/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:anchor-bowmen-3-2-1-open-portsmouth-novices-202701@neilfletcher.github
  .io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270123
 DTEND;VALUE=DATE:20270124
 SUMMARY:3\,2\,1 Open Portsmouth (novices) (Derby)
@@ -668,15 +701,16 @@ LOCATION:West Park School\, Spondon\, Derby\, Derbyshire
 GEO:52.92;-1.41
 DESCRIPTION:Host: Anchor Bowmen\nIndoor target\, Winter (indoor season)\nR
  ounds: Portsmouth\nEligibility: Novice archers\nAbout 80 min drive from N
- orthampton\nDetails and entry: https://www.ianseo.net/TourList.php
-URL:https://www.ianseo.net/TourList.php
+ orthampton\nDetails and entry: https://www.hl-outdoors.co.uk/event/ses-0g
+ 6q927op66/novice-portsmouth/
+URL:https://www.hl-outdoors.co.uk/event/ses-0g6q927op66/novice-portsmouth/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:bowbrook-archers-bowbrook-archers-ukrs-portsmouth-202701@neilfletcher.
  github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270123
 DTEND;VALUE=DATE:20270124
 SUMMARY:Bowbrook Archers UKRS Portsmouth (Shrewsbury)
@@ -684,16 +718,17 @@ LOCATION:Bowbrook Archers\, Withington\, Shrewsbury\, Shropshire
 GEO:52.72;-2.62
 DESCRIPTION:Host: Bowbrook Archers\nIndoor target\, Winter (indoor season)
  \nRounds: Portsmouth\nRecord status: UKRS\nAbout 110 min drive from North
- ampton\nDetails and entry: https://www.hl-outdoors.co.uk/events/type/indo
- or/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ ampton\nDetails and entry: https://www.hl-outdoors.co.uk/event/ses-1ob1h6
+ zhvwd/bowbrook-archers-ukrs-portsmouth/
+URL:https://www.hl-outdoors.co.uk/event/ses-1ob1h6zhvwd/bowbrook-archers-u
+ krs-portsmouth/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:talisman-bowmen-talisman-bowmen-junior-shoot-202701@neilfletcher.githu
  b.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270123
 DTEND;VALUE=DATE:20270124
 SUMMARY:Talisman Bowmen Junior Shoot (Fareham)
@@ -701,15 +736,16 @@ LOCATION:Cams Hill School\, Fareham\, Hampshire
 GEO:50.852;-1.24
 DESCRIPTION:Host: Talisman Bowmen\nIndoor target\, Winter (indoor season)\
  nRounds: Portsmouth\nEligibility: Juniors only\nAbout 135 min drive from 
- Northampton\nDetails and entry: https://haa.org.uk/events/eventsbyyear/20
- 27
-URL:https://haa.org.uk/events/eventsbyyear/2027
+ Northampton\nDetails and entry: https://www.hl-outdoors.co.uk/event/ses-1
+ t903vwb1v2/35th-talisman-bowmen-junior-shoot-tournament/
+URL:https://www.hl-outdoors.co.uk/event/ses-1t903vwb1v2/35th-talisman-bowm
+ en-junior-shoot-tournament/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:warwickshire-indoor-2027@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270123
 DTEND;VALUE=DATE:20270124
 SUMMARY:Warwickshire (& Open) Indoor Senior and Junior Championships (Cove
@@ -728,7 +764,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:merlin-efaa-international-2027@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270124
 DTEND;VALUE=DATE:20270125
 SUMMARY:EFAA Classification Shoot (International) (Ashby-de-la-Zouch)
@@ -745,7 +781,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:aurora-field-archers-nfas-shoot-202701@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270124
 DTEND;VALUE=DATE:20270125
 SUMMARY:NFAS Shoot (Essex)
@@ -762,7 +798,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:waterside-archers-out-of-the-ashes-triple-wand-sho-202701@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270124
 DTEND;VALUE=DATE:20270125
 SUMMARY:Out of the Ashes Triple Wand Shoot (Hythe)
@@ -778,7 +814,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:friars-gate-archers-wa24-3d-target-winter-shoot-202701@neilfletcher.gi
  thub.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270124
 DTEND;VALUE=DATE:20270125
 SUMMARY:WA24 3D Target Winter Shoot (Crowborough)
@@ -794,7 +830,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:hillingdon-archery-club-hillingdon-open-ukrs-ports-202701@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270130
 DTEND;VALUE=DATE:20270201
 SUMMARY:Hillingdon Open UKRS Portsmouth and Worcester (Hillingdon)
@@ -810,7 +846,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:the-foresters-foresters-ukrs-wa18m-202701@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
 SUMMARY:Foresters UKRS WA18m (Enderby)
@@ -819,14 +855,15 @@ GEO:52.592;-1.21
 DESCRIPTION:Host: The Foresters\nIndoor target\, Winter (indoor season)\nR
  ounds: WA 18m\nRecord status: UKRS\nAbout 50 min drive from Northampton\n
  Stage 3 of the Countesthorpe Triple.\nDetails and entry: https://www.hl-o
- utdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ utdoors.co.uk/event/ses-1ketiqa7idr/foresters-ukrs-wa18m/
+URL:https://www.hl-outdoors.co.uk/event/ses-1ketiqa7idr/foresters-ukrs-wa1
+ 8m/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:peacock-archers-peacock-archers-wa18-202701@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
 SUMMARY:Peacock Archers WA18 (Bottisham)
@@ -834,15 +871,16 @@ LOCATION:Bottisham Sports Centre\, Bottisham\, Cambridgeshire
 GEO:52.221;0.26
 DESCRIPTION:Host: Peacock Archers\nIndoor target\, Winter (indoor season)\
  nRounds: WA 18m\nAbout 80 min drive from Northampton\nDetails and entry: 
- https://www.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ https://www.hl-outdoors.co.uk/event/ses-0ky11fv7aoh/peacock-archers-wa18/
+URL:https://www.hl-outdoors.co.uk/event/ses-0ky11fv7aoh/peacock-archers-wa
+ 18/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:redhill-archers-redhill-archers-open-junior-indoor-202702@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270206
 DTEND;VALUE=DATE:20270207
 SUMMARY:Redhill Archers Open Junior Indoor Championship (Worcestershire)
@@ -852,15 +890,17 @@ GEO:52.19;-2.22
 DESCRIPTION:Host: Redhill Archers\nIndoor target\, Winter (indoor season)\
  nRounds: TBC\nRecord status: UKRS\nEligibility: Juniors only\nAbout 90 mi
  n drive from Northampton\nDetails and entry: https://www.hl-outdoors.co.u
- k/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ k/event/ses-061843n7hu7/redhill-archers-open-junior-indoor-championship-u
+ krs/
+URL:https://www.hl-outdoors.co.uk/event/ses-061843n7hu7/redhill-archers-op
+ en-junior-indoor-championship-ukrs/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:wmas-cwaa-wmas-and-cwaa-junior-ukrs-indoor-champio-202702@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270206
 DTEND;VALUE=DATE:20270207
 SUMMARY:WMAS and CWAA Junior UKRS Indoor Championships (Wythall)
@@ -869,15 +909,16 @@ GEO:52.38;-1.88
 DESCRIPTION:Host: WMAS / CWAA\nIndoor target\, Winter (indoor season)\nRou
  nds: Bristol\nRecord status: UKRS\nEligibility: Juniors only\nAbout 70 mi
  n drive from Northampton\nDetails and entry: https://www.hl-outdoors.co.u
- k/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ k/event/ses-051md4sge49/wmas-and-cwaa-junior-ukrs-indoor-championships/
+URL:https://www.hl-outdoors.co.uk/event/ses-051md4sge49/wmas-and-cwaa-juni
+ or-ukrs-indoor-championships/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:wallingford-castle-archers-wallingford-indoor-seri-202702@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270206
 DTEND;VALUE=DATE:20270207
 SUMMARY:Wallingford Indoor Series Leg 5 (Didcot)
@@ -885,33 +926,34 @@ LOCATION:Didcot Girls School\, Didcot\, Oxfordshire
 GEO:51.606;-1.243
 DESCRIPTION:Host: Wallingford Castle Archers\nIndoor target\, Winter (indo
  or season)\nRounds: WA 18m\nRecord status: WRS\nAbout 75 min drive from N
- orthampton\nDetails and entry: https://www.wallingfordcastle.co.uk/tourna
- ments/
-URL:https://www.wallingfordcastle.co.uk/tournaments/
+ orthampton\nDetails and entry: https://www.hl-outdoors.co.uk/event/ses-0u
+ 1mbn881rl/wallingford-indoor-series-leg-5/
+URL:https://www.hl-outdoors.co.uk/event/ses-0u1mbn881rl/wallingford-indoor
+ -series-leg-5/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:braintree-bowmen-braintree-worcester-sandwich-202702@neilfletcher.gith
  ub.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270207
 DTEND;VALUE=DATE:20270208
 SUMMARY:Braintree Worcester Sandwich (Gosfield)
-LOCATION:Gosfield School Sports Hall\, Gosfield\, Essex
+LOCATION:Gosfield School Sports Hall\, CO9 1PF\, Gosfield\, Essex
 GEO:51.937;0.585
 DESCRIPTION:Host: Braintree Bowmen\nIndoor target\, Winter (indoor season)
  \nRounds: WA 18m\, Worcester\nRecord status: UKRS\nAbout 95 min drive fro
- m Northampton\nOne diary says 7 Feb\, the other 27 Feb. Check before book
- ing.\nDetails and entry: https://buytickets.at/braintreebowmen/2102466
-URL:https://buytickets.at/braintreebowmen/2102466
+ m Northampton\nSession A: WA18. Session B: Worcester.\nDetails and entry:
+  https://www.tickettailor.com/events/braintreebowmen/2102466
+URL:https://www.tickettailor.com/events/braintreebowmen/2102466
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:friskney-bowmen-friskney-bowmen-winter-indoor-seri-202702@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270207
 DTEND;VALUE=DATE:20270208
 SUMMARY:Friskney Bowmen Winter Indoor Series (Boston)
@@ -919,15 +961,17 @@ LOCATION:Peter Paine Performance Centre\, Boston\, Lincolnshire
 GEO:52.979;-0.027
 DESCRIPTION:Host: Friskney Bowmen\nIndoor target\, Winter (indoor season)\
  nRounds: WA 25m\nAbout 100 min drive from Northampton\nDetails and entry:
-  https://www.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+  https://www.hl-outdoors.co.uk/event/ses-0zpj8847w1d/friskney-bowmen-wint
+ er-indoor-series/
+URL:https://www.hl-outdoors.co.uk/event/ses-0zpj8847w1d/friskney-bowmen-wi
+ nter-indoor-series/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:nottinghamshire-archery-society-nottinghamshire-in-202702@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270207
 DTEND;VALUE=DATE:20270208
 SUMMARY:Nottinghamshire Indoor Championships and Open Portsmouth (Rainwort
@@ -936,33 +980,38 @@ LOCATION:The Joseph Whitaker School\, Rainworth\, Nottinghamshire
 GEO:53.119;-1.122
 DESCRIPTION:Host: Nottinghamshire Archery Society\nIndoor target\, Winter 
  (indoor season)\nRounds: Portsmouth\nAbout 95 min drive from Northampton\
- nDetails and entry: https://www.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ nDetails and entry: https://www.hl-outdoors.co.uk/event/ses-1n8wx6rwfj8/n
+ ottinghamshire-archery-society-indoor-championships-and-open-portsmouth-2
+ 027/
+URL:https://www.hl-outdoors.co.uk/event/ses-1n8wx6rwfj8/nottinghamshire-ar
+ chery-society-indoor-championships-and-open-portsmouth-2027/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:targetcraft-annual-worcester-2027@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270207
 DTEND;VALUE=DATE:20270208
 SUMMARY:Targetcraft Annual Worcester (Rothwell)
-LOCATION:Montsaye Community Sports Centre\, Greening Road\, NN14 6BB (last
-  year's venue\, check the prospectus)\, Rothwell\, Northamptonshire
+LOCATION:Montsaye Sports Centre\, Greening Road\, Rothwell\, NN14 6BB (las
+ t year's venue)\, Rothwell\, Northamptonshire
 GEO:52.4205;-0.796
 DESCRIPTION:Host: Targetcraft Archers\nIndoor target\, Winter (indoor seas
  on)\nRounds: Worcester\nRecord status: UKRS\nAbout 25 min drive from Nort
- hampton\nBarebow and longbow friendly round\, 20 yards on the black and w
- hite face.\nDetails and entry: https://www.ncasarchery.org.uk/tournaments
- _events/ncascalendar/
-URL:https://www.ncasarchery.org.uk/tournaments_events/ncascalendar/
+ hampton\nEntry isn't open yet: the date comes from the Brighton Bowmen di
+ ary and the club hasn't put it on its tournaments page. Last year's sold 
+ out\, so watch that page. Barebow and longbow friendly\, 20 yards on the 
+ black and white face.\nDetails and entry: https://targetcraft.co.uk/tourn
+ aments/
+URL:https://targetcraft.co.uk/tournaments/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:essex-county-archery-association-essex-county-indo-202702@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270213
 DTEND;VALUE=DATE:20270215
 SUMMARY:Essex County Indoor Championship (Chelmsford)
@@ -970,15 +1019,17 @@ LOCATION:Sandon School\, Chelmsford\, Essex
 GEO:51.72;0.52
 DESCRIPTION:Host: Essex County Archery Association\nIndoor target\, Winter
   (indoor season)\nRounds: WA 18m\nAbout 100 min drive from Northampton\nD
- etails and entry: https://www.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ etails and entry: https://www.hl-outdoors.co.uk/event/ses-1sk0t8myrrn/ess
+ ex-county-indoor-championship-2027/
+URL:https://www.hl-outdoors.co.uk/event/ses-1sk0t8myrrn/essex-county-indoo
+ r-championship-2027/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:scca-and-clickers-kent-junior-indoor-championships-202702@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270213
 DTEND;VALUE=DATE:20270214
 SUMMARY:Kent Junior Indoor Championships (Sittingbourne)
@@ -987,15 +1038,17 @@ GEO:51.34;0.74
 DESCRIPTION:Host: SCCA and Clickers\nIndoor target\, Winter (indoor season
  )\nRounds: Portsmouth\nRecord status: UKRS\nEligibility: Juniors only\nAb
  out 130 min drive from Northampton\nDetails and entry: https://www.hl-out
- doors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ doors.co.uk/event/ses-23jlvhxuucx/scca-and-clickers-archery-record-status
+ -junior-portsmouth-incorporating-the-kent/
+URL:https://www.hl-outdoors.co.uk/event/ses-23jlvhxuucx/scca-and-clickers-
+ archery-record-status-junior-portsmouth-incorporating-the-kent/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:middlesex-caa-middlesex-county-indoor-championship-202702@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270213
 DTEND;VALUE=DATE:20270215
 SUMMARY:Middlesex County Indoor Championship and Open Portsmouth (Sunbury-
@@ -1013,7 +1066,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:shropshire-shropshire-county-indoor-championships-202702@neilfletcher.
  github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270213
 DTEND;VALUE=DATE:20270214
 SUMMARY:Shropshire County Indoor Championships (Lilleshall)
@@ -1021,15 +1074,17 @@ LOCATION:Lilleshall National Sports Centre\, Lilleshall\, Shropshire
 GEO:52.73;-2.39
 DESCRIPTION:Host: Shropshire\nIndoor target\, Winter (indoor season)\nRoun
  ds: Portsmouth\nRecord status: UKRS\nAbout 100 min drive from Northampton
- \nDetails and entry: https://www.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ \nDetails and entry: https://www.hl-outdoors.co.uk/event/ses-0puvnmd5ujf/
+ shropshire-county-indoor-champs-ukrs-portsmouth/
+URL:https://www.hl-outdoors.co.uk/event/ses-0puvnmd5ujf/shropshire-county-
+ indoor-champs-ukrs-portsmouth/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:tockington-archers-tockington-indoor-open-202702@neilfletcher.github.i
  o
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270213
 DTEND;VALUE=DATE:20270214
 SUMMARY:Tockington Indoor Open (Bristol)
@@ -1037,15 +1092,17 @@ LOCATION:Abbeywood Community School\, Bristol\, Gloucestershire
 GEO:51.51;-2.52
 DESCRIPTION:Host: Tockington Archers\nIndoor target\, Winter (indoor seaso
  n)\nRounds: Portsmouth\nRecord status: UKRS\nAbout 120 min drive from Nor
- thampton\nDetails and entry: https://www.ianseo.net/TourList.php
-URL:https://www.ianseo.net/TourList.php
+ thampton\nDetails and entry: https://www.hl-outdoors.co.uk/event/ses-12fj
+ 5xa6u2h/tockington-archers-portsmouth-feb-2027/
+URL:https://www.hl-outdoors.co.uk/event/ses-12fj5xa6u2h/tockington-archers
+ -portsmouth-feb-2027/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:harlequin-bowhunters-valentines-shoot-36-3ds-202702@neilfletcher.githu
  b.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270214
 DTEND;VALUE=DATE:20270215
 SUMMARY:Valentines Shoot (36 3Ds) (Leicestershire)
@@ -1060,7 +1117,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:wfca-wfca-37th-open-portsmouth-202702@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270214
 DTEND;VALUE=DATE:20270215
 SUMMARY:WFCA 37th Open Portsmouth (Worcestershire)
@@ -1068,15 +1125,17 @@ LOCATION:LQ Arena (see entry form)\, Worcestershire\, Worcestershire
 GEO:52.39;-2.25
 DESCRIPTION:Host: WFCA\nIndoor target\, Winter (indoor season)\nRounds: Po
  rtsmouth\nRecord status: UKRS\nAbout 90 min drive from Northampton\nDetai
- ls and entry: https://www.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ ls and entry: https://www.hl-outdoors.co.uk/event/ses-1oz61ed6o5q/wfca-37
+ th-open-portsmouth-ukrs/
+URL:https://www.hl-outdoors.co.uk/event/ses-1oz61ed6o5q/wfca-37th-open-por
+ tsmouth-ukrs/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:hampshire-archery-association-hampshire-indoor-cha-202702@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270220
 DTEND;VALUE=DATE:20270221
 SUMMARY:Hampshire Indoor Championships (Eastleigh)
@@ -1092,7 +1151,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:llantarnam-archery-club-llantarnam-double-wa18-202702@neilfletcher.git
  hub.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270220
 DTEND;VALUE=DATE:20270221
 SUMMARY:Llantarnam Double WA18 (Cwmbran)
@@ -1100,15 +1159,17 @@ LOCATION:Llantarnam Archery Club\, Cwmbran\, Gwent
 GEO:51.65;-3.03
 DESCRIPTION:Host: Llantarnam Archery Club\nIndoor target\, Winter (indoor 
  season)\nRounds: WA 18m\nRecord status: WRS\nAbout 135 min drive from Nor
- thampton\nDetails and entry: https://www.ianseo.net/TourList.php
-URL:https://www.ianseo.net/TourList.php
+ thampton\nDetails and entry: https://www.hl-outdoors.co.uk/event/ses-1k67
+ kmzkvlw/wa18-uk-record-status/
+URL:https://www.hl-outdoors.co.uk/event/ses-1k67kmzkvlw/wa18-uk-record-sta
+ tus/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:llantarnam-archery-club-llantarnam-double-vegas-30-202702@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270221
 DTEND;VALUE=DATE:20270222
 SUMMARY:Llantarnam Double Vegas 300 (Cwmbran)
@@ -1116,16 +1177,17 @@ LOCATION:Llantarnam Archery Club\, Cwmbran\, Gwent
 GEO:51.65;-3.03
 DESCRIPTION:Host: Llantarnam Archery Club\nIndoor target\, Winter (indoor 
  season)\nRounds: Double Vegas 300\nRecord status: UKRS\nAbout 135 min dri
- ve from Northampton\nDetails and entry: https://www.ianseo.net/TourList.p
- hp
-URL:https://www.ianseo.net/TourList.php
+ ve from Northampton\nDetails and entry: https://www.hl-outdoors.co.uk/eve
+ nt/ses-26r6nak3iuq/llantarnam-double-vegas-300/
+URL:https://www.hl-outdoors.co.uk/event/ses-26r6nak3iuq/llantarnam-double-
+ vegas-300/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:gloucestershire-cas-gloucestershire-senior-indoor-202702@neilfletcher.
  github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270227
 DTEND;VALUE=DATE:20270228
 SUMMARY:Gloucestershire Senior Indoor and Team Championships (Hartpury)
@@ -1133,15 +1195,17 @@ LOCATION:Hartpury College Sports Academy\, Hartpury\, Gloucestershire
 GEO:51.91;-2.3
 DESCRIPTION:Host: Gloucestershire CAS\nIndoor target\, Winter (indoor seas
  on)\nRounds: Portsmouth\nRecord status: UKRS\nAbout 100 min drive from No
- rthampton\nThree sessions.\nDetails and entry: https://archerygb.org/comp
- etitions/find-a-competition
-URL:https://archerygb.org/competitions/find-a-competition
+ rthampton\nThree sessions.\nDetails and entry: https://www.hl-outdoors.co
+ .uk/event/ses-1v4vyfazk2g/gloucestershire-senior-indoors-and-team-champio
+ nships-session-b-10-00/
+URL:https://www.hl-outdoors.co.uk/event/ses-1v4vyfazk2g/gloucestershire-se
+ nior-indoors-and-team-championships-session-b-10-00/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:harlequin-the-harlequin-indoor-weekend-202702@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270227
 DTEND;VALUE=DATE:20270301
 SUMMARY:The Harlequin Indoor Weekend (Abingdon)
@@ -1149,15 +1213,17 @@ LOCATION:John Mason School\, Abingdon\, Oxfordshire
 GEO:51.67;-1.3
 DESCRIPTION:Host: Harlequin\nIndoor target\, Winter (indoor season)\nRound
  s: WA 25m\, Portsmouth\nAbout 70 min drive from Northampton\nDetails and 
- entry: https://www.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ entry: https://www.hl-outdoors.co.uk/event/ses-16vyqrtm3j5/the-harlequin-
+ indoor-weekend/
+URL:https://www.hl-outdoors.co.uk/event/ses-16vyqrtm3j5/the-harlequin-indo
+ or-weekend/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:wallingford-castle-archers-wallingford-indoor-seri-202702x@neilfletche
  r.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270227
 DTEND;VALUE=DATE:20270228
 SUMMARY:Wallingford Indoor Series Leg 6 (Didcot)
@@ -1165,16 +1231,17 @@ LOCATION:Didcot Girls School\, Didcot\, Oxfordshire
 GEO:51.606;-1.243
 DESCRIPTION:Host: Wallingford Castle Archers\nIndoor target\, Winter (indo
  or season)\nRounds: WA 18m\nRecord status: WRS\nAbout 75 min drive from N
- orthampton\nDetails and entry: https://www.wallingfordcastle.co.uk/tourna
- ments/
-URL:https://www.wallingfordcastle.co.uk/tournaments/
+ orthampton\nDetails and entry: https://www.hl-outdoors.co.uk/event/ses-1w
+ r9qsokh3t/wallingford-indoor-series-leg-6/
+URL:https://www.hl-outdoors.co.uk/event/ses-1wr9qsokh3t/wallingford-indoor
+ -series-leg-6/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:see-entry-form-32nd-open-indoor-portsmouth-202702@neilfletcher.github.
  io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:32nd Open Indoor Portsmouth (Huntingdonshire)
@@ -1183,14 +1250,16 @@ LOCATION:One Leisure (see entry form for which centre)\, Huntingdonshire\,
 GEO:52.33;-0.08
 DESCRIPTION:Host: See entry form\nIndoor target\, Winter (indoor season)\n
  Rounds: Portsmouth\nAbout 60 min drive from Northampton\nDetails and entr
- y: https://www.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ y: https://www.hl-outdoors.co.uk/event/ses-236qps0c6zd/32nd-open-indoor-p
+ ortsmouth/
+URL:https://www.hl-outdoors.co.uk/event/ses-236qps0c6zd/32nd-open-indoor-p
+ ortsmouth/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:aca-kaa-aca-kaa-indoor-tournament-202702@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:ACA/KAA Indoor Tournament (Maidstone)
@@ -1198,14 +1267,16 @@ LOCATION:Maidstone Market\, Maidstone\, Kent
 GEO:51.272;0.522
 DESCRIPTION:Host: ACA / KAA\nIndoor target\, Winter (indoor season)\nRound
  s: Portsmouth\nAbout 125 min drive from Northampton\nDetails and entry: h
- ttps://www.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ ttps://www.hl-outdoors.co.uk/event/ses-03ut0r5jmvw/aca-kaa-indoor-tournam
+ ent/
+URL:https://www.hl-outdoors.co.uk/event/ses-03ut0r5jmvw/aca-kaa-indoor-tou
+ rnament/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:merlin-efaa-expert-2027@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:EFAA Classification Shoot (Expert Field) (Ashby-de-la-Zouch)
@@ -1222,7 +1293,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:hingham-bowmen-hingham-bowmen-vegas-202702@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:Hingham Bowmen Vegas (Hingham)
@@ -1230,15 +1301,16 @@ LOCATION:Sports Hall\, Hingham\, Hingham\, Norfolk
 GEO:52.58;0.99
 DESCRIPTION:Host: Hingham Bowmen\nIndoor target\, Winter (indoor season)\n
  Rounds: Vegas\nAbout 115 min drive from Northampton\nDetails and entry: h
- ttps://www.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ ttps://www.hl-outdoors.co.uk/event/ses-270uzl85hdx/hingham-bowmen-vegas/
+URL:https://www.hl-outdoors.co.uk/event/ses-270uzl85hdx/hingham-bowmen-veg
+ as/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:university-of-warwick-archery-club-university-of-w-202702@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:University of Warwick Indoor WA25 (Coventry)
@@ -1248,15 +1320,16 @@ GEO:52.372;-1.56
 DESCRIPTION:Host: University of Warwick Archery Club\nIndoor target\, Wint
  er (indoor season)\nRounds: WA 25m\nRecord status: WRS\nAbout 50 min driv
  e from Northampton\nDetails and entry: https://www.hl-outdoors.co.uk/even
- ts/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ t/ses-0gjsv6f11ss/university-of-warwick-indoor-wa25-wrs/
+URL:https://www.hl-outdoors.co.uk/event/ses-0gjsv6f11ss/university-of-warw
+ ick-indoor-wa25-wrs/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:friskney-bowmen-friskney-bowmen-winter-indoor-seri-202703@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270307
 DTEND;VALUE=DATE:20270308
 SUMMARY:Friskney Bowmen Winter Indoor Series (Boston)
@@ -1264,14 +1337,16 @@ LOCATION:Peter Paine Performance Centre\, Boston\, Lincolnshire
 GEO:52.979;-0.027
 DESCRIPTION:Host: Friskney Bowmen\nIndoor target\, Winter (indoor season)\
  nRounds: Worcester\nAbout 100 min drive from Northampton\nDetails and ent
- ry: https://www.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ ry: https://www.hl-outdoors.co.uk/event/ses-10x5s233gij/friskney-bowmen-w
+ inter-indoor-series/
+URL:https://www.hl-outdoors.co.uk/event/ses-10x5s233gij/friskney-bowmen-wi
+ nter-indoor-series/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:centaura-field-archers-nfas-shoot-202703@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270307
 DTEND;VALUE=DATE:20270308
 SUMMARY:NFAS Shoot (Derbyshire)
@@ -1287,7 +1362,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:county-of-worcester-county-of-worcester-indoor-cha-202703@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270313
 DTEND;VALUE=DATE:20270314
 SUMMARY:County of Worcester Indoor Championships and Open (Worcestershire)
@@ -1295,15 +1370,17 @@ LOCATION:LQ Arena (see entry form)\, Worcestershire\, Worcestershire
 GEO:52.39;-2.25
 DESCRIPTION:Host: County of Worcester\nIndoor target\, Winter (indoor seas
  on)\nRounds: Portsmouth\nAbout 90 min drive from Northampton\nDetails and
-  entry: https://www.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+  entry: https://www.hl-outdoors.co.uk/event/ses-1jkoz5cs4e0/county-of-wor
+ cester-indoor-championships-and-open-2027/
+URL:https://www.hl-outdoors.co.uk/event/ses-1jkoz5cs4e0/county-of-worceste
+ r-indoor-championships-and-open-2027/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:northamptonshire-county-archery-society-ncas-count-202703@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270314
 DTEND;VALUE=DATE:20270315
 SUMMARY:NCAS County and Open Indoor Championships (Raunds)
@@ -1312,16 +1389,18 @@ LOCATION:Manor School and Sports College\, NN9 6PA\, Raunds\, Northamptons
 GEO:52.343;-0.546
 DESCRIPTION:Host: Northamptonshire County Archery Society\nIndoor target\,
   Winter (indoor season)\nRounds: Portsmouth\nAbout 35 min drive from Nort
- hampton\nOur county championships.\nDetails and entry: https://www.ncasar
- chery.org.uk/tournaments_events/ncascalendar/
-URL:https://www.ncasarchery.org.uk/tournaments_events/ncascalendar/
+ hampton\nOur county championships.\nDetails and entry: https://www.hl-out
+ doors.co.uk/event/ses-20dp2bkecuf/ncas-county-and-open-indoor-championshi
+ ps-2027/
+URL:https://www.hl-outdoors.co.uk/event/ses-20dp2bkecuf/ncas-county-and-op
+ en-indoor-championships-2027/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:oxfordshire-oxfordshire-junior-intermediate-and-no-202703@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270320
 DTEND;VALUE=DATE:20270321
 SUMMARY:Oxfordshire Junior\, Intermediate and Novice Indoor Championship (
@@ -1330,16 +1409,18 @@ LOCATION:Didcot Girls School\, Didcot\, Oxfordshire
 GEO:51.606;-1.243
 DESCRIPTION:Host: Oxfordshire\nIndoor target\, Winter (indoor season)\nRou
  nds: Portsmouth\nEligibility: Juniors and novices\nAbout 75 min drive fro
- m Northampton\nDetails and entry: https://www.hl-outdoors.co.uk/events/ty
- pe/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ m Northampton\nDetails and entry: https://www.hl-outdoors.co.uk/event/ses
+ -0boji6rog2l/oxfordshire-junior-intermediate-and-novice-indoor-championsh
+ ip/
+URL:https://www.hl-outdoors.co.uk/event/ses-0boji6rog2l/oxfordshire-junior
+ -intermediate-and-novice-indoor-championship/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:waterside-archers-open-tournament-stafford-202703@neilfletcher.github.
  io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270321
 DTEND;VALUE=DATE:20270322
 SUMMARY:Open Tournament (Stafford) (Hythe)
@@ -1355,7 +1436,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:redditch-and-bromsgrove-company-of-archers-redditc-202703@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270321
 DTEND;VALUE=DATE:20270322
 SUMMARY:Redditch and Bromsgrove Open Portsmouth (Bromsgrove)
@@ -1363,16 +1444,17 @@ LOCATION:Meadow Park Football Club\, Bromsgrove\, Worcestershire
 GEO:52.33;-2.06
 DESCRIPTION:Host: Redditch and Bromsgrove Company of Archers\nIndoor targe
  t\, Winter (indoor season)\nRounds: Portsmouth\nAbout 80 min drive from N
- orthampton\nDetails and entry: https://www.hl-outdoors.co.uk/events/type/
- indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ orthampton\nDetails and entry: https://www.hl-outdoors.co.uk/event/ses-0t
+ 0hmkarlgz/redditch-and-bromsgrove-company-of-archers-open-portsmouth/
+URL:https://www.hl-outdoors.co.uk/event/ses-0t0hmkarlgz/redditch-and-broms
+ grove-company-of-archers-open-portsmouth/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:talisman-bowmen-talisman-bowmen-harbour-shoot-202703@neilfletcher.gith
  ub.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270321
 DTEND;VALUE=DATE:20270322
 SUMMARY:Talisman Bowmen Harbour Shoot (Fareham)
@@ -1380,14 +1462,16 @@ LOCATION:Cams Hill School\, Fareham\, Hampshire
 GEO:50.852;-1.24
 DESCRIPTION:Host: Talisman Bowmen\nIndoor target\, Winter (indoor season)\
  nRounds: Portsmouth\, Double Portsmouth\nAbout 135 min drive from Northam
- pton\nDetails and entry: https://talismanbowmen.com/
-URL:https://talismanbowmen.com/
+ pton\nDetails and entry: https://www.hl-outdoors.co.uk/event/ses-1coei309
+ w2z/talisman-bowmen-harbour-shoot/
+URL:https://www.hl-outdoors.co.uk/event/ses-1coei309w2z/talisman-bowmen-ha
+ rbour-shoot/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:merlin-efaa-hunter-2027@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270328
 DTEND;VALUE=DATE:20270329
 SUMMARY:EFAA Classification Shoot (Hunter) (Ashby-de-la-Zouch)
@@ -1405,7 +1489,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:newark-castle-archers-newark-castle-archers-winter-202703@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270328
 DTEND;VALUE=DATE:20270329
 SUMMARY:Newark Castle Archers Winter Worcester (Newark)
@@ -1413,14 +1497,16 @@ LOCATION:Magnus Community Sports Centre\, Newark\, Nottinghamshire
 GEO:53.08;-0.81
 DESCRIPTION:Host: Newark Castle Archers\nIndoor target\, Winter (indoor se
  ason)\nRounds: Worcester\nAbout 90 min drive from Northampton\nDetails an
- d entry: https://www.hl-outdoors.co.uk/events/type/indoor/
-URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+ d entry: https://www.hl-outdoors.co.uk/event/ses-2aijd6tkvsy/newark-castl
+ e-archers-winter-worcester/
+URL:https://www.hl-outdoors.co.uk/event/ses-2aijd6tkvsy/newark-castle-arch
+ ers-winter-worcester/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cheltenham-archers-easter-bunny-202703@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270329
 DTEND;VALUE=DATE:20270330
 SUMMARY:Easter Bunny (Cheltenham)
@@ -1436,7 +1522,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:redhill-archers-redhill-archers-wa720-202704@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270403
 DTEND;VALUE=DATE:20270404
 SUMMARY:Redhill Archers WA720 (Worcestershire)
@@ -1454,7 +1540,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:black-arrow-field-archery-club-nfas-40-x-3ds-202704@neilfletcher.githu
  b.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270404
 DTEND;VALUE=DATE:20270405
 SUMMARY:NFAS 40 x 3Ds (Leicestershire)
@@ -1469,7 +1555,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:castle-bowmen-nfas-shoot-202704@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270411
 DTEND;VALUE=DATE:20270412
 SUMMARY:NFAS Shoot (Lincolnshire)
@@ -1486,7 +1572,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:severn-valley-field-archers-nfas-shoot-36-targets-202704@neilfletcher.
  github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270418
 DTEND;VALUE=DATE:20270419
 SUMMARY:NFAS Shoot (36 targets) (Worcestershire)
@@ -1503,7 +1589,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:deer-park-archers-wa50m-longbow-head-to-heads-202704@neilfletcher.gith
  ub.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270424
 DTEND;VALUE=DATE:20270425
 SUMMARY:WA50M Longbow Head to Heads (Cheltenham)
@@ -1519,7 +1605,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:merlin-field-archers-efaa-classification-shoot-com-202704@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270425
 DTEND;VALUE=DATE:20270426
 SUMMARY:EFAA Classification Shoot (Combination) (Ashby-de-la-Zouch)
@@ -1536,7 +1622,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:duvelle-bowmen-nfas-40-mixed-202704@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270425
 DTEND;VALUE=DATE:20270426
 SUMMARY:NFAS 40 Mixed (Derbyshire)
@@ -1553,7 +1639,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:south-wilts-archery-club-nfas-bluebell-shoot-202704@neilfletcher.githu
  b.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270425
 DTEND;VALUE=DATE:20270426
 SUMMARY:NFAS Bluebell Shoot (Salisbury)
@@ -1570,7 +1656,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:waterside-archers-wrs-world-archery-weekend-202705@neilfletcher.github
  .io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270501
 DTEND;VALUE=DATE:20270503
 SUMMARY:WRS World Archery Weekend (Hythe)
@@ -1586,7 +1672,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:long-eaton-field-archers-bluebell-shoot-36-3ds-202705@neilfletcher.git
  hub.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270502
 DTEND;VALUE=DATE:20270503
 SUMMARY:Bluebell Shoot (36 3Ds) (Long Eaton)
@@ -1602,7 +1688,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:noak-hill-archers-nha-wrs-double-wa70-202705@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270502
 DTEND;VALUE=DATE:20270503
 SUMMARY:NHA WRS Double WA70 (Romford)
@@ -1618,7 +1704,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:redhill-archers-open-american-202705@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270503
 DTEND;VALUE=DATE:20270504
 SUMMARY:Open American (Worcestershire)
@@ -1634,7 +1720,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:goldcrest-archers-open-western-202705@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270503
 DTEND;VALUE=DATE:20270504
 SUMMARY:Open Western (Cheshire)
@@ -1650,7 +1736,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:lyme-valley-archers-big-kev-s-memorial-shoot-202705@neilfletcher.githu
  b.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270509
 DTEND;VALUE=DATE:20270510
 SUMMARY:Big Kev's Memorial Shoot (Newcastle-under-Lyme)
@@ -1668,7 +1754,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:friars-gate-archers-foresters-field-target-spring-202705@neilfletcher.
  github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270509
 DTEND;VALUE=DATE:20270510
 SUMMARY:Foresters Field Target Spring Shoot (Crowborough)
@@ -1683,7 +1769,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ballands-bowmen-nfas-36-3ds-202705@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270509
 DTEND;VALUE=DATE:20270510
 SUMMARY:NFAS 36 3Ds (Wiltshire)
@@ -1698,7 +1784,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:shipston-archers-run-archery-tournament-202705@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270509
 DTEND;VALUE=DATE:20270510
 SUMMARY:Run Archery Tournament (Shipston-on-Stour)
@@ -1713,7 +1799,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:deer-park-archers-dpa-3d-championships-202705@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270515
 DTEND;VALUE=DATE:20270517
 SUMMARY:DPA 3D Championships (Cheltenham)
@@ -1729,7 +1815,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:city-of-cambridge-bowmen-double-double-wa-720-202705@neilfletcher.gith
  ub.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270515
 DTEND;VALUE=DATE:20270517
 SUMMARY:Double Double WA 720 (Cambridge)
@@ -1744,7 +1830,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:black-and-gold-archers-spring-tournament-202705@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270516
 DTEND;VALUE=DATE:20270517
 SUMMARY:Spring Tournament (Gloucestershire)
@@ -1761,7 +1847,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:aurora-field-archers-triple-crown-2-x-18-3ds-202705@neilfletcher.githu
  b.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270516
 DTEND;VALUE=DATE:20270517
 SUMMARY:Triple Crown (2 x 18 3Ds) (Essex)
@@ -1776,7 +1862,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:belvoir-archers-the-3-2-1-shoot-202705@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270522
 DTEND;VALUE=DATE:20270523
 SUMMARY:The 3\, 2\, 1 Shoot (Vale of Belvoir)
@@ -1792,7 +1878,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:merlin-field-archers-efaa-classification-shoot-exp-202705@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270523
 DTEND;VALUE=DATE:20270524
 SUMMARY:EFAA Classification Shoot (Expert Field) (Ashby-de-la-Zouch)
@@ -1810,7 +1896,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:forest-of-bere-bowmen-fobb-york-hereford-shoot-202705@neilfletcher.git
  hub.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270523
 DTEND;VALUE=DATE:20270524
 SUMMARY:FoBB York / Hereford Shoot (Waterlooville)
@@ -1826,7 +1912,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:harlequin-bowhunters-nfas-40-3ds-202705@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270523
 DTEND;VALUE=DATE:20270524
 SUMMARY:NFAS 40 3Ds (Leicestershire)
@@ -1842,7 +1928,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:hillingdon-archery-club-hillingdon-2-day-open-wrs-202705@neilfletcher.
  github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270530
 DTEND;VALUE=DATE:20270601
 SUMMARY:Hillingdon 2 Day Open WRS Double WA720 (Hillingdon)
@@ -1859,7 +1945,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:middlesex-caa-middlesex-county-outdoor-championshi-202705@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270530
 DTEND;VALUE=DATE:20270531
 SUMMARY:Middlesex County Outdoor Championship and Open (Day 1) (Middlesex)
@@ -1875,7 +1961,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:croesowallt-archers-the-silver-dollar-202705@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270530
 DTEND;VALUE=DATE:20270531
 SUMMARY:The Silver Dollar (Oswestry)
@@ -1891,7 +1977,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:forest-of-bere-bowmen-fobb-team-shoot-202705@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270601
 SUMMARY:FoBB Team Shoot (Waterlooville)
@@ -1907,7 +1993,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:middlesex-caa-greenwood-osterley-archers-middlesex-202705@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270601
 SUMMARY:Middlesex County Outdoor Championship and Open (Day 2) (Middlesex)
@@ -1923,7 +2009,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:waterside-archers-open-westerns-202706@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270606
 DTEND;VALUE=DATE:20270607
 SUMMARY:Open Westerns (Hythe)
@@ -1939,7 +2025,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:black-arrow-field-archery-club-nfas-40-x-3ds-202706@neilfletcher.githu
  b.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270613
 DTEND;VALUE=DATE:20270614
 SUMMARY:NFAS 40 x 3Ds (Leicestershire)
@@ -1956,7 +2042,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:druids-field-archers-solstice-shoot-36-3ds-202706@neilfletcher.github.
  io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270619
 DTEND;VALUE=DATE:20270621
 SUMMARY:Solstice Shoot (36 3Ds) (Wiltshire)
@@ -1973,7 +2059,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:long-eaton-field-archers-summer-solstice-36-3ds-202706@neilfletcher.gi
  thub.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270620
 DTEND;VALUE=DATE:20270621
 SUMMARY:Summer Solstice (36 3Ds) (Long Eaton)
@@ -1990,7 +2076,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:merlin-field-archers-efaa-classification-shoot-hun-202706@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270627
 DTEND;VALUE=DATE:20270628
 SUMMARY:EFAA Classification Shoot (Hunter) (Ashby-de-la-Zouch)
@@ -2007,7 +2093,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:castle-bowmen-nfas-shoot-202706@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270627
 DTEND;VALUE=DATE:20270628
 SUMMARY:NFAS Shoot (Lincolnshire)
@@ -2023,7 +2109,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:goldcrest-archers-ukrs-wa900-202706@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270627
 DTEND;VALUE=DATE:20270628
 SUMMARY:UKRS WA900 (Cheshire)
@@ -2040,7 +2126,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:forest-of-bere-bowmen-fobb-wrs-wa-weekend-202707@neilfletcher.github.i
  o
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270703
 DTEND;VALUE=DATE:20270705
 SUMMARY:FoBB WRS WA Weekend (Waterlooville)
@@ -2055,7 +2141,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:belvoir-archers-open-double-720-202707@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270703
 DTEND;VALUE=DATE:20270704
 SUMMARY:Open Double 720 (Vale of Belvoir)
@@ -2070,7 +2156,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:harlequin-bowhunters-predator-and-prey-202707@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270704
 DTEND;VALUE=DATE:20270705
 SUMMARY:Predator and Prey (Leicestershire)
@@ -2087,7 +2173,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:merlin-field-archers-efaa-classification-shoot-exp-202707@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270725
 DTEND;VALUE=DATE:20270726
 SUMMARY:EFAA Classification Shoot (Expert Field) (Ashby-de-la-Zouch)
@@ -2104,7 +2190,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:spirit-of-sherwood-nfas-40-x-3ds-202708@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270801
 DTEND;VALUE=DATE:20270802
 SUMMARY:NFAS 40 x 3Ds (Nottinghamshire)
@@ -2120,7 +2206,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:black-and-gold-archers-summer-tournament-202708@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270801
 DTEND;VALUE=DATE:20270802
 SUMMARY:Summer Tournament (Gloucestershire)
@@ -2136,7 +2222,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:belvoir-archers-summer-windsors-202708@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270807
 DTEND;VALUE=DATE:20270808
 SUMMARY:Summer Windsors (Vale of Belvoir)
@@ -2153,7 +2239,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:friars-gate-archers-fga-wa24-ranked-shoot-202708@neilfletcher.github.i
  o
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270815
 DTEND;VALUE=DATE:20270816
 SUMMARY:FGA WA24 Ranked Shoot (Crowborough)
@@ -2170,7 +2256,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:merlin-field-archers-chris-jones-memorial-shoot-202708@neilfletcher.gi
  thub.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270822
 DTEND;VALUE=DATE:20270823
 SUMMARY:Chris Jones Memorial Shoot (Ashby-de-la-Zouch)
@@ -2187,7 +2273,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:castle-bowmen-nfas-shoot-202708@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270822
 DTEND;VALUE=DATE:20270823
 SUMMARY:NFAS Shoot (Lincolnshire)
@@ -2204,7 +2290,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:long-eaton-field-archers-late-summer-36-3ds-202708@neilfletcher.github
  .io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270829
 DTEND;VALUE=DATE:20270830
 SUMMARY:Late Summer (36 3Ds) (Long Eaton)
@@ -2221,7 +2307,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:south-wilts-archery-club-nfas-autumn-field-shoot-202709@neilfletcher.g
  ithub.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270905
 DTEND;VALUE=DATE:20270906
 SUMMARY:NFAS Autumn Field Shoot (Salisbury)
@@ -2237,7 +2323,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:centaura-field-archers-nfas-shoot-202709@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270905
 DTEND;VALUE=DATE:20270906
 SUMMARY:NFAS Shoot (Derbyshire)
@@ -2252,7 +2338,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:lyme-valley-archers-fun-shoot-2-x-18-202709@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270912
 DTEND;VALUE=DATE:20270913
 SUMMARY:Fun Shoot (2 x 18) (Newcastle-under-Lyme)
@@ -2270,7 +2356,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:aurora-field-archers-triple-crown-iii-2-x-18-3ds-202709@neilfletcher.g
  ithub.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270912
 DTEND;VALUE=DATE:20270913
 SUMMARY:Triple Crown III (2 x 18 3Ds) (Essex)
@@ -2285,7 +2371,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:duvelle-bowmen-nfas-36-mixed-202709@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20270926
 DTEND;VALUE=DATE:20270927
 SUMMARY:NFAS 36 Mixed (Derbyshire)
@@ -2300,7 +2386,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:pines-park-archers-nfas-40-targets-202710@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20271003
 DTEND;VALUE=DATE:20271004
 SUMMARY:NFAS 40 Targets (Nottinghamshire)
@@ -2315,7 +2401,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:severn-valley-field-archers-nfas-shoot-202710@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20271003
 DTEND;VALUE=DATE:20271004
 SUMMARY:NFAS Shoot (Worcestershire)
@@ -2332,7 +2418,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:waterside-archers-clout-weekend-inc-hampshire-clou-202710@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20271009
 DTEND;VALUE=DATE:20271011
 SUMMARY:Clout Weekend inc Hampshire Clout (Hythe)
@@ -2347,7 +2433,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:belvoir-archers-winter-windsor-202710@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20271009
 DTEND;VALUE=DATE:20271010
 SUMMARY:Winter Windsor (Vale of Belvoir)
@@ -2362,7 +2448,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:harlequin-bowhunters-nfas-40-3ds-202710@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20271010
 DTEND;VALUE=DATE:20271011
 SUMMARY:NFAS 40 3Ds (Leicestershire)
@@ -2378,7 +2464,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:deer-park-archers-wa-3d-202710@neilfletcher.github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20271016
 DTEND;VALUE=DATE:20271017
 SUMMARY:WA 3D (Cheltenham)
@@ -2394,7 +2480,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:merlin-field-archers-efaa-classification-shoot-hun-202710@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20271024
 DTEND;VALUE=DATE:20271025
 SUMMARY:EFAA Classification Shoot (Hunter) (Ashby-de-la-Zouch)
@@ -2412,7 +2498,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:hillingdon-archery-club-hillingdon-wrs-wa18-with-w-202711@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20271106
 DTEND;VALUE=DATE:20271108
 SUMMARY:Hillingdon WRS WA18 with WA Target Awards Weekend (Hillingdon)
@@ -2428,7 +2514,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:forest-of-bere-bowmen-forest-of-bere-bowmen-crookh-202711@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20271107
 DTEND;VALUE=DATE:20271108
 SUMMARY:Forest of Bere Bowmen Crookhorn (Portsmouth)
@@ -2436,15 +2522,17 @@ LOCATION:The Mountbatten Centre\, Portsmouth\, Hampshire
 GEO:50.82;-1.08
 DESCRIPTION:Host: Forest of Bere Bowmen\nIndoor target\, Winter (indoor se
  ason)\nRounds: Double Portsmouth\nAbout 135 min drive from Northampton\nD
- etails and entry: https://www.fobb.uk/tournaments
-URL:https://www.fobb.uk/tournaments
+ etails and entry: https://www.hl-outdoors.co.uk/event/ses-01nvq99nliz/for
+ est-of-bere-bowmen-crookhorn/
+URL:https://www.hl-outdoors.co.uk/event/ses-01nvq99nliz/forest-of-bere-bow
+ men-crookhorn/
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:waterside-archers-w-a-i-t-portsmouth-worcester-wa1-202711@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20271107
 DTEND;VALUE=DATE:20271108
 SUMMARY:W.A.I.T Portsmouth / Worcester / WA18 (Hythe)
@@ -2460,7 +2548,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:merlin-field-archers-efaa-classification-shoot-exp-202711@neilfletcher
  .github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20271128
 DTEND;VALUE=DATE:20271129
 SUMMARY:EFAA Classification Shoot (Expert Field) (Ashby-de-la-Zouch)
@@ -2478,7 +2566,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:south-wilts-archery-club-the-not-boxing-day-shoot-202712@neilfletcher.
  github.io
-DTSTAMP:20261126T163201Z
+DTSTAMP:20261126T164610Z
 DTSTART;VALUE=DATE:20271227
 DTEND;VALUE=DATE:20271228
 SUMMARY:The NOT Boxing Day Shoot (Salisbury)
