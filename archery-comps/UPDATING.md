@@ -44,7 +44,7 @@ One object per competition. Fields:
 | rounds | e.g. `["Portsmouth"]`, `["WA 18m"]`, `["York", "Hereford"]` |
 | status | `UKRS`, `WRS` or `""` |
 | eligibility | `""` if open to all AGB members, else e.g. `"EFAA members only"`, `"Juniors only"` |
-| url | the best page for details and entry |
+| url | a page that actually shows this comp and how to enter. Check it lists the comp; a club homepage that doesn't mention it is no good. If entry is only via Archery GB, use the AGB listing (find-a-competition/NNNNN if you can find the ID, otherwise https://archerygb.org/competitions/find-a-competition) |
 | source | where you found it |
 | added | today's date, ONLY for comps not already in the file. Never change `added` on existing entries |
 | notes | one or two short, useful sentences, or `""` |

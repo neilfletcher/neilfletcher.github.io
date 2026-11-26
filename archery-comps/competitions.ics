@@ -11,7 +11,7 @@ REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
 UID:bcaa-open-indoor-2026@neilfletcher.github.io
-DTSTAMP:20261126T070846Z
+DTSTAMP:20261126T161831Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:BCAA Open Indoor Championships (Ampthill)
@@ -29,7 +29,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:glen-inaugural-indoor-2026@neilfletcher.github.io
-DTSTAMP:20261126T070846Z
+DTSTAMP:20261126T161831Z
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20261130
 SUMMARY:Bowmen of Glen Inaugural Indoor (Great Glen)
@@ -38,15 +38,16 @@ LOCATION:Great Glen (see entry form for the hall)\, Great Glen\, Leicester
 GEO:52.577;-1.033
 DESCRIPTION:Host: Bowmen of Glen\nIndoor target\, Winter (indoor season)\n
  Rounds: Portsmouth\nAbout 40 min drive from Northampton\nThe club's first
-  indoor open. Online entry via Archery GB.\nDetails and entry: https://ww
- w.bowmenofglen.org/
-URL:https://www.bowmenofglen.org/
+  indoor open. Entry is only via Archery GB: find it under 29 November on 
+ the Find a Competition page and use Enter Now.\nDetails and entry: https:
+ //archerygb.org/competitions/find-a-competition
+URL:https://archerygb.org/competitions/find-a-competition
 CATEGORIES:Indoor,Target
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:agb-national-indoor-2026@neilfletcher.github.io
-DTSTAMP:20261126T070846Z
+DTSTAMP:20261126T161831Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261206
 SUMMARY:Archery GB National Indoor Championships (Kenilworth)
@@ -66,7 +67,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:agb-junior-national-indoor-2026@neilfletcher.github.io
-DTSTAMP:20261126T070846Z
+DTSTAMP:20261126T161831Z
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
 SUMMARY:Archery GB Junior National Indoor Championships (Kenilworth)
@@ -83,7 +84,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:back2back-2026@neilfletcher.github.io
-DTSTAMP:20261126T070846Z
+DTSTAMP:20261126T161831Z
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
 SUMMARY:Back2Back 2026 (Kenilworth)
@@ -99,7 +100,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:black-eagle-chocolate-2026@neilfletcher.github.io
-DTSTAMP:20261126T070846Z
+DTSTAMP:20261126T161831Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:The Chocolate Shoot (Souldrop)
@@ -116,7 +117,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:foxes-worcester-2026@neilfletcher.github.io
-DTSTAMP:20261126T070846Z
+DTSTAMP:20261126T161831Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:The Foxes Worcester (Leicester)
@@ -133,7 +134,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:aor-48th-indoor-2027@neilfletcher.github.io
-DTSTAMP:20261126T070846Z
+DTSTAMP:20261126T161831Z
 DTSTART;VALUE=DATE:20270117
 DTEND;VALUE=DATE:20270118
 SUMMARY:AoR 48th Annual Indoor Tournament (Raunds)
@@ -150,7 +151,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:warwickshire-indoor-2027@neilfletcher.github.io
-DTSTAMP:20261126T070846Z
+DTSTAMP:20261126T161831Z
 DTSTART;VALUE=DATE:20270123
 DTEND;VALUE=DATE:20270124
 SUMMARY:Warwickshire (& Open) Indoor Senior and Junior Championships (Cove
@@ -169,7 +170,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:merlin-efaa-international-2027@neilfletcher.github.io
-DTSTAMP:20261126T070846Z
+DTSTAMP:20261126T161831Z
 DTSTART;VALUE=DATE:20270124
 DTEND;VALUE=DATE:20270125
 SUMMARY:EFAA Classification Shoot (International) (Ashby-de-la-Zouch)
@@ -186,7 +187,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:targetcraft-annual-worcester-2027@neilfletcher.github.io
-DTSTAMP:20261126T070846Z
+DTSTAMP:20261126T161831Z
 DTSTART;VALUE=DATE:20270207
 DTEND;VALUE=DATE:20270208
 SUMMARY:Targetcraft Annual Worcester (Rothwell)
@@ -203,7 +204,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:merlin-efaa-expert-2027@neilfletcher.github.io
-DTSTAMP:20261126T070846Z
+DTSTAMP:20261126T161831Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 SUMMARY:EFAA Classification Shoot (Expert Field) (Ashby-de-la-Zouch)
@@ -220,7 +221,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:merlin-efaa-hunter-2027@neilfletcher.github.io
-DTSTAMP:20261126T070846Z
+DTSTAMP:20261126T161831Z
 DTSTART;VALUE=DATE:20270328
 DTEND;VALUE=DATE:20270329
 SUMMARY:EFAA Classification Shoot (Hunter) (Ashby-de-la-Zouch)
