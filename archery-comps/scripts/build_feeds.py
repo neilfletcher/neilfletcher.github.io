@@ -32,8 +32,9 @@ def drive_mins(home, c):
         return int(c["driveMins"])
     lat1, lng1, lat2, lng2 = map(math.radians, [home["lat"], home["lng"], c["lat"], c["lng"]])
     a = math.sin((lat2 - lat1) / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin((lng2 - lng1) / 2) ** 2
-    miles = 3958.8 * 2 * math.asin(math.sqrt(a))
-    return round(miles * 1.25 / 55 * 60 + 8)
+    road = 3958.8 * 2 * math.asin(math.sqrt(a)) * 1.25
+    speed = 45 if road < 30 else (52 if road < 80 else 58)
+    return int(round((road / speed * 60 + 8) / 5) * 5)
 
 
 def season(date_str):
@@ -103,7 +104,7 @@ def build_ics(comps, home, now):
     stamp = now.strftime("%Y%m%dT%H%M%SZ")
     lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Comp Finder//Archery comps near Northampton//EN",
              "CALSCALE:GREGORIAN", "METHOD:PUBLISH", "X-WR-CALNAME:Archery comps near Northampton",
-             "X-WR-CALDESC:Archery competitions within about an hour of Northampton. Updated weekly.",
+             "X-WR-CALDESC:Archery competitions within about 90 minutes of Northampton. Updated weekly.",
              "X-WR-TIMEZONE:Europe/London", "REFRESH-INTERVAL;VALUE=DURATION:P1D", "X-PUBLISHED-TTL:P1D"]
     for c in comps:
         start = dt.date.fromisoformat(c["date"])
@@ -133,7 +134,7 @@ def build_rss(comps, home, now):
            "<title>Archery comps near Northampton</title>",
            f"<link>{SITE}</link>",
            f'<atom:link href="{SITE}feed.xml" rel="self" type="application/rss+xml"/>',
-           "<description>New archery competitions within about an hour of Northampton, checked weekly.</description>",
+           "<description>Archery competitions up to three hours from Northampton, checked weekly.</description>",
            "<language>en-gb</language>",
            f"<lastBuildDate>{format_datetime(now)}</lastBuildDate>"]
     for c in items:
@@ -179,15 +180,19 @@ def main():
 
     upcoming = [c for c in doc["competitions"]
                 if dt.date.fromisoformat(c.get("endDate") or c["date"]) >= today]
+    alert_max = doc["meta"].get("alertMaxDriveMins", 90)
+    nearby = [c for c in upcoming if drive_mins(home, c) <= alert_max]
     now = dt.datetime.now(dt.timezone.utc).replace(microsecond=0)
-    (ROOT / "competitions.ics").write_text(build_ics(upcoming, home, now), encoding="utf-8", newline="")
+    (ROOT / "competitions.ics").write_text(build_ics(nearby, home, now), encoding="utf-8", newline="")
     (ROOT / "feed.xml").write_text(build_rss(upcoming, home, now), encoding="utf-8")
-    print(f"OK: {len(upcoming)} upcoming competitions; wrote competitions.ics and feed.xml")
+    print(f"OK: {len(upcoming)} upcoming competitions ({len(nearby)} within {alert_max} min go in the calendar feed); wrote competitions.ics and feed.xml")
 
     if args.new_since:
         since = dt.date.fromisoformat(args.new_since)
         new = [c for c in upcoming if dt.date.fromisoformat(c["added"]) >= since]
-        print(f"\nNEW SINCE {since}: {len(new)}")
+        near = [c for c in new if drive_mins(home, c) <= alert_max]
+        print(f"\nNEW SINCE {since}: {len(new)} in total, {len(near)} within {alert_max} min (only these go in the alert email):")
+        new = near
         for c in new:
             d = dt.date.fromisoformat(c["date"])
             print(f"- {d:%a %-d %b %Y}: {c['name']}, {c['town']} ({c['county']}). "

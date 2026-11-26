@@ -3,14 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Comp Finder: archery competitions near Northampton</title>
-<meta name="description" content="Archery competitions within about an hour of Northampton: map, dates, indoor or outdoor, rounds and record status. Updated weekly, with calendar, RSS and email alerts.">
-<link rel="alternate" type="application/rss+xml" title="Archery comps near Northampton" href="feed.xml">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23fff'/%3E%3Ccircle cx='50' cy='50' r='38' fill='%23222'/%3E%3Ccircle cx='50' cy='50' r='29' fill='%232f7fd8'/%3E%3Ccircle cx='50' cy='50' r='19' fill='%23d93a2f'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%23f2c230'/%3E%3C/svg%3E">
+<title>Competitions near Northampton | Duston Bowmen</title>
+<meta name="description" content="Archery competitions up to three hours' drive from Northampton, for Duston Bowmen members and anyone else. Updated weekly.">
+<meta name="theme-color" content="#1b2fd1">
+<link rel="alternate" type="application/rss+xml" title="Archery competitions near Northampton" href="feed.xml">
+<link rel="icon" href="logo.jpg">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JF54HQGVLT"></script>
 <script>
@@ -21,195 +22,173 @@
 </script>
 <style>
   :root {
-    --paper: #f6f3ec;
-    --card: #ffffff;
-    --ink: #1d2320;
-    --muted: #5e665f;
-    --line: #e2ddd1;
-    --green: #2f5d46;
-    --green-dark: #1f4232;
-    --gold: #f2c230;
-    --red: #d93a2f;
-    --blue: #2f7fd8;
-    --indoor: #2f7fd8;
-    --outdoor: #3f9a5c;
-    --radius: 14px;
-    --shadow: 0 1px 2px rgba(0,0,0,.05), 0 6px 20px rgba(29,35,32,.06);
+    --blue: #1b2fd1;
+    --blue-dark: #121f8f;
+    --gold: #f2c100;
+    --ink: #15151a;
+    --ink-2: #44444c;
+    --muted: #6d6d75;
+    --line: #d9d9e0;
+    --page: #fafaf7;
+    --green: #2c7a3f;
+    --red: #b3261e;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; }
   body {
-    font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
-    color: var(--ink); background: var(--paper); line-height: 1.5; font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px; line-height: 1.45; color: var(--ink); background: var(--page);
   }
-  a { color: var(--green); }
-  h1, h2, h3 { font-family: Fraunces, Georgia, serif; line-height: 1.15; margin: 0; }
+  a { color: var(--blue); text-underline-offset: 2px; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+  h1, h2 { font-family: "Russo One", Impact, sans-serif; font-weight: 400; letter-spacing: .01em; }
 
-  header.hero {
-    background: radial-gradient(circle at 92% 20%, rgba(242,194,48,.28) 0 70px, transparent 71px),
-                radial-gradient(circle at 92% 20%, rgba(217,58,47,.22) 0 110px, transparent 111px),
-                radial-gradient(circle at 92% 20%, rgba(47,127,216,.18) 0 150px, transparent 151px),
-                var(--green-dark);
-    color: #fff; padding: 28px 20px 22px;
-  }
-  .wrap { max-width: 1240px; margin: 0 auto; }
-  .hero h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 800; letter-spacing: -.01em; }
-  .hero p { margin: 8px 0 0; max-width: 680px; color: #dbe7df; }
-  .hero .stats { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
-  .pill-stat { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18);
-    border-radius: 999px; padding: 6px 12px; font-size: 13px; }
-  .pill-stat b { color: var(--gold); }
-  .hero .cta { margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap; }
-  .btn { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 9px 16px;
-    font-weight: 600; font-size: 14px; text-decoration: none; border: 1px solid transparent; cursor: pointer;
-    font-family: inherit; }
-  .btn.gold { background: var(--gold); color: #1d2320; }
-  .btn.ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.4); }
-  .btn.small { padding: 6px 12px; font-size: 13px; }
-  .btn.line { background: #fff; color: var(--ink); border-color: var(--line); }
-  .btn.line:hover { border-color: var(--green); }
+  .top { background: var(--blue); color: #fff; border-bottom: 5px solid var(--gold); }
+  .top .wrap { display: flex; align-items: center; gap: 18px; padding-top: 16px; padding-bottom: 16px; }
+  .top img { width: 64px; height: 64px; border-radius: 50%; background: #fff; padding: 4px; object-fit: contain; flex: none; }
+  .top .club { font-size: 13px; text-transform: uppercase; letter-spacing: .12em; color: #c9cffb; margin: 0; }
+  .top h1 { font-size: clamp(22px, 4vw, 32px); margin: 2px 0 0; line-height: 1.1; }
+  .top .updated { margin-left: auto; text-align: right; font-size: 13px; color: #c9cffb; }
+  .top .updated b { color: #fff; font-weight: 600; display: block; font-size: 14px; }
+  .top .updated a { color: var(--gold); }
+  .intro { color: var(--ink-2); max-width: 760px; margin: 16px 0 0; }
 
-  .filters { position: sticky; top: 0; z-index: 1000; background: rgba(246,243,236,.96);
-    backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); padding: 10px 20px; }
-  .filters .wrap { display: flex; gap: 10px 16px; flex-wrap: wrap; align-items: center; }
-  .seg { display: inline-flex; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
-  .seg button { border: 0; background: transparent; padding: 6px 12px; border-radius: 999px; font: inherit;
-    font-size: 13px; font-weight: 500; color: var(--muted); cursor: pointer; }
-  .seg button[aria-pressed="true"] { background: var(--green); color: #fff; }
-  .filters select, .filters input[type="search"] { font: inherit; font-size: 13px; padding: 7px 10px;
-    border: 1px solid var(--line); border-radius: 999px; background: #fff; color: var(--ink); }
-  .filters input[type="search"] { min-width: 170px; }
-  .range { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
-  .range input { accent-color: var(--green); width: 120px; }
-  .range b { color: var(--ink); min-width: 56px; }
-  .check { font-size: 13px; color: var(--muted); display: inline-flex; gap: 6px; align-items: center; }
-  .check input { accent-color: var(--green); }
-  .viewtabs { display: none; margin-left: auto; }
+  .bar { border-bottom: 1px solid var(--line); background: #fff; position: sticky; top: 0; z-index: 1000; margin-top: 14px; border-top: 1px solid var(--line); }
+  .bar .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 22px; padding-top: 10px; padding-bottom: 10px; }
+  .tabs { display: flex; gap: 2px; }
+  .tabs button { font: inherit; font-size: 14px; background: none; border: 0; border-bottom: 3px solid transparent;
+    padding: 4px 8px 3px; color: var(--ink-2); cursor: pointer; }
+  .tabs button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--gold); font-weight: 600; }
+  .bar label { font-size: 14px; color: var(--ink-2); display: inline-flex; align-items: center; gap: 6px; }
+  .bar select, .bar input[type="search"] { font: inherit; font-size: 14px; padding: 5px 8px; border: 1px solid var(--line);
+    border-radius: 3px; background: #fff; color: var(--ink); }
+  .bar input[type="range"] { accent-color: var(--blue); width: 130px; }
+  .bar input[type="checkbox"] { accent-color: var(--blue); }
+  #driveOut { font-variant-numeric: tabular-nums; min-width: 64px; color: var(--ink); font-weight: 600; }
+  .viewtabs { display: none; }
 
-  main.wrap { padding: 18px 20px 40px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 20px; }
-  #listPane { min-width: 0; }
-  #mapPane { position: sticky; top: 70px; height: calc(100vh - 90px); min-height: 420px; }
-  #map { height: 100%; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--line); }
+  main.wrap { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 28px; padding-top: 8px; padding-bottom: 40px; }
+  #mapPane { position: sticky; top: 64px; height: calc(100vh - 84px); min-height: 420px; margin-top: 16px; }
+  #map { height: calc(100% - 24px); border: 1px solid var(--line); }
+  .count { font-size: 13px; color: var(--muted); margin: 16px 0 0; }
 
-  .month { margin: 18px 0 8px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase;
-    color: var(--muted); font-family: Inter, sans-serif; font-weight: 600; display: flex; gap: 10px; align-items: center; }
-  .month::after { content: ""; flex: 1; height: 1px; background: var(--line); }
-  .month:first-child { margin-top: 0; }
+  .month { font-size: 19px; color: var(--blue); margin: 26px 0 0; padding-bottom: 6px; border-bottom: 2px solid var(--ink); }
+  .fx { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 70px; }
+  .fx.hl { background: #fff8d6; }
+  .day { text-align: center; padding-top: 2px; }
+  .day .n { font-family: "Russo One", Impact, sans-serif; font-size: 26px; line-height: 1; }
+  .day .w { font-size: 12px; text-transform: uppercase; color: var(--muted); letter-spacing: .05em; }
+  .day .to { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .fx h3 { margin: 0; font-size: 16px; font-weight: 700; line-height: 1.3; }
+  .fx h3 a { color: var(--ink); text-decoration: none; }
+  .fx h3 a:hover { color: var(--blue); text-decoration: underline; }
+  .new { display: inline-block; background: var(--gold); color: var(--ink); font-size: 11px; font-weight: 700;
+    padding: 0 5px; margin-left: 6px; vertical-align: 2px; letter-spacing: .04em; }
+  .who { color: var(--ink-2); font-size: 14px; }
+  .where { font-size: 14px; color: var(--ink-2); margin-top: 2px; }
+  .where b { color: var(--ink); font-weight: 600; }
+  .facts { font-size: 13px; margin-top: 6px; color: var(--ink-2); }
+  .facts .env { font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: .04em; }
+  .facts .env.indoor { color: var(--blue); }
+  .facts .env.outdoor { color: var(--green); }
+  .facts .sep { color: #b8b8c0; margin: 0 5px; }
+  .facts .restricted { color: var(--red); font-weight: 600; }
+  .facts .soon { font-weight: 600; color: var(--ink); }
+  .note { font-size: 13px; color: var(--muted); margin-top: 6px; }
+  .links { font-size: 13px; margin-top: 8px; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+  .links a, .links button { font: inherit; font-size: 13px; color: var(--blue); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
+  .links .main { font-weight: 700; }
+  .empty { padding: 30px 0; color: var(--muted); }
 
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
-    box-shadow: var(--shadow); padding: 14px; display: grid; grid-template-columns: 64px 1fr; gap: 14px;
-    margin-bottom: 12px; scroll-margin-top: 80px; transition: border-color .15s; }
-  .card.hl { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(242,194,48,.35), var(--shadow); }
-  .date { text-align: center; border-radius: 10px; background: var(--paper); border: 1px solid var(--line);
-    padding: 6px 4px; height: fit-content; }
-  .date .dow { font-size: 11px; text-transform: uppercase; color: var(--muted); letter-spacing: .06em; }
-  .date .d { font-family: Fraunces, serif; font-size: 26px; font-weight: 800; line-height: 1; }
-  .date .m { font-size: 12px; font-weight: 600; }
-  .date .multi { font-size: 10px; color: var(--muted); }
-  .card h3 { font-size: 18px; }
-  .card h3 a { color: inherit; text-decoration: none; }
-  .card h3 a:hover { text-decoration: underline; }
-  .host { color: var(--muted); font-size: 13px; margin-top: 2px; }
-  .where { font-size: 13px; margin-top: 6px; }
-  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-  .chip { font-size: 12px; padding: 2px 9px; border-radius: 999px; background: var(--paper);
-    border: 1px solid var(--line); white-space: nowrap; }
-  .chip.indoor { background: #e7f0fb; border-color: #c4daf4; color: #174f8f; }
-  .chip.outdoor { background: #e6f3ea; border-color: #c2e1cc; color: #1f6237; }
-  .chip.status { background: #fff6d8; border-color: #f2df9a; color: #6b5308; font-weight: 600; }
-  .chip.warn { background: #fdecea; border-color: #f4c7c2; color: #8f231b; }
-  .chip.new { background: var(--red); border-color: var(--red); color: #fff; font-weight: 600; }
-  .chip.soon { background: var(--ink); border-color: var(--ink); color: #fff; }
-  .notes { font-size: 13px; color: var(--muted); margin-top: 8px; }
-  .actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .section { margin-top: 40px; }
+  .section h2 { font-size: 20px; margin: 0 0 4px; color: var(--ink); }
+  .section > p { color: var(--ink-2); margin: 0 0 14px; max-width: 640px; }
+  .opts { border-top: 2px solid var(--ink); }
+  .opt { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .opt h3 { margin: 0; font-size: 15px; }
+  .opt p { margin: 0 0 8px; color: var(--ink-2); font-size: 14px; }
+  .btn { display: inline-block; font: inherit; font-size: 14px; font-weight: 600; padding: 7px 14px; border-radius: 3px;
+    background: var(--blue); color: #fff; text-decoration: none; border: 1px solid var(--blue); cursor: pointer; margin: 0 6px 6px 0; }
+  .btn.plain { background: #fff; color: var(--blue); }
+  .copy { display: flex; gap: 6px; max-width: 460px; }
+  .copy input { flex: 1; min-width: 0; font: inherit; font-size: 12px; padding: 5px 7px; border: 1px solid var(--line); border-radius: 3px; color: var(--muted); background: #fff; }
+  .copy button { font: inherit; font-size: 12px; padding: 4px 10px; border: 1px solid var(--line); background: #fff; border-radius: 3px; cursor: pointer; }
+  dl.notes { margin: 0; border-top: 2px solid var(--ink); }
+  dl.notes dt { font-weight: 700; margin-top: 12px; font-size: 14px; }
+  dl.notes dd { margin: 2px 0 0; color: var(--ink-2); font-size: 14px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  footer { border-top: 5px solid var(--gold); background: var(--blue-dark); color: #c9cffb; font-size: 13px; padding: 20px 0 30px; }
+  footer a { color: #fff; }
+  footer ul { margin: 6px 0 12px; padding-left: 18px; columns: 2; }
 
-  .empty { background: #fff; border: 1px dashed var(--line); border-radius: var(--radius); padding: 22px;
-    text-align: center; color: var(--muted); }
-
-  section.panel { background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
-    box-shadow: var(--shadow); padding: 20px; margin-top: 24px; }
-  section.panel h2 { font-size: 24px; margin-bottom: 6px; }
-  .alerts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 14px; }
-  .alert { border: 1px solid var(--line); border-radius: 12px; padding: 14px; background: var(--paper); }
-  .alert h3 { font-size: 17px; margin-bottom: 4px; }
-  .alert p { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
-  .alert .actions { margin-top: 0; }
-  .copyrow { display: flex; gap: 6px; margin-top: 8px; }
-  .copyrow input { flex: 1; min-width: 0; font: inherit; font-size: 12px; padding: 6px 8px;
-    border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--muted); }
-  .legend { display: flex; gap: 14px; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
-  .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; vertical-align: -1px; margin-right: 5px; }
-  details.faq { border-top: 1px solid var(--line); padding: 10px 0; }
-  details.faq summary { cursor: pointer; font-weight: 600; }
-  details.faq p { color: var(--muted); font-size: 14px; margin: 6px 0 0; }
-  footer { color: var(--muted); font-size: 13px; padding: 10px 20px 40px; }
-  footer .wrap { border-top: 1px solid var(--line); padding-top: 16px; }
-  footer ul { padding-left: 18px; margin: 6px 0; }
-
-  .pin { width: 26px; height: 26px; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,.4);
-    display: grid; place-items: center; color: #fff; font: 700 11px Inter, sans-serif; }
-  .pin.indoor { background: var(--indoor); }
-  .pin.outdoor { background: var(--outdoor); }
-  .pin.mixed { background: linear-gradient(135deg, var(--indoor) 50%, var(--outdoor) 50%); }
-  .home-pin { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
-    background: radial-gradient(circle, var(--gold) 0 30%, var(--red) 31% 52%, var(--blue) 53% 74%, #222 75%);
-    border: 2px solid #fff; box-shadow: 0 1px 5px rgba(0,0,0,.5); }
-  .leaflet-popup-content { font-family: Inter, sans-serif; font-size: 13px; margin: 12px 14px; }
-  .pop h4 { font-family: Fraunces, serif; margin: 0 0 2px; font-size: 15px; }
-  .pop .ev { padding: 6px 0; border-top: 1px solid #eee; }
-  .pop .ev:first-of-type { border-top: 0; }
-  .pop a { font-weight: 600; }
+  .pin { width: 16px; height: 16px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,.35);
+    display: grid; place-items: center; color: #fff; font: 700 10px -apple-system, sans-serif; }
+  .pin.multi { width: 22px; height: 22px; }
+  .pin.indoor { background: var(--blue); }
+  .pin.outdoor { background: var(--green); }
+  .pin.mixed { background: var(--ink); }
+  .home-pin { width: 16px; height: 16px; background: var(--gold); border: 3px solid var(--blue); transform: rotate(45deg); }
+  .leaflet-container { font-family: inherit; }
+  .leaflet-popup-content-wrapper { border-radius: 3px; }
+  .leaflet-popup-content { font-size: 13px; margin: 10px 12px; }
+  .pop .t { font-weight: 700; margin-bottom: 4px; }
+  .pop .ev { padding: 5px 0; border-top: 1px solid #eee; }
+  .key { font-size: 12px; color: var(--muted); margin-top: 6px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .key i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; vertical-align: -1px; }
 
   @media (max-width: 900px) {
     main.wrap { grid-template-columns: 1fr; }
-    #mapPane { position: relative; top: 0; height: 70vh; display: none; }
+    #mapPane { position: relative; top: 0; height: 72vh; display: none; margin-top: 12px; }
     body.show-map #mapPane { display: block; }
     body.show-map #listPane { display: none; }
-    .viewtabs { display: inline-flex; }
-    .alerts { grid-template-columns: 1fr; }
-    .filters input[type="search"] { min-width: 0; flex: 1; }
-    .filters { position: static; }
+    .viewtabs { display: flex; }
+    .bar { position: static; }
+    .top .updated { display: none; }
+    .opt { grid-template-columns: 1fr; gap: 4px; }
+    footer ul { columns: 1; }
   }
   @media (max-width: 520px) {
-    .card { grid-template-columns: 54px 1fr; gap: 10px; padding: 12px; }
-    .date .d { font-size: 22px; }
-    .filters { padding: 8px 12px; }
-    main.wrap { padding: 14px 12px 30px; }
+    .wrap { padding: 0 14px; }
+    .top img { width: 52px; height: 52px; }
+    .bar .wrap { gap: 8px 14px; }
+    .bar input[type="search"] { width: 100%; }
   }
 </style>
 </head>
 <body>
 
-<header class="hero">
+<header class="top">
   <div class="wrap">
-    <h1>Comp Finder</h1>
-    <p>Archery competitions within about an hour's drive of Northampton, gathered from Archery GB, the county societies, club sites and the tournament diaries so you don't have to. Checked every week.</p>
-    <div class="stats" id="stats"></div>
-    <div class="cta">
-      <a class="btn gold" href="#alerts">Get alerts for new comps</a>
-      <a class="btn ghost" href="#faq">How this works</a>
+    <img src="logo.jpg" alt="Duston Bowmen">
+    <div>
+      <p class="club">Duston Bowmen</p>
+      <h1>Competitions near Northampton</h1>
     </div>
+    <div class="updated">Last checked<b id="lastChecked">&nbsp;</b><a href="#alerts">Get alerts</a></div>
   </div>
 </header>
 
-<div class="filters" role="region" aria-label="Filters">
+<div class="wrap">
+  <p class="intro">Open tournaments up to three hours' drive away, collected from Archery GB, the county and regional associations and other clubs' own pages. It's checked every Sunday. Always check the organiser's page before you enter or travel.</p>
+</div>
+
+<div class="bar" role="region" aria-label="Filters">
   <div class="wrap">
-    <div class="seg" id="envSeg" role="group" aria-label="Indoor or outdoor">
+    <div class="tabs" id="envTabs" role="group" aria-label="Indoor or outdoor">
       <button data-env="all" aria-pressed="true">All</button>
       <button data-env="indoor" aria-pressed="false">Indoor</button>
       <button data-env="outdoor" aria-pressed="false">Outdoor</button>
     </div>
-    <select id="discSel" aria-label="Discipline">
-      <option value="all">All disciplines</option>
-      <option>Target</option><option>Field</option><option>Clout</option>
-      <option>3D</option><option>Flight</option><option>Other</option>
-    </select>
-    <label class="range">Up to <b id="driveOut">60 min</b>
-      <input type="range" id="driveRange" min="20" max="90" step="5" value="60" aria-label="Maximum drive time in minutes">
+    <label>Type
+      <select id="discSel">
+        <option value="all">Any</option>
+        <option>Target</option><option>Field</option><option>Clout</option>
+        <option>3D</option><option>Flight</option><option>Other</option>
+      </select>
     </label>
-    <label class="check"><input type="checkbox" id="hideRestricted"> Hide members-only (EFAA, juniors etc.)</label>
-    <input type="search" id="q" placeholder="Search club, town, round" aria-label="Search">
-    <div class="seg viewtabs" role="group" aria-label="View">
+    <label>Drive up to <input type="range" id="driveRange" min="20" max="180" step="10" value="60" aria-label="Maximum drive in minutes"><span id="driveOut">1 hr</span></label>
+    <label><input type="checkbox" id="hideRestricted"> Hide members-only shoots</label>
+    <input type="search" id="q" placeholder="Search" aria-label="Search by club, town or round">
+    <div class="tabs viewtabs" role="group" aria-label="View">
       <button data-view="list" aria-pressed="true">List</button>
       <button data-view="map" aria-pressed="false">Map</button>
     </div>
@@ -218,68 +197,66 @@
 
 <main class="wrap">
   <div id="listPane">
+    <p class="count" id="count"></p>
     <div id="list" aria-live="polite"></div>
 
-    <section class="panel" id="alerts">
-      <h2>Get told when something new turns up</h2>
-      <p style="margin:0;color:var(--muted)">The list is refreshed once a week. Pick whichever suits you; the calendar one is the least effort.</p>
-      <div class="alerts">
-        <div class="alert">
+    <div class="section" id="alerts">
+      <h2>Alerts</h2>
+      <p>New comps are added once a week. Choose whichever suits you.</p>
+      <div class="opts">
+        <div class="opt">
           <h3>Calendar</h3>
-          <p>Subscribe once and every comp appears in your phone's calendar, with new ones added automatically.</p>
-          <div class="actions">
-            <a class="btn small gold" id="gcalBtn" target="_blank" rel="noopener">Google Calendar</a>
-            <a class="btn small line" id="webcalBtn">Apple / Outlook</a>
+          <div>
+            <p>Subscribe once and comps within an hour and a half show up in your phone's calendar. New ones appear by themselves.</p>
+            <a class="btn" id="gcalBtn" target="_blank" rel="noopener">Google Calendar</a><a class="btn plain" id="webcalBtn">iPhone / Outlook</a>
+            <div class="copy"><input id="icsUrl" readonly aria-label="Calendar address"><button data-copy="icsUrl">Copy</button></div>
           </div>
-          <div class="copyrow"><input id="icsUrl" readonly aria-label="Calendar feed address"><button class="btn small line" data-copy="icsUrl">Copy</button></div>
         </div>
-        <div class="alert">
+        <div class="opt">
           <h3>Email</h3>
-          <p>One short email when new comps are found, never more than once a week. Hit send on the pre-filled email to join; same again to leave.</p>
-          <div class="actions">
-            <a class="btn small gold" id="subBtn">Sign me up</a>
-            <a class="btn small line" id="unsubBtn">Unsubscribe</a>
+          <div>
+            <p>A short email when new comps are found, at most once a week. Tap the button and send the email it opens. Do the same with Unsubscribe to stop.</p>
+            <a class="btn" id="subBtn">Subscribe</a><a class="btn plain" id="unsubBtn">Unsubscribe</a>
           </div>
         </div>
-        <div class="alert">
+        <div class="opt">
           <h3>RSS</h3>
-          <p>For feed readers, or to plug into the club's own site or a group chat bot.</p>
-          <div class="actions"><a class="btn small line" href="feed.xml">Open feed</a></div>
-          <div class="copyrow"><input id="rssUrl" readonly aria-label="RSS feed address"><button class="btn small line" data-copy="rssUrl">Copy</button></div>
+          <div>
+            <p>For feed readers. Includes everything up to three hours away.</p>
+            <div class="copy"><input id="rssUrl" readonly aria-label="RSS address"><button data-copy="rssUrl">Copy</button></div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="panel" id="faq">
-      <h2>How this works</h2>
-      <details class="faq" open><summary>Where do the comps come from?</summary>
-        <p>Every week the listings are checked against Archery GB's Find a Competition, the Brighton Bowmen tournament diary, NCAS and the neighbouring county associations (Bedfordshire, Leicestershire and Rutland, Buckinghamshire, Warwickshire, Cambridgeshire), EMAS, the EFAA calendar and the hosting clubs' own pages. Anything within roughly 75 minutes of Northampton goes in; the slider lets you narrow it down.</p></details>
-      <details class="faq"><summary>How accurate are the drive times?</summary>
-        <p>They're estimates from the middle of Northampton, good for "is this worth the trip" rather than planning to the minute. Tap Directions on any comp for a proper route.</p></details>
-      <details class="faq"><summary>Indoor, outdoor, winter and summer?</summary>
-        <p>Indoor or outdoor is where you actually shoot. The season follows the usual archery year: October to March is the winter (indoor) season, April to September the summer (outdoor) season. Field and clout shoots can happen outdoors in winter too, so both are shown.</p></details>
-      <details class="faq"><summary>What do UKRS and WRS mean?</summary>
-        <p>UK Record Status and World Record Status. Scores shot there count for records, rankings and some badges, and the shoot runs under full rules with judges. Non-record shoots are usually more relaxed and great for a first comp.</p></details>
-      <details class="faq"><summary>Always check the organiser's page</summary>
-        <p>Details change, venues move and entries fill up. The link on each comp goes to the organiser or the listing it came from; check there before entering or travelling.</p></details>
-      <details class="faq"><summary>Missing a comp?</summary>
-        <p><a id="missingLink">Send the details</a> and it'll be added in the next weekly update.</p></details>
-    </section>
+    <div class="section" id="notes">
+      <h2>Notes</h2>
+      <dl class="notes">
+        <dt>Drive times</dt>
+        <dd>Rough estimates from the middle of Northampton. Use Directions for a proper route.</dd>
+        <dt>Seasons</dt>
+        <dd>October to March is the winter (indoor) season and April to September the summer (outdoor) season. Field and clout can run outdoors all year.</dd>
+        <dt>UKRS and WRS</dt>
+        <dd>UK and World Record Status. Scores count for records, rankings and some awards, and the shoot runs to full rules. Non-record shoots tend to be more relaxed, which makes them a good first comp.</dd>
+        <dt>Members-only</dt>
+        <dd>Some shoots need membership of another body (EFAA or NFAS for field) or are for juniors only. They're marked in red.</dd>
+        <dt>Something missing or wrong?</dt>
+        <dd><a id="missingLink">Email the details</a> and it'll be sorted in the next update.</dd>
+      </dl>
+    </div>
   </div>
 
   <div id="mapPane">
     <div id="map" role="region" aria-label="Map of competitions"></div>
+    <div class="key"><span><i style="background:var(--blue)"></i>Indoor</span><span><i style="background:var(--green)"></i>Outdoor</span><span>Dashed line: your drive limit, roughly</span></div>
   </div>
 </main>
 
 <footer>
   <div class="wrap">
-    <div class="legend"><span><span class="dot" style="background:var(--indoor)"></span>Indoor</span>
-      <span><span class="dot" style="background:var(--outdoor)"></span>Outdoor</span>
-      <span id="lastChecked"></span></div>
-    <p style="margin:10px 0 4px">Sources checked:</p>
+    <p style="margin:0">Sources checked each week:</p>
     <ul id="sources"></ul>
-    <p>Made for Duston Bowmen and friends by <a href="https://neilfletcher.github.io/">Neil Fletcher</a>. Not affiliated with Archery GB or any county association.</p>
+    <p style="margin:0">Put together by <a href="https://neilfletcher.github.io/">Neil Fletcher</a> for Duston Bowmen. Not run by Archery GB or any county association.</p>
   </div>
 </footer>
 
@@ -288,46 +265,40 @@
 (function () {
   "use strict";
 
-  // Where email sign-ups go. The weekly update reads these from Gmail and sends the alerts.
+  // Email sign-ups go here; the weekly update reads them from Gmail and sends the alerts.
   var ALERT_EMAIL = "neil.fletcher+comps@gmail.com";
   var SITE = "https://neilfletcher.github.io/archery-comps/";
   var NEW_DAYS = 14;
 
   var state = { env: "all", disc: "all", maxDrive: 60, hideRestricted: false, q: "" };
-  var data = null, comps = [], map = null, markerLayer = null, radiusCircle = null, home = null;
+  try { var saved = +localStorage.getItem("dbcomps-drive"); if (saved >= 20 && saved <= 180) state.maxDrive = saved; } catch (e) {}
+  var comps = [], map = null, markerLayer = null, radiusCircle = null, home = null, focusing = false;
 
   var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   var DOW = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 
-  function el(tag, attrs, html) {
-    var e = document.createElement(tag);
-    if (attrs) for (var k in attrs) { if (k === "class") e.className = attrs[k]; else e.setAttribute(k, attrs[k]); }
-    if (html != null) e.innerHTML = html;
-    return e;
-  }
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
     return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function parseDate(s) { var p = s.split("-"); return new Date(+p[0], +p[1] - 1, +p[2]); }
   function todayDate() { var d = new Date(); return new Date(d.getFullYear(), d.getMonth(), d.getDate()); }
   function daysBetween(a, b) { return Math.round((b - a) / 86400000); }
+  function shortDate(d) { return d.getDate() + " " + MONTHS[d.getMonth()].slice(0, 3); }
+  function longDate(d) { return DOW[d.getDay()] + " " + d.getDate() + " " + MONTHS[d.getMonth()] + " " + d.getFullYear(); }
+  function fmtMins(m) { if (m < 60) return m + " min"; var h = Math.floor(m / 60), r = m % 60; return h + " hr" + (r ? " " + r : ""); }
 
-  function haversineMiles(a, b) {
-    var R = 3958.8, toR = Math.PI / 180;
-    var dLat = (b.lat - a.lat) * toR, dLng = (b.lng - a.lng) * toR;
-    var h = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-      Math.cos(a.lat * toR) * Math.cos(b.lat * toR) * Math.sin(dLng / 2) * Math.sin(dLng / 2);
+  function miles(a, b) {
+    var R = 3958.8, r = Math.PI / 180, dLat = (b.lat - a.lat) * r, dLng = (b.lng - a.lng) * r;
+    var h = Math.pow(Math.sin(dLat / 2), 2) + Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.pow(Math.sin(dLng / 2), 2);
     return 2 * R * Math.asin(Math.sqrt(h));
   }
-  function estDrive(c) { return c.driveMins ? +c.driveMins : Math.round(haversineMiles(home, c) * 1.25 / 55 * 60 + 8); }
-  function minsToMetres(m) { return Math.max(0, (m - 8) * 55 / 60 / 1.25) * 1609.34; }
-
-  function season(c) {
-    var m = parseDate(c.date).getMonth() + 1;
-    return (m >= 10 || m <= 3) ? "Winter season" : "Summer season";
+  function estDrive(c) {
+    if (c.driveMins) return +c.driveMins;
+    var road = miles(home, c) * 1.25, sp = road < 30 ? 45 : road < 80 ? 52 : 58;
+    return Math.round((road / sp * 60 + 8) / 5) * 5;
   }
+  function minsToMetres(m) { var sp = m < 48 ? 45 : m < 100 ? 52 : 58; return Math.max(0, (m - 8) / 60 * sp / 1.25) * 1609.34; }
+  function season(c) { var m = parseDate(c.date).getMonth() + 1; return (m >= 10 || m <= 3) ? "winter season" : "summer season"; }
   function restricted(c) { return !!(c.eligibility && c.eligibility.trim()); }
-
-  function fmtLong(d) { return DOW[d.getDay()] + " " + d.getDate() + " " + MONTHS[d.getMonth()].slice(0, 3) + " " + d.getFullYear(); }
 
   function filtered() {
     var q = state.q.trim().toLowerCase();
@@ -349,80 +320,65 @@
     function ymd(d) { return d.getFullYear() + String(d.getMonth() + 1).padStart(2, "0") + String(d.getDate()).padStart(2, "0"); }
     var start = parseDate(c.date), end = parseDate(c.endDate || c.date); end.setDate(end.getDate() + 1);
     var desc = c.host + "\n" + (c.rounds || []).join(", ") + (c.status ? " (" + c.status + ")" : "") + "\n" + c.url;
-    return ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Comp Finder//EN", "BEGIN:VEVENT",
+    return ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Duston Bowmen comps//EN", "BEGIN:VEVENT",
       "UID:" + c.id + "@neilfletcher.github.io", "DTSTAMP:" + ymd(new Date()) + "T000000Z",
       "DTSTART;VALUE=DATE:" + ymd(start), "DTEND;VALUE=DATE:" + ymd(end),
       "SUMMARY:" + e(c.name), "LOCATION:" + e([c.venue, c.town].filter(Boolean).join(", ")),
       "DESCRIPTION:" + e(desc), "URL:" + c.url, "END:VEVENT", "END:VCALENDAR"].join("\r\n");
   }
 
-  function cardHTML(c) {
-    var d = parseDate(c.date), t = todayDate();
-    var until = daysBetween(t, d);
+  function rowHTML(c) {
+    var d = parseDate(c.date), until = daysBetween(todayDate(), d);
     var multi = c.endDate && c.endDate !== c.date;
-    var chips = [];
-    if (c._isNew) chips.push('<span class="chip new">New</span>');
-    if (until >= 0 && until <= 14) chips.push('<span class="chip soon">' + (until === 0 ? "Today" : until === 1 ? "Tomorrow" : "In " + until + " days") + '</span>');
-    chips.push('<span class="chip ' + c.environment + '">' + (c.environment === "indoor" ? "Indoor" : "Outdoor") + '</span>');
-    chips.push('<span class="chip">' + esc(season(c)) + '</span>');
-    chips.push('<span class="chip">' + esc(c.discipline) + '</span>');
-    (c.rounds || []).forEach(function (r) { chips.push('<span class="chip">' + esc(r) + '</span>'); });
-    if (c.status) chips.push('<span class="chip status">' + esc(c.status) + '</span>');
-    if (restricted(c)) chips.push('<span class="chip warn">' + esc(c.eligibility) + '</span>');
-    chips.push('<span class="chip">~' + c._drive + ' min drive</span>');
+    var sep = '<span class="sep">/</span>';
+    var facts = ['<span class="env ' + c.environment + '">' + c.environment + '</span>'];
+    var what = [c.discipline === "Target" ? "" : c.discipline.toLowerCase(), (c.rounds || []).join(", ")].filter(Boolean).join(", ");
+    if (what) facts.push(esc(what));
+    if (c.status) facts.push(esc(c.status));
+    facts.push(season(c));
+    if (restricted(c)) facts.push('<span class="restricted">' + esc(c.eligibility) + '</span>');
+    if (until >= 0 && until <= 14) facts.push('<span class="soon">' + (until === 0 ? "today" : until === 1 ? "tomorrow" : "in " + until + " days") + '</span>');
     var dir = "https://www.google.com/maps/dir/?api=1&destination=" + c.lat + "," + c.lng;
-    return '<div class="date"><div class="dow">' + DOW[d.getDay()] + '</div><div class="d">' + d.getDate() + '</div><div class="m">' +
-        MONTHS[d.getMonth()].slice(0, 3) + '</div>' + (multi ? '<div class="multi">to ' + parseDate(c.endDate).getDate() + ' ' + MONTHS[parseDate(c.endDate).getMonth()].slice(0, 3) + '</div>' : '') + '</div>' +
-      '<div><h3><a href="' + esc(c.url) + '" target="_blank" rel="noopener">' + esc(c.name) + '</a></h3>' +
-      '<div class="host">' + esc(c.host) + '</div>' +
-      '<div class="where">' + esc(c.venue || "") + (c.venue ? ", " : "") + esc(c.town) + ', ' + esc(c.county) + '</div>' +
-      '<div class="chips">' + chips.join("") + '</div>' +
-      (c.notes ? '<div class="notes">' + esc(c.notes) + '</div>' : '') +
-      '<div class="actions">' +
-        '<a class="btn small gold" href="' + esc(c.url) + '" target="_blank" rel="noopener">Details and entry</a>' +
-        '<button class="btn small line" data-map="' + esc(c.id) + '">Show on map</button>' +
-        '<a class="btn small line" href="' + dir + '" target="_blank" rel="noopener">Directions</a>' +
-        '<button class="btn small line" data-ics="' + esc(c.id) + '">Add to calendar</button>' +
-      '</div></div>';
+    return '<div class="day"><div class="w">' + DOW[d.getDay()] + '</div><div class="n">' + d.getDate() + '</div>' +
+        (multi ? '<div class="to">to ' + shortDate(parseDate(c.endDate)) + '</div>' : '') + '</div>' +
+      '<div>' +
+        '<h3><a href="' + esc(c.url) + '" target="_blank" rel="noopener">' + esc(c.name) + '</a>' + (c._isNew ? '<span class="new">NEW</span>' : '') + '</h3>' +
+        '<div class="who">' + esc(c.host) + '</div>' +
+        '<div class="where"><b>' + esc(c.town) + '</b>, ' + esc(c.county) + ', about ' + fmtMins(c._drive) + (c.venue ? '. ' + esc(c.venue) : '') + (c.approxLocation ? ' (map pin is approximate)' : '') + '</div>' +
+        '<div class="facts">' + facts.join(sep) + '</div>' +
+        (c.notes ? '<div class="note">' + esc(c.notes) + '</div>' : '') +
+        '<div class="links">' +
+          '<a class="main" href="' + esc(c.url) + '" target="_blank" rel="noopener">Details and entry</a>' +
+          '<button data-map="' + esc(c.id) + '">Map</button>' +
+          '<a href="' + dir + '" target="_blank" rel="noopener">Directions</a>' +
+          '<button data-ics="' + esc(c.id) + '">Add to calendar</button>' +
+        '</div>' +
+      '</div>';
   }
 
   function renderList(list) {
     var box = document.getElementById("list");
-    box.innerHTML = "";
-    if (!list.length) {
-      box.appendChild(el("div", { class: "empty" }, "Nothing matches those filters. Try a longer drive time or switch to <b>All</b>."));
-      return;
-    }
-    var lastKey = "";
+    var n = list.length;
+    document.getElementById("count").textContent = n + (n === 1 ? " competition" : " competitions") + " within " + fmtMins(state.maxDrive);
+    if (!n) { box.innerHTML = '<p class="empty">Nothing matches. Try a longer drive or set the filter back to All.</p>'; return; }
+    var html = "", last = "";
     list.forEach(function (c) {
       var d = parseDate(c.date), key = d.getFullYear() + "-" + d.getMonth();
-      if (key !== lastKey) { box.appendChild(el("h2", { class: "month" }, MONTHS[d.getMonth()] + " " + d.getFullYear())); lastKey = key; }
-      box.appendChild(el("article", { class: "card", id: "c-" + c.id }, cardHTML(c)));
+      if (key !== last) { html += '<h2 class="month">' + MONTHS[d.getMonth()] + ' ' + d.getFullYear() + '</h2>'; last = key; }
+      html += '<article class="fx" id="c-' + esc(c.id) + '">' + rowHTML(c) + '</article>';
     });
-  }
-
-  function renderStats(list) {
-    var t = todayDate();
-    var next = list[0];
-    var indoor = list.filter(function (c) { return c.environment === "indoor"; }).length;
-    var fresh = comps.filter(function (c) { return c._isNew; }).length;
-    var html = '<span class="pill-stat"><b>' + list.length + '</b> upcoming within ' + state.maxDrive + ' min</span>' +
-      '<span class="pill-stat"><b>' + indoor + '</b> indoor, <b>' + (list.length - indoor) + '</b> outdoor</span>';
-    if (next) { var n = daysBetween(t, parseDate(next.date));
-      html += '<span class="pill-stat">Next: <b>' + esc(next.name) + '</b> ' + (n <= 0 ? "today" : "in " + n + (n === 1 ? " day" : " days")) + '</span>'; }
-    if (fresh) html += '<span class="pill-stat"><b>' + fresh + '</b> new in the last fortnight</span>';
-    document.getElementById("stats").innerHTML = html;
+    box.innerHTML = html;
   }
 
   function initMap() {
-    if (typeof L === "undefined") { document.getElementById("map").innerHTML = '<div class="empty">The map couldn\'t load. The list still works.</div>'; return; }
-    map = L.map("map", { scrollWheelZoom: true }).setView([home.lat, home.lng], 9);
+    if (typeof L === "undefined") { document.getElementById("map").innerHTML = '<p class="empty" style="padding:20px">The map didn\'t load. The list still works.</p>'; return; }
+    map = L.map("map").setView([home.lat, home.lng], 9);
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 18, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
-    L.marker([home.lat, home.lng], { icon: L.divIcon({ className: "", html: '<div class="home-pin"></div>', iconSize: [30, 30], iconAnchor: [15, 15] }), zIndexOffset: 1000 })
-      .addTo(map).bindPopup("<b>Northampton</b><br>Drive times are measured from here.");
-    radiusCircle = L.circle([home.lat, home.lng], { radius: minsToMetres(state.maxDrive), color: "#2f5d46", weight: 1.5, dashArray: "6 6", fill: true, fillOpacity: .04 }).addTo(map);
+    L.marker([home.lat, home.lng], { icon: L.divIcon({ className: "", html: '<div class="home-pin"></div>', iconSize: [16, 16], iconAnchor: [8, 8] }), zIndexOffset: 1000 })
+      .addTo(map).bindPopup("Northampton. Drive times are from here.");
+    radiusCircle = L.circle([home.lat, home.lng], { radius: minsToMetres(state.maxDrive), color: "#1b2fd1", weight: 1.5, dashArray: "5 6", fill: false }).addTo(map);
     markerLayer = L.layerGroup().addTo(map);
     map.fitBounds(radiusCircle.getBounds(), { padding: [10, 10] });
   }
@@ -437,23 +393,25 @@
       var g = groups[k], envs = {};
       g.forEach(function (c) { envs[c.environment] = 1; });
       var cls = Object.keys(envs).length > 1 ? "mixed" : g[0].environment;
-      var icon = L.divIcon({ className: "", html: '<div class="pin ' + cls + '">' + (g.length > 1 ? g.length : "") + '</div>', iconSize: [26, 26], iconAnchor: [13, 13], popupAnchor: [0, -12] });
-      var html = '<div class="pop"><h4>' + esc(g[0].town) + '</h4><div style="color:#666">~' + g[0]._drive + ' min drive</div>' +
-        g.map(function (c) { return '<div class="ev"><b>' + fmtLong(parseDate(c.date)) + '</b><br>' + esc(c.name) +
-          '<br><span style="color:#666">' + (c.environment === "indoor" ? "Indoor" : "Outdoor") + ', ' + esc(c.discipline) + (c.status ? ", " + esc(c.status) : "") + '</span><br>' +
-          '<a href="#c-' + esc(c.id) + '" data-jump="' + esc(c.id) + '">See in list</a> &middot; <a href="' + esc(c.url) + '" target="_blank" rel="noopener">Details</a></div>'; }).join("") + '</div>';
-      var m = L.marker(k.split(",").map(Number), { icon: icon }).bindPopup(html, { maxWidth: 260 });
-      m._compIds = g.map(function (c) { return c.id; });
+      var size = g.length > 1 ? 22 : 16;
+      var icon = L.divIcon({ className: "", html: '<div class="pin ' + cls + (g.length > 1 ? ' multi' : '') + '">' + (g.length > 1 ? g.length : "") + '</div>',
+        iconSize: [size, size], iconAnchor: [size / 2, size / 2], popupAnchor: [0, -10] });
+      var html = '<div class="pop"><div class="t">' + esc(g[0].town) + ', about ' + fmtMins(g[0]._drive) + '</div>' +
+        g.map(function (c) { return '<div class="ev">' + longDate(parseDate(c.date)) + '<br><b>' + esc(c.name) + '</b><br>' +
+          '<a href="#c-' + esc(c.id) + '" data-jump="' + esc(c.id) + '">In the list</a> &middot; <a href="' + esc(c.url) + '" target="_blank" rel="noopener">Details</a></div>'; }).join("") + '</div>';
+      var m = L.marker(k.split(",").map(Number), { icon: icon }).bindPopup(html, { maxWidth: 260, maxHeight: 320 });
+      m._ids = g.map(function (c) { return c.id; });
       markerLayer.addLayer(m);
     });
   }
 
-  function render() {
+  var fitTimer = null;
+  function render(refit) {
     var list = filtered();
-    document.getElementById("driveOut").textContent = state.maxDrive + " min";
-    renderStats(list);
+    document.getElementById("driveOut").textContent = fmtMins(state.maxDrive);
     renderList(list);
     renderMap(list);
+    if (refit && map) { clearTimeout(fitTimer); fitTimer = setTimeout(function () { map.fitBounds(radiusCircle.getBounds(), { padding: [10, 10] }); }, 250); }
   }
 
   function setView(v) {
@@ -461,7 +419,6 @@
     document.querySelectorAll(".viewtabs button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.view === v)); });
     if (map) setTimeout(function () { map.invalidateSize(); if (v === "map" && !focusing) map.fitBounds(radiusCircle.getBounds(), { padding: [10, 10] }); }, 50);
   }
-  var focusing = false;
 
   function showOnMap(id) {
     var c = comps.filter(function (x) { return x.id === id; })[0];
@@ -470,31 +427,28 @@
     if (window.matchMedia("(max-width: 900px)").matches) setView("map");
     setTimeout(function () { focusing = false; }, 200);
     map.setView([c.lat, c.lng], 12);
-    markerLayer.eachLayer(function (m) { if (m._compIds.indexOf(id) !== -1) m.openPopup(); });
+    markerLayer.eachLayer(function (m) { if (m._ids.indexOf(id) !== -1) m.openPopup(); });
   }
 
   function jumpTo(id) {
     setView("list");
-    var card = document.getElementById("c-" + id);
-    if (!card) return;
-    card.scrollIntoView({ behavior: "smooth", block: "start" });
-    card.classList.add("hl");
-    setTimeout(function () { card.classList.remove("hl"); }, 2200);
+    var row = document.getElementById("c-" + id);
+    if (!row) return;
+    row.scrollIntoView({ behavior: "smooth", block: "start" });
+    row.classList.add("hl");
+    setTimeout(function () { row.classList.remove("hl"); }, 2000);
   }
 
   function wireAlerts() {
-    var icsHttp = SITE + "competitions.ics";
-    var webcal = icsHttp.replace(/^https:/, "webcal:");
-    document.getElementById("icsUrl").value = icsHttp;
+    var ics = SITE + "competitions.ics", webcal = ics.replace(/^https:/, "webcal:");
+    document.getElementById("icsUrl").value = ics;
     document.getElementById("rssUrl").value = SITE + "feed.xml";
     document.getElementById("webcalBtn").href = webcal;
     document.getElementById("gcalBtn").href = "https://calendar.google.com/calendar/r?cid=" + encodeURIComponent(webcal);
     function mail(subject, body) { return "mailto:" + ALERT_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body); }
-    document.getElementById("subBtn").href = mail("Archery comps: subscribe",
-      "Please add me to the email alerts for new archery competitions near Northampton.\n\nJust hit send. You can leave at any time.");
-    document.getElementById("unsubBtn").href = mail("Archery comps: unsubscribe", "Please take me off the archery comps email alerts.");
-    document.getElementById("missingLink").href = mail("Archery comps: missing comp",
-      "Name of the comp:\nDate:\nHost club and venue:\nLink to the prospectus or entry form:\n");
+    document.getElementById("subBtn").href = mail("Archery comps: subscribe", "Please add me to the competition alerts.");
+    document.getElementById("unsubBtn").href = mail("Archery comps: unsubscribe", "Please take me off the competition alerts.");
+    document.getElementById("missingLink").href = mail("Archery comps: missing comp", "Competition:\nDate:\nHost club and venue:\nLink:\n");
     document.querySelectorAll("[data-copy]").forEach(function (b) {
       b.addEventListener("click", function () {
         var inp = document.getElementById(b.dataset.copy);
@@ -506,28 +460,34 @@
   }
 
   function wireFilters() {
-    document.querySelectorAll("#envSeg button").forEach(function (b) {
+    var range = document.getElementById("driveRange");
+    range.value = state.maxDrive;
+    document.querySelectorAll("#envTabs button").forEach(function (b) {
       b.addEventListener("click", function () {
         state.env = b.dataset.env;
-        document.querySelectorAll("#envSeg button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+        document.querySelectorAll("#envTabs button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
         render();
       });
     });
     document.getElementById("discSel").addEventListener("change", function (e) { state.disc = e.target.value; render(); });
-    document.getElementById("driveRange").addEventListener("input", function (e) { state.maxDrive = +e.target.value; render(); });
+    range.addEventListener("input", function (e) {
+      state.maxDrive = +e.target.value;
+      try { localStorage.setItem("dbcomps-drive", state.maxDrive); } catch (err) {}
+      render(true);
+    });
     document.getElementById("hideRestricted").addEventListener("change", function (e) { state.hideRestricted = e.target.checked; render(); });
     document.getElementById("q").addEventListener("input", function (e) { state.q = e.target.value; render(); });
     document.querySelectorAll(".viewtabs button").forEach(function (b) { b.addEventListener("click", function () { setView(b.dataset.view); }); });
-
     document.addEventListener("click", function (e) {
       var t = e.target.closest("[data-map],[data-ics],[data-jump]");
       if (!t) return;
-      if (t.dataset.map) { showOnMap(t.dataset.map); }
+      if (t.dataset.map) showOnMap(t.dataset.map);
       else if (t.dataset.jump) { e.preventDefault(); jumpTo(t.dataset.jump); }
       else if (t.dataset.ics) {
         var c = comps.filter(function (x) { return x.id === t.dataset.ics; })[0];
-        var blob = new Blob([icsForOne(c)], { type: "text/calendar" });
-        var a = el("a", { href: URL.createObjectURL(blob), download: c.id + ".ics" });
+        var a = document.createElement("a");
+        a.href = URL.createObjectURL(new Blob([icsForOne(c)], { type: "text/calendar" }));
+        a.download = c.id + ".ics";
         document.body.appendChild(a); a.click(); a.remove();
         if (window.gtag) gtag("event", "add_to_calendar", { comp: c.id });
       }
@@ -536,20 +496,19 @@
 
   function load() {
     fetch("data/competitions.json?v=" + Date.now()).then(function (r) { return r.json(); }).then(function (doc) {
-      data = doc; home = doc.meta.home;
+      home = doc.meta.home;
       var t = todayDate();
       comps = doc.competitions.filter(function (c) { return parseDate(c.endDate || c.date) >= t; })
-        .map(function (c) { c._drive = estDrive(c); c._isNew = daysBetween(parseDate(c.added), t) <= NEW_DAYS; return c; })
+        .map(function (c) { c._drive = estDrive(c); c._isNew = c.added > (doc.meta.launched || "") && daysBetween(parseDate(c.added), t) <= NEW_DAYS; return c; })
         .sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : a._drive - b._drive; });
-      var lc = parseDate(doc.meta.lastChecked);
-      document.getElementById("lastChecked").textContent = "Last checked " + fmtLong(lc);
+      document.getElementById("lastChecked").textContent = longDate(parseDate(doc.meta.lastChecked));
       document.getElementById("sources").innerHTML = doc.meta.sourcesChecked.map(function (s) {
         return '<li><a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.name) + '</a></li>'; }).join("");
       initMap();
       render();
       if (location.hash.indexOf("#c-") === 0) jumpTo(location.hash.slice(3));
     }).catch(function () {
-      document.getElementById("list").innerHTML = '<div class="empty">Couldn\'t load the competitions just now. Try refreshing.</div>';
+      document.getElementById("list").innerHTML = '<p class="empty">Couldn\'t load the list. Try refreshing.</p>';
     });
   }
 

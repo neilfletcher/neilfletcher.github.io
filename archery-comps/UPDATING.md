@@ -7,15 +7,19 @@ The weekly scheduled task follows these steps. A person can follow them too.
 
 ## 1. Find competitions
 
-Goal: every archery competition (target, field, clout, 3D, flight) from today to about 12 months ahead whose
-venue is within roughly 75 minutes' drive of Northampton. That covers Northamptonshire, Bedfordshire,
-Leicestershire and Rutland, Buckinghamshire (Milton Keynes and the north), Warwickshire and Coventry,
-Cambridgeshire (Cambridge, Huntingdon, Peterborough), north Hertfordshire, and the edges of Oxfordshire.
+Goal: every open archery competition (target, field, clout, 3D, flight) from today to about 12 months ahead whose
+venue is within 3 hours' drive of Northampton (driveMins <= 180). Roughly: all of the Midlands, East Anglia,
+London and the Home Counties, the south coast from Kent to Dorset, Bristol and south Wales to Cardiff and
+Llantrisant, north Wales to Rhyl, Cheshire, Lancashire to Preston, and Yorkshire to Leeds and Huddersfield.
+Out of range: Scotland, Northern Ireland, Cumbria, the North East, Devon and Cornwall, the Isle of Wight.
+
+The two diaries below cover most of the country in one page each; read them in full every week first, then fill
+gaps from the county sites and searches.
 
 Check, at least:
 - Archery GB Find a Competition: https://archerygb.org/competitions/find-a-competition (and individual listings at /competitions/find-a-competition/NNNNN)
 - Brighton Bowmen Tournament Diary (has a County column): https://www.brightonbowmen.net/tournament-diary/
-- HL Outdoors archery diary: https://www.hl-outdoors.co.uk/events/type/indoor/ (and the outdoor equivalent)
+- HL Outdoors archery diary: https://www.hl-outdoors.co.uk/events/type/indoor/ (and /events/type/outdoor/ if it exists)
 - NCAS: https://www.ncasarchery.org.uk/
 - Bedfordshire CAA: https://www.archerybeds.com/
 - Buckinghamshire AA: https://www.bucksarcheryassociation.org.uk/
@@ -38,7 +42,8 @@ One object per competition. Fields:
 | date / endDate | `YYYY-MM-DD`; endDate only for multi-day events |
 | venue, town, county | venue may say "check the prospectus" if unconfirmed |
 | lat, lng | venue coordinates, 4 decimal places |
-| driveMins | estimated drive from central Northampton (52.2405, -0.9027) |
+| approxLocation | `true` if lat/lng is only the town or county (field clubs often don't publish their ground) |
+| driveMins | estimated drive from central Northampton (52.2405, -0.9027), rounded to 5. Rule of thumb: road miles = straight-line miles x 1.25, at 45 mph under 30 road miles, 52 mph under 80, 58 mph beyond, plus 8 minutes |
 | environment | `indoor` or `outdoor` |
 | discipline | `Target`, `Field`, `Clout`, `3D`, `Flight` or `Other` |
 | rounds | e.g. `["Portsmouth"]`, `["WA 18m"]`, `["York", "Hereford"]` |
@@ -71,7 +76,9 @@ Subscribers sign up by emailing `neil.fletcher+comps@gmail.com` with subject "Ar
 
 1. Gmail search `to:neil.fletcher+comps@gmail.com subject:"Archery comps"` (go back as far as results allow).
 2. For each sender, their latest subscribe/unsubscribe message decides whether they're on the list.
-3. If at least one comp was added today and there is at least one subscriber, send ONE email from Neil's Gmail:
+3. The alert email and the calendar feed only cover comps within `meta.alertMaxDriveMins` (90) so they aren't
+   swamped; the build script's NEW SINCE list is already filtered to that. The website and RSS show the full 3 hours.
+   If at least one nearby comp was added today and there is at least one subscriber, send ONE email from Neil's Gmail:
    - To: neil.fletcher@gmail.com, Bcc: all subscribers (never put subscribers in To or Cc)
    - Subject: `New archery comps near Northampton (<n> found)`
    - Body: a short friendly intro line, the list printed by the build script (date, name, town, indoor/outdoor,
