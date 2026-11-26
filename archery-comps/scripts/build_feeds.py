@@ -25,6 +25,7 @@ ENVS = {"indoor", "outdoor"}
 DISCIPLINES = {"Target", "Field", "Clout", "3D", "Flight", "Other"}
 EM_DASH = "\u2014"
 PRUNE_AFTER_DAYS = 14
+RANGES = list(range(30, 181, 15))
 
 
 def drive_mins(home, c):
@@ -100,11 +101,18 @@ def describe(c, home):
     return "\n".join(bits)
 
 
-def build_ics(comps, home, now):
+def fmt_mins(m):
+    if m < 60:
+        return f"{m} min"
+    h, r = divmod(m, 60)
+    return f"{h} hr" + (f" {r}" if r else "")
+
+
+def build_ics(comps, home, now, limit=90):
     stamp = now.strftime("%Y%m%dT%H%M%SZ")
     lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Comp Finder//Archery comps near Northampton//EN",
-             "CALSCALE:GREGORIAN", "METHOD:PUBLISH", "X-WR-CALNAME:Archery comps near Northampton",
-             "X-WR-CALDESC:Archery competitions within about 90 minutes of Northampton. Updated weekly.",
+             "CALSCALE:GREGORIAN", "METHOD:PUBLISH", f"X-WR-CALNAME:Archery comps within {fmt_mins(limit)} of Northampton",
+             f"X-WR-CALDESC:Archery competitions within about {fmt_mins(limit)} of Northampton. Updated weekly by Duston Bowmen.",
              "X-WR-TIMEZONE:Europe/London", "REFRESH-INTERVAL;VALUE=DURATION:P1D", "X-PUBLISHED-TTL:P1D"]
     for c in comps:
         start = dt.date.fromisoformat(c["date"])
@@ -184,20 +192,24 @@ def main():
     nearby = [c for c in upcoming if drive_mins(home, c) <= alert_max]
     now = dt.datetime.now(dt.timezone.utc).replace(microsecond=0)
     (ROOT / "competitions.ics").write_text(build_ics(nearby, home, now), encoding="utf-8", newline="")
+    # One calendar per drive-time setting on the site's slider (30 to 180 minutes in 15-minute steps)
+    cal_dir = ROOT / "calendars"
+    cal_dir.mkdir(exist_ok=True)
+    for limit in RANGES:
+        within = [c for c in upcoming if drive_mins(home, c) <= limit]
+        (cal_dir / f"within-{limit}.ics").write_text(build_ics(within, home, now, limit), encoding="utf-8", newline="")
     (ROOT / "feed.xml").write_text(build_rss(upcoming, home, now), encoding="utf-8")
-    print(f"OK: {len(upcoming)} upcoming competitions ({len(nearby)} within {alert_max} min go in the calendar feed); wrote competitions.ics and feed.xml")
+    print(f"OK: {len(upcoming)} upcoming competitions; wrote feed.xml, competitions.ics ({len(nearby)} within {alert_max} min) and calendars/within-30..180.ics")
 
     if args.new_since:
         since = dt.date.fromisoformat(args.new_since)
-        new = [c for c in upcoming if dt.date.fromisoformat(c["added"]) >= since]
-        near = [c for c in new if drive_mins(home, c) <= alert_max]
-        print(f"\nNEW SINCE {since}: {len(new)} in total, {len(near)} within {alert_max} min (only these go in the alert email):")
-        new = near
+        new = sorted((c for c in upcoming if dt.date.fromisoformat(c["added"]) >= since),
+                     key=lambda c: (drive_mins(home, c), c["date"]))
+        print(f"\nNEW SINCE {since}: {len(new)}. Each subscriber gets only the lines with [N min] <= their own limit.")
         for c in new:
             d = dt.date.fromisoformat(c["date"])
-            print(f"- {d:%a %-d %b %Y}: {c['name']}, {c['town']} ({c['county']}). "
-                  f"{c['environment'].title()} {c['discipline'].lower()}, about {drive_mins(home, c)} min. {c['url']}")
-
+            print(f"[{drive_mins(home, c)} min] {d:%a %-d %b %Y}: {c['name']}, {c['town']} ({c['county']}). "
+                  f"{c['environment'].title()} {c['discipline'].lower()}. {c['url']}")
 
 if __name__ == "__main__":
     main()

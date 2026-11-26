@@ -1,0 +1,82 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Comp Finder//Archery comps near Northampton//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Archery comps within 30 min of Northampton
+X-WR-CALDESC:Archery competitions within about 30 min of Northampton. Upda
+ ted weekly by Duston Bowmen.
+X-WR-TIMEZONE:Europe/London
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:black-eagle-chocolate-2026@neilfletcher.github.io
+DTSTAMP:20261126T163201Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:The Chocolate Shoot (Souldrop)
+LOCATION:Black Eagle Bowmen woodland course\, MK44 1HJ\, Souldrop\, Bedfor
+ dshire
+GEO:52.2505;-0.556
+DESCRIPTION:Host: Black Eagle Bowmen\nOutdoor field\, Winter (indoor seaso
+ n)\nRounds: Field\nEligibility: EFAA members only\nAbout 30 min drive fro
+ m Northampton\nField archery in the woods. EFAA membership needed.\nDetai
+ ls and entry: https://efaafieldarcher.com/shoot-calendar
+URL:https://efaafieldarcher.com/shoot-calendar
+CATEGORIES:Outdoor,Field
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:long-buckby-archery-club-long-buckby-ac-frostbite-202701@neilfletcher.
+ github.io
+DTSTAMP:20261126T163201Z
+DTSTART;VALUE=DATE:20270109
+DTEND;VALUE=DATE:20270110
+SUMMARY:Long Buckby AC Frostbite Shoot (Daventry)
+LOCATION:Daventry and District Sports Club\, NN11 4ST\, Daventry\, Northam
+ ptonshire
+GEO:52.25;-1.17
+DESCRIPTION:Host: Long Buckby Archery Club\nOutdoor target\, Winter (indoo
+ r season)\nRounds: Frostbite\, Single Frostbite\nAbout 25 min drive from 
+ Northampton\n3 dozen at 30m. Close to home.\nDetails and entry: https://w
+ ww.hl-outdoors.co.uk/events/type/indoor/
+URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+CATEGORIES:Outdoor,Target
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:aor-48th-indoor-2027@neilfletcher.github.io
+DTSTAMP:20261126T163201Z
+DTSTART;VALUE=DATE:20270117
+DTEND;VALUE=DATE:20270118
+SUMMARY:AoR 48th Annual Indoor Tournament (Raunds)
+LOCATION:Manor School and Sports College\, Mountbatten Way\, NN9 6PA\, Rau
+ nds\, Northamptonshire
+GEO:52.343;-0.546
+DESCRIPTION:Host: Archers of Raunds\nIndoor target\, Winter (indoor season
+ )\nRounds: WA 18m\nRecord status: UKRS\nAbout 30 min drive from Northampt
+ on\n5th WA18. Home county\, so a good first comp.\nDetails and entry: htt
+ ps://www.ncasarchery.org.uk/tournaments_events/ncascalendar/
+URL:https://www.ncasarchery.org.uk/tournaments_events/ncascalendar/
+CATEGORIES:Indoor,Target
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:targetcraft-annual-worcester-2027@neilfletcher.github.io
+DTSTAMP:20261126T163201Z
+DTSTART;VALUE=DATE:20270207
+DTEND;VALUE=DATE:20270208
+SUMMARY:Targetcraft Annual Worcester (Rothwell)
+LOCATION:Montsaye Community Sports Centre\, Greening Road\, NN14 6BB (last
+  year's venue\, check the prospectus)\, Rothwell\, Northamptonshire
+GEO:52.4205;-0.796
+DESCRIPTION:Host: Targetcraft Archers\nIndoor target\, Winter (indoor seas
+ on)\nRounds: Worcester\nRecord status: UKRS\nAbout 25 min drive from Nort
+ hampton\nBarebow and longbow friendly round\, 20 yards on the black and w
+ hite face.\nDetails and entry: https://www.ncasarchery.org.uk/tournaments
+ _events/ncascalendar/
+URL:https://www.ncasarchery.org.uk/tournaments_events/ncascalendar/
+CATEGORIES:Indoor,Target
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

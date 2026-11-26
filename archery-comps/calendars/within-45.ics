@@ -1,0 +1,257 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Comp Finder//Archery comps near Northampton//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Archery comps within 45 min of Northampton
+X-WR-CALDESC:Archery competitions within about 45 min of Northampton. Upda
+ ted weekly by Duston Bowmen.
+X-WR-TIMEZONE:Europe/London
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:bcaa-open-indoor-2026@neilfletcher.github.io
+DTSTAMP:20261126T163201Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:BCAA Open Indoor Championships (Bedford)
+LOCATION:Polhill Avenue (see entry form)\, Bedford\, Bedfordshire
+GEO:52.145;-0.45
+DESCRIPTION:Host: Clophill AC for the Bedfordshire County Archery Associat
+ ion\nIndoor target\, Winter (indoor season)\nRounds: Portsmouth\nRecord s
+ tatus: UKRS\nAbout 35 min drive from Northampton\nBedfordshire county cha
+ mpionships with open entry.\nDetails and entry: https://www.ianseo.net/To
+ urList.php
+URL:https://www.ianseo.net/TourList.php
+CATEGORIES:Indoor,Target
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:glen-inaugural-indoor-2026@neilfletcher.github.io
+DTSTAMP:20261126T163201Z
+DTSTART;VALUE=DATE:20261129
+DTEND;VALUE=DATE:20261130
+SUMMARY:Bowmen of Glen Inaugural Indoor (Great Glen)
+LOCATION:Great Glen (see entry form for the hall)\, Great Glen\, Leicester
+ shire
+GEO:52.577;-1.033
+DESCRIPTION:Host: Bowmen of Glen\nIndoor target\, Winter (indoor season)\n
+ Rounds: Portsmouth\nAbout 40 min drive from Northampton\nThe club's first
+  indoor open. Entry is only via Archery GB: find it under 29 November on 
+ the Find a Competition page and use Enter Now.\nDetails and entry: https:
+ //archerygb.org/competitions/find-a-competition
+URL:https://archerygb.org/competitions/find-a-competition
+CATEGORIES:Indoor,Target
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:agb-national-indoor-2026@neilfletcher.github.io
+DTSTAMP:20261126T163201Z
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20261206
+SUMMARY:Archery GB National Indoor Championships (Kenilworth)
+LOCATION:T.R.U. Ball Axcel Hall\, Stoneleigh Park\, CV8 2LZ\, Kenilworth\,
+  Warwickshire
+GEO:52.344;-1.523
+DESCRIPTION:Host: Archery GB\nIndoor target\, Winter (indoor season)\nRoun
+ ds: WA 18m\nRecord status: WRS\nAbout 45 min drive from Northampton\nEntr
+ ies opened in September via the Archery GB Members' Portal and are likely
+  full. Free parking and a trade show all weekend\, worth a visit even if 
+ you're not shooting.\nDetails and entry: https://archerygb.org/competitio
+ ns/national-tournaments/national-indoor-championships
+URL:https://archerygb.org/competitions/national-tournaments/national-indoo
+ r-championships
+CATEGORIES:Indoor,Target
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:agb-junior-national-indoor-2026@neilfletcher.github.io
+DTSTAMP:20261126T163201Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+SUMMARY:Archery GB Junior National Indoor Championships (Kenilworth)
+LOCATION:Stoneleigh Park\, CV8 2LZ\, Kenilworth\, Warwickshire
+GEO:52.344;-1.523
+DESCRIPTION:Host: Archery GB\nIndoor target\, Winter (indoor season)\nRoun
+ ds: Portsmouth\nEligibility: Juniors only\nAbout 45 min drive from Northa
+ mpton\nSame weekend and venue as the senior Nationals and the Back2Back.\
+ nDetails and entry: https://archerygb.org/competitions/national-tournamen
+ ts
+URL:https://archerygb.org/competitions/national-tournaments
+CATEGORIES:Indoor,Target
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:back2back-2026@neilfletcher.github.io
+DTSTAMP:20261126T163201Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+SUMMARY:Back2Back 2026 (Kenilworth)
+LOCATION:Stoneleigh Park\, CV8 2LZ\, Kenilworth\, Warwickshire
+GEO:52.344;-1.523
+DESCRIPTION:Host: Archery GB\nIndoor target\, Winter (indoor season)\nRoun
+ ds: WA 18m\nAbout 45 min drive from Northampton\nKnockout format\, last a
+ rcher standing wins. Great to watch.\nDetails and entry: https://archeryg
+ b.org/shoot-compete/compete/archery-gb-competitions
+URL:https://archerygb.org/shoot-compete/compete/archery-gb-competitions
+CATEGORIES:Indoor,Target
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:archers-of-raunds-aor-portsmouth-double-portsmouth-202612@neilfletcher
+ .github.io
+DTSTAMP:20261126T163201Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:AoR Portsmouth / Double Portsmouth (Raunds)
+LOCATION:Manor School and Sports College\, NN9 6PA\, Raunds\, Northamptons
+ hire
+GEO:52.343;-0.546
+DESCRIPTION:Host: Archers of Raunds\nIndoor target\, Winter (indoor season
+ )\nRounds: Portsmouth\, Double Portsmouth\nAbout 35 min drive from Northa
+ mpton\nDetails and entry: https://www.ncasarchery.org.uk/tournaments_even
+ ts/ncascalendar/
+URL:https://www.ncasarchery.org.uk/tournaments_events/ncascalendar/
+CATEGORIES:Indoor,Target
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:black-eagle-chocolate-2026@neilfletcher.github.io
+DTSTAMP:20261126T163201Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:The Chocolate Shoot (Souldrop)
+LOCATION:Black Eagle Bowmen woodland course\, MK44 1HJ\, Souldrop\, Bedfor
+ dshire
+GEO:52.2505;-0.556
+DESCRIPTION:Host: Black Eagle Bowmen\nOutdoor field\, Winter (indoor seaso
+ n)\nRounds: Field\nEligibility: EFAA members only\nAbout 30 min drive fro
+ m Northampton\nField archery in the woods. EFAA membership needed.\nDetai
+ ls and entry: https://efaafieldarcher.com/shoot-calendar
+URL:https://efaafieldarcher.com/shoot-calendar
+CATEGORIES:Outdoor,Field
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:foxes-worcester-2026@neilfletcher.github.io
+DTSTAMP:20261126T163201Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:The Foxes Worcester (Leicester)
+LOCATION:The Winstanley School\, Braunstone\, Leicester\, Leicestershire
+GEO:52.617;-1.178
+DESCRIPTION:Host: The Foxes\nIndoor target\, Winter (indoor season)\nRound
+ s: Worcester\nRecord status: UKRS\nAbout 45 min drive from Northampton\nS
+ tage 2 of the Countesthorpe Triple. Stage 3 is the Foresters WA18 in Janu
+ ary.\nDetails and entry: https://www.the-foxes.org.uk/
+URL:https://www.the-foxes.org.uk/
+CATEGORIES:Indoor,Target
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:long-buckby-archery-club-long-buckby-ac-frostbite-202701@neilfletcher.
+ github.io
+DTSTAMP:20261126T163201Z
+DTSTART;VALUE=DATE:20270109
+DTEND;VALUE=DATE:20270110
+SUMMARY:Long Buckby AC Frostbite Shoot (Daventry)
+LOCATION:Daventry and District Sports Club\, NN11 4ST\, Daventry\, Northam
+ ptonshire
+GEO:52.25;-1.17
+DESCRIPTION:Host: Long Buckby Archery Club\nOutdoor target\, Winter (indoo
+ r season)\nRounds: Frostbite\, Single Frostbite\nAbout 25 min drive from 
+ Northampton\n3 dozen at 30m. Close to home.\nDetails and entry: https://w
+ ww.hl-outdoors.co.uk/events/type/indoor/
+URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+CATEGORIES:Outdoor,Target
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:clophill-archery-club-12th-clophill-triple-202701@neilfletcher.github.
+ io
+DTSTAMP:20261126T163201Z
+DTSTART;VALUE=DATE:20270110
+DTEND;VALUE=DATE:20270111
+SUMMARY:12th Clophill Triple (Ampthill)
+LOCATION:Alameda Sports Hall\, Ampthill\, Bedfordshire
+GEO:52.03;-0.493
+DESCRIPTION:Host: Clophill Archery Club\nIndoor target\, Winter (indoor se
+ ason)\nRounds: Double Vegas 300\nAbout 45 min drive from Northampton\nDet
+ ails and entry: https://www.hl-outdoors.co.uk/events/type/indoor/
+URL:https://www.hl-outdoors.co.uk/events/type/indoor/
+CATEGORIES:Indoor,Target
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:aor-48th-indoor-2027@neilfletcher.github.io
+DTSTAMP:20261126T163201Z
+DTSTART;VALUE=DATE:20270117
+DTEND;VALUE=DATE:20270118
+SUMMARY:AoR 48th Annual Indoor Tournament (Raunds)
+LOCATION:Manor School and Sports College\, Mountbatten Way\, NN9 6PA\, Rau
+ nds\, Northamptonshire
+GEO:52.343;-0.546
+DESCRIPTION:Host: Archers of Raunds\nIndoor target\, Winter (indoor season
+ )\nRounds: WA 18m\nRecord status: UKRS\nAbout 30 min drive from Northampt
+ on\n5th WA18. Home county\, so a good first comp.\nDetails and entry: htt
+ ps://www.ncasarchery.org.uk/tournaments_events/ncascalendar/
+URL:https://www.ncasarchery.org.uk/tournaments_events/ncascalendar/
+CATEGORIES:Indoor,Target
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:warwickshire-indoor-2027@neilfletcher.github.io
+DTSTAMP:20261126T163201Z
+DTSTART;VALUE=DATE:20270123
+DTEND;VALUE=DATE:20270124
+SUMMARY:Warwickshire (& Open) Indoor Senior and Junior Championships (Cove
+ ntry)
+LOCATION:University of Warwick Sports & Wellness Hub\, Leighfield Rd\, CV4
+  7EU\, Coventry\, Warwickshire
+GEO:52.372;-1.56
+DESCRIPTION:Host: Warwickshire Archery Association\nIndoor target\, Winter
+  (indoor season)\nRounds: Portsmouth\nAbout 45 min drive from Northampton
+ \nCompounds on 3-spot\; everyone else can pick single or 3-spot. Foam bos
+ ses\, AGB cards checked.\nDetails and entry: https://www.warwicksu.com/ev
+ ents/4008/28589/
+URL:https://www.warwicksu.com/events/4008/28589/
+CATEGORIES:Indoor,Target
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:targetcraft-annual-worcester-2027@neilfletcher.github.io
+DTSTAMP:20261126T163201Z
+DTSTART;VALUE=DATE:20270207
+DTEND;VALUE=DATE:20270208
+SUMMARY:Targetcraft Annual Worcester (Rothwell)
+LOCATION:Montsaye Community Sports Centre\, Greening Road\, NN14 6BB (last
+  year's venue\, check the prospectus)\, Rothwell\, Northamptonshire
+GEO:52.4205;-0.796
+DESCRIPTION:Host: Targetcraft Archers\nIndoor target\, Winter (indoor seas
+ on)\nRounds: Worcester\nRecord status: UKRS\nAbout 25 min drive from Nort
+ hampton\nBarebow and longbow friendly round\, 20 yards on the black and w
+ hite face.\nDetails and entry: https://www.ncasarchery.org.uk/tournaments
+ _events/ncascalendar/
+URL:https://www.ncasarchery.org.uk/tournaments_events/ncascalendar/
+CATEGORIES:Indoor,Target
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:northamptonshire-county-archery-society-ncas-count-202703@neilfletcher
+ .github.io
+DTSTAMP:20261126T163201Z
+DTSTART;VALUE=DATE:20270314
+DTEND;VALUE=DATE:20270315
+SUMMARY:NCAS County and Open Indoor Championships (Raunds)
+LOCATION:Manor School and Sports College\, NN9 6PA\, Raunds\, Northamptons
+ hire
+GEO:52.343;-0.546
+DESCRIPTION:Host: Northamptonshire County Archery Society\nIndoor target\,
+  Winter (indoor season)\nRounds: Portsmouth\nAbout 35 min drive from Nort
+ hampton\nOur county championships.\nDetails and entry: https://www.ncasar
+ chery.org.uk/tournaments_events/ncascalendar/
+URL:https://www.ncasarchery.org.uk/tournaments_events/ncascalendar/
+CATEGORIES:Indoor,Target
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

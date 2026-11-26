@@ -185,7 +185,7 @@
         <option>3D</option><option>Flight</option><option>Other</option>
       </select>
     </label>
-    <label>Drive up to <input type="range" id="driveRange" min="20" max="180" step="10" value="60" aria-label="Maximum drive in minutes"><span id="driveOut">1 hr</span></label>
+    <label>Drive up to <input type="range" id="driveRange" min="30" max="180" step="15" value="60" aria-label="Maximum drive in minutes"><span id="driveOut">1 hr</span></label>
     <label><input type="checkbox" id="hideRestricted"> Hide members-only shoots</label>
     <input type="search" id="q" placeholder="Search" aria-label="Search by club, town or round">
     <div class="tabs viewtabs" role="group" aria-label="View">
@@ -202,12 +202,12 @@
 
     <div class="section" id="alerts">
       <h2>Alerts</h2>
-      <p>New comps are added once a week. Choose whichever suits you.</p>
+      <p>New comps are added once a week. Alerts cover comps within <b class="rangeTxt">1 hr</b>, the drive time set on the slider above. Change the slider first if you want more or fewer.</p>
       <div class="opts">
         <div class="opt">
           <h3>Calendar</h3>
           <div>
-            <p>Subscribe once and comps within an hour and a half show up in your phone's calendar. New ones appear by themselves.</p>
+            <p>Subscribe once and every comp within <b class="rangeTxt">1 hr</b> shows up in your phone's calendar. New ones appear by themselves.</p>
             <a class="btn" id="gcalBtn" target="_blank" rel="noopener">Google Calendar</a><a class="btn plain" id="webcalBtn">iPhone / Outlook</a>
             <div class="copy"><input id="icsUrl" readonly aria-label="Calendar address"><button data-copy="icsUrl">Copy</button></div>
           </div>
@@ -215,7 +215,7 @@
         <div class="opt">
           <h3>Email</h3>
           <div>
-            <p>A short email when new comps are found, at most once a week. Tap the button and send the email it opens. Do the same with Unsubscribe to stop.</p>
+            <p>A short email when new comps within <b class="rangeTxt">1 hr</b> are found, at most once a week. Tap the button and send the email it opens. To change your range, move the slider and subscribe again. Use Unsubscribe to stop.</p>
             <a class="btn" id="subBtn">Subscribe</a><a class="btn plain" id="unsubBtn">Unsubscribe</a>
           </div>
         </div>
@@ -271,7 +271,7 @@
   var NEW_DAYS = 14;
 
   var state = { env: "all", disc: "all", maxDrive: 60, hideRestricted: false, q: "" };
-  try { var saved = +localStorage.getItem("dbcomps-drive"); if (saved >= 20 && saved <= 180) state.maxDrive = saved; } catch (e) {}
+  try { var saved = +localStorage.getItem("dbcomps-drive"); if (saved >= 30 && saved <= 180) state.maxDrive = Math.round(saved / 15) * 15; } catch (e) {}
   var comps = [], map = null, markerLayer = null, radiusCircle = null, home = null, focusing = false;
 
   var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -439,14 +439,22 @@
     setTimeout(function () { row.classList.remove("hl"); }, 2000);
   }
 
-  function wireAlerts() {
-    var ics = SITE + "competitions.ics", webcal = ics.replace(/^https:/, "webcal:");
+  function mail(subject, body) { return "mailto:" + ALERT_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body); }
+
+  // Point the calendar and email buttons at the drive time currently on the slider.
+  function updateAlerts() {
+    var m = state.maxDrive, label = fmtMins(m);
+    var ics = SITE + "calendars/within-" + m + ".ics", webcal = ics.replace(/^https:/, "webcal:");
+    document.querySelectorAll(".rangeTxt").forEach(function (e) { e.textContent = label; });
     document.getElementById("icsUrl").value = ics;
-    document.getElementById("rssUrl").value = SITE + "feed.xml";
     document.getElementById("webcalBtn").href = webcal;
     document.getElementById("gcalBtn").href = "https://calendar.google.com/calendar/r?cid=" + encodeURIComponent(webcal);
-    function mail(subject, body) { return "mailto:" + ALERT_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body); }
-    document.getElementById("subBtn").href = mail("Archery comps: subscribe", "Please add me to the competition alerts.");
+    document.getElementById("subBtn").href = mail("Archery comps: subscribe (" + m + " min)",
+      "Please send me new competitions within " + label + " of Northampton.\n\nTo change the range later, just subscribe again from the site.");
+  }
+
+  function wireAlerts() {
+    document.getElementById("rssUrl").value = SITE + "feed.xml";
     document.getElementById("unsubBtn").href = mail("Archery comps: unsubscribe", "Please take me off the competition alerts.");
     document.getElementById("missingLink").href = mail("Archery comps: missing comp", "Competition:\nDate:\nHost club and venue:\nLink:\n");
     document.querySelectorAll("[data-copy]").forEach(function (b) {
@@ -457,6 +465,7 @@
           .then(function () { b.textContent = "Copied"; setTimeout(function () { b.textContent = "Copy"; }, 1500); });
       });
     });
+    updateAlerts();
   }
 
   function wireFilters() {
@@ -474,6 +483,7 @@
       state.maxDrive = +e.target.value;
       try { localStorage.setItem("dbcomps-drive", state.maxDrive); } catch (err) {}
       render(true);
+      updateAlerts();
     });
     document.getElementById("hideRestricted").addEventListener("change", function (e) { state.hideRestricted = e.target.checked; render(); });
     document.getElementById("q").addEventListener("input", function (e) { state.q = e.target.value; render(); });

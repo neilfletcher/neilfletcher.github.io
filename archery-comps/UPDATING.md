@@ -71,20 +71,24 @@ The script validates the data, removes comps that finished more than two weeks a
 
 ## 4. Email alerts (Gmail)
 
-Subscribers sign up by emailing `neil.fletcher+comps@gmail.com` with subject "Archery comps: subscribe"
-(or "unsubscribe"). There is no stored list: work it out each week.
+Each subscriber picks their own drive-time limit on the site. They sign up by emailing
+`neil.fletcher+comps@gmail.com` with subject `Archery comps: subscribe (N min)`, where N is 30 to 180
+(or `Archery comps: unsubscribe`). There is no stored list: work it out each week.
 
 1. Gmail search `to:neil.fletcher+comps@gmail.com subject:"Archery comps"` (go back as far as results allow).
-2. For each sender, their latest subscribe/unsubscribe message decides whether they're on the list.
-3. The alert email and the calendar feed only cover comps within `meta.alertMaxDriveMins` (90) so they aren't
-   swamped; the build script's NEW SINCE list is already filtered to that. The website and RSS show the full 3 hours.
-   If at least one nearby comp was added today and there is at least one subscriber, send ONE email from Neil's Gmail:
-   - To: neil.fletcher@gmail.com, Bcc: all subscribers (never put subscribers in To or Cc)
-   - Subject: `New archery comps near Northampton (<n> found)`
-   - Body: a short friendly intro line, the list printed by the build script (date, name, town, indoor/outdoor,
-     drive time, link), then the site link and "To stop these, reply with the subject Archery comps: unsubscribe".
+2. For each sender, their latest subscribe/unsubscribe message decides whether they're on the list, and the
+   number in their latest subscribe subject is their limit. No number means 90.
+3. The build script's NEW SINCE list puts `[N min]` at the start of each line. For each distinct limit among
+   subscribers, take the new comps with N <= that limit. If there are any, send ONE email for that group:
+   - To: neil.fletcher@gmail.com, Bcc: everyone in that group (never put subscribers in To or Cc)
+   - Subject: `New archery comps within <limit as e.g. 1 hr 30> of Northampton (<n> found)`
+   - Body: a short friendly intro line, the matching comps (date, name, town, indoor/outdoor, drive time, link),
+     then the site link and "To change your range, subscribe again from the site. To stop, reply with the
+     subject Archery comps: unsubscribe".
 4. Any "Archery comps: missing comp" emails: research the comp and add it in step 2.
-5. Don't send anything if nothing new was found.
+5. Don't send anything to a group with nothing new in range.
+
+The calendar feeds (`calendars/within-N.ics`) are rebuilt by the script, so calendar subscribers need nothing doing.
 
 ## 5. Report
 
