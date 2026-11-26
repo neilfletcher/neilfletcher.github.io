@@ -1,0 +1,347 @@
+{
+  "meta": {
+    "lastChecked": "2026-11-26",
+    "home": {
+      "name": "Northampton",
+      "lat": 52.2405,
+      "lng": -0.9027
+    },
+    "maxDriveMins": 75,
+    "sourcesChecked": [
+      {
+        "name": "Archery GB: Find a Competition",
+        "url": "https://archerygb.org/competitions/find-a-competition"
+      },
+      {
+        "name": "Brighton Bowmen Tournament Diary",
+        "url": "https://www.brightonbowmen.net/tournament-diary/"
+      },
+      {
+        "name": "NCAS (Northamptonshire County Archery Society)",
+        "url": "https://www.ncasarchery.org.uk/"
+      },
+      {
+        "name": "Bedfordshire County Archery Association",
+        "url": "https://www.archerybeds.com/"
+      },
+      {
+        "name": "HL Outdoors archery diary",
+        "url": "https://www.hl-outdoors.co.uk/events/type/indoor/"
+      },
+      {
+        "name": "EFAA shoot calendar",
+        "url": "https://efaafieldarcher.com/shoot-calendar"
+      },
+      {
+        "name": "The Foxes (Leicester)",
+        "url": "https://www.the-foxes.org.uk/events/"
+      },
+      {
+        "name": "Archers of Raunds",
+        "url": "https://archersofraunds.co.uk/"
+      }
+    ]
+  },
+  "competitions": [
+    {
+      "id": "bcaa-open-indoor-2026",
+      "name": "BCAA Open Indoor Championships",
+      "host": "Clophill AC for the Bedfordshire County Archery Association",
+      "date": "2026-11-28",
+      "venue": "Alameda Sports Hall (Clophill's usual indoor venue, check the prospectus)",
+      "town": "Ampthill",
+      "county": "Bedfordshire",
+      "lat": 52.03,
+      "lng": -0.493,
+      "driveMins": 40,
+      "environment": "indoor",
+      "discipline": "Target",
+      "rounds": [
+        "Portsmouth"
+      ],
+      "status": "UKRS",
+      "eligibility": "",
+      "url": "https://www.archerybeds.com/",
+      "source": "Brighton Bowmen diary; BCAA",
+      "added": "2026-11-26",
+      "notes": "Bedfordshire county championships with open entry."
+    },
+    {
+      "id": "glen-inaugural-indoor-2026",
+      "name": "Bowmen of Glen Inaugural Indoor",
+      "host": "Bowmen of Glen",
+      "date": "2026-11-29",
+      "venue": "Great Glen (see entry form for the hall)",
+      "town": "Great Glen",
+      "county": "Leicestershire",
+      "lat": 52.577,
+      "lng": -1.033,
+      "driveMins": 40,
+      "environment": "indoor",
+      "discipline": "Target",
+      "rounds": [
+        "Portsmouth"
+      ],
+      "status": "",
+      "eligibility": "",
+      "url": "https://www.bowmenofglen.org/",
+      "source": "Archery GB",
+      "added": "2026-11-26",
+      "notes": "The club's first indoor open. Online entry via Archery GB."
+    },
+    {
+      "id": "agb-national-indoor-2026",
+      "name": "Archery GB National Indoor Championships",
+      "host": "Archery GB",
+      "date": "2026-12-04",
+      "endDate": "2026-12-05",
+      "venue": "T.R.U. Ball Axcel Hall, Stoneleigh Park, CV8 2LZ",
+      "town": "Kenilworth",
+      "county": "Warwickshire",
+      "lat": 52.344,
+      "lng": -1.523,
+      "driveMins": 45,
+      "environment": "indoor",
+      "discipline": "Target",
+      "rounds": [
+        "WA 18m"
+      ],
+      "status": "WRS",
+      "eligibility": "",
+      "url": "https://archerygb.org/competitions/national-tournaments/national-indoor-championships",
+      "source": "Archery GB",
+      "added": "2026-11-26",
+      "notes": "Entries opened in September via the Archery GB Members' Portal and are likely full. Free parking and a trade show all weekend, worth a visit even if you're not shooting."
+    },
+    {
+      "id": "agb-junior-national-indoor-2026",
+      "name": "Archery GB Junior National Indoor Championships",
+      "host": "Archery GB",
+      "date": "2026-12-06",
+      "venue": "Stoneleigh Park, CV8 2LZ",
+      "town": "Kenilworth",
+      "county": "Warwickshire",
+      "lat": 52.344,
+      "lng": -1.523,
+      "driveMins": 45,
+      "environment": "indoor",
+      "discipline": "Target",
+      "rounds": [
+        "Portsmouth"
+      ],
+      "status": "",
+      "eligibility": "Juniors only",
+      "url": "https://archerygb.org/competitions/national-tournaments",
+      "source": "Archery GB; HL Outdoors diary",
+      "added": "2026-11-26",
+      "notes": "Same weekend and venue as the senior Nationals and the Back2Back."
+    },
+    {
+      "id": "back2back-2026",
+      "name": "Back2Back 2026",
+      "host": "Archery GB",
+      "date": "2026-12-06",
+      "venue": "Stoneleigh Park, CV8 2LZ",
+      "town": "Kenilworth",
+      "county": "Warwickshire",
+      "lat": 52.344,
+      "lng": -1.523,
+      "driveMins": 45,
+      "environment": "indoor",
+      "discipline": "Target",
+      "rounds": [
+        "WA 18m"
+      ],
+      "status": "",
+      "eligibility": "",
+      "url": "https://archerygb.org/shoot-compete/compete/archery-gb-competitions",
+      "source": "HL Outdoors diary; Archery GB",
+      "added": "2026-11-26",
+      "notes": "Knockout format, last archer standing wins. Great to watch."
+    },
+    {
+      "id": "black-eagle-chocolate-2026",
+      "name": "The Chocolate Shoot",
+      "host": "Black Eagle Bowmen",
+      "date": "2026-12-13",
+      "venue": "Black Eagle Bowmen woodland course, MK44 1HJ",
+      "town": "Souldrop",
+      "county": "Bedfordshire",
+      "lat": 52.2505,
+      "lng": -0.556,
+      "driveMins": 30,
+      "environment": "outdoor",
+      "discipline": "Field",
+      "rounds": [
+        "Field"
+      ],
+      "status": "",
+      "eligibility": "EFAA members only",
+      "url": "https://efaafieldarcher.com/shoot-calendar",
+      "source": "Brighton Bowmen diary; EFAA",
+      "added": "2026-11-26",
+      "notes": "Field archery in the woods. EFAA membership needed."
+    },
+    {
+      "id": "foxes-worcester-2026",
+      "name": "The Foxes Worcester",
+      "host": "The Foxes",
+      "date": "2026-12-13",
+      "venue": "Leicester (Countesthorpe Triple venue, see entry form)",
+      "town": "Leicester",
+      "county": "Leicestershire",
+      "lat": 52.556,
+      "lng": -1.138,
+      "driveMins": 45,
+      "environment": "indoor",
+      "discipline": "Target",
+      "rounds": [
+        "Worcester"
+      ],
+      "status": "UKRS",
+      "eligibility": "",
+      "url": "https://www.the-foxes.org.uk/events/",
+      "source": "Archery GB; Brighton Bowmen diary; The Foxes",
+      "added": "2026-11-26",
+      "notes": "Stage 2 of the Countesthorpe Triple. Stage 3 is the Foresters WA18 in January."
+    },
+    {
+      "id": "aor-48th-indoor-2027",
+      "name": "AoR 48th Annual Indoor Tournament",
+      "host": "Archers of Raunds",
+      "date": "2027-01-17",
+      "venue": "Manor School and Sports College, Mountbatten Way, NN9 6PA",
+      "town": "Raunds",
+      "county": "Northamptonshire",
+      "lat": 52.343,
+      "lng": -0.546,
+      "driveMins": 30,
+      "environment": "indoor",
+      "discipline": "Target",
+      "rounds": [
+        "WA 18m"
+      ],
+      "status": "UKRS",
+      "eligibility": "",
+      "url": "https://archersofraunds.co.uk/",
+      "source": "Brighton Bowmen diary; HL Outdoors diary",
+      "added": "2026-11-26",
+      "notes": "5th WA18. Home county, so a good first comp."
+    },
+    {
+      "id": "warwickshire-indoor-2027",
+      "name": "Warwickshire (& Open) Indoor Senior and Junior Championships",
+      "host": "Warwickshire Archery Association",
+      "date": "2027-01-23",
+      "venue": "University of Warwick Sports & Wellness Hub, Leighfield Rd, CV4 7EU",
+      "town": "Coventry",
+      "county": "Warwickshire",
+      "lat": 52.372,
+      "lng": -1.56,
+      "driveMins": 45,
+      "environment": "indoor",
+      "discipline": "Target",
+      "rounds": [
+        "Portsmouth"
+      ],
+      "status": "",
+      "eligibility": "",
+      "url": "https://www.warwicksu.com/events/4008/28589/",
+      "source": "Warwick SU; Brighton Bowmen diary",
+      "added": "2026-11-26",
+      "notes": "Compounds on 3-spot; everyone else can pick single or 3-spot. Foam bosses, AGB cards checked."
+    },
+    {
+      "id": "merlin-efaa-international-2027",
+      "name": "EFAA Classification Shoot (International)",
+      "host": "Merlin Field Archers",
+      "date": "2027-01-24",
+      "venue": "Merlin Field Archers, Melbourne Road, Lount, LE65 1RS",
+      "town": "Ashby-de-la-Zouch",
+      "county": "Leicestershire",
+      "lat": 52.768,
+      "lng": -1.43,
+      "driveMins": 60,
+      "environment": "outdoor",
+      "discipline": "Field",
+      "rounds": [
+        "International"
+      ],
+      "status": "",
+      "eligibility": "EFAA members only",
+      "url": "https://efaafieldarcher.com/shoot-calendar",
+      "source": "Brighton Bowmen diary; EFAA",
+      "added": "2026-11-26",
+      "notes": "28-target woodland course on the Staunton Harold estate."
+    },
+    {
+      "id": "targetcraft-annual-worcester-2027",
+      "name": "Targetcraft Annual Worcester",
+      "host": "Targetcraft Archers",
+      "date": "2027-02-07",
+      "venue": "Montsaye Community Sports Centre, Greening Road, NN14 6BB (last year's venue, check the prospectus)",
+      "town": "Rothwell",
+      "county": "Northamptonshire",
+      "lat": 52.4205,
+      "lng": -0.796,
+      "driveMins": 25,
+      "environment": "indoor",
+      "discipline": "Target",
+      "rounds": [
+        "Worcester"
+      ],
+      "status": "UKRS",
+      "eligibility": "",
+      "url": "https://targetcraft.co.uk/",
+      "source": "Brighton Bowmen diary",
+      "added": "2026-11-26",
+      "notes": "Barebow and longbow friendly round, 20 yards on the black and white face."
+    },
+    {
+      "id": "merlin-efaa-expert-2027",
+      "name": "EFAA Classification Shoot (Expert Field)",
+      "host": "Merlin Field Archers",
+      "date": "2027-02-28",
+      "venue": "Merlin Field Archers, Melbourne Road, Lount, LE65 1RS",
+      "town": "Ashby-de-la-Zouch",
+      "county": "Leicestershire",
+      "lat": 52.768,
+      "lng": -1.43,
+      "driveMins": 60,
+      "environment": "outdoor",
+      "discipline": "Field",
+      "rounds": [
+        "Expert Field"
+      ],
+      "status": "",
+      "eligibility": "EFAA members only",
+      "url": "https://efaafieldarcher.com/shoot-calendar",
+      "source": "Brighton Bowmen diary; EFAA",
+      "added": "2026-11-26",
+      "notes": ""
+    },
+    {
+      "id": "merlin-efaa-hunter-2027",
+      "name": "EFAA Classification Shoot (Hunter)",
+      "host": "Merlin Field Archers",
+      "date": "2027-03-28",
+      "venue": "Merlin Field Archers, Melbourne Road, Lount, LE65 1RS",
+      "town": "Ashby-de-la-Zouch",
+      "county": "Leicestershire",
+      "lat": 52.768,
+      "lng": -1.43,
+      "driveMins": 60,
+      "environment": "outdoor",
+      "discipline": "Field",
+      "rounds": [
+        "Hunter"
+      ],
+      "status": "",
+      "eligibility": "EFAA members only",
+      "url": "https://efaafieldarcher.com/shoot-calendar",
+      "source": "Brighton Bowmen diary; EFAA",
+      "added": "2026-11-26",
+      "notes": ""
+    }
+  ]
+}

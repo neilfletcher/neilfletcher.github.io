@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comp Finder: archery competitions near Northampton</title>
+<meta name="description" content="Archery competitions within about an hour of Northampton: map, dates, indoor or outdoor, rounds and record status. Updated weekly, with calendar, RSS and email alerts.">
+<link rel="alternate" type="application/rss+xml" title="Archery comps near Northampton" href="feed.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23fff'/%3E%3Ccircle cx='50' cy='50' r='38' fill='%23222'/%3E%3Ccircle cx='50' cy='50' r='29' fill='%232f7fd8'/%3E%3Ccircle cx='50' cy='50' r='19' fill='%23d93a2f'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%23f2c230'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JF54HQGVLT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JF54HQGVLT');
+</script>
+<style>
+  :root {
+    --paper: #f6f3ec;
+    --card: #ffffff;
+    --ink: #1d2320;
+    --muted: #5e665f;
+    --line: #e2ddd1;
+    --green: #2f5d46;
+    --green-dark: #1f4232;
+    --gold: #f2c230;
+    --red: #d93a2f;
+    --blue: #2f7fd8;
+    --indoor: #2f7fd8;
+    --outdoor: #3f9a5c;
+    --radius: 14px;
+    --shadow: 0 1px 2px rgba(0,0,0,.05), 0 6px 20px rgba(29,35,32,.06);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--ink); background: var(--paper); line-height: 1.5; font-size: 15px;
+  }
+  a { color: var(--green); }
+  h1, h2, h3 { font-family: Fraunces, Georgia, serif; line-height: 1.15; margin: 0; }
+
+  header.hero {
+    background: radial-gradient(circle at 92% 20%, rgba(242,194,48,.28) 0 70px, transparent 71px),
+                radial-gradient(circle at 92% 20%, rgba(217,58,47,.22) 0 110px, transparent 111px),
+                radial-gradient(circle at 92% 20%, rgba(47,127,216,.18) 0 150px, transparent 151px),
+                var(--green-dark);
+    color: #fff; padding: 28px 20px 22px;
+  }
+  .wrap { max-width: 1240px; margin: 0 auto; }
+  .hero h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 800; letter-spacing: -.01em; }
+  .hero p { margin: 8px 0 0; max-width: 680px; color: #dbe7df; }
+  .hero .stats { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+  .pill-stat { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18);
+    border-radius: 999px; padding: 6px 12px; font-size: 13px; }
+  .pill-stat b { color: var(--gold); }
+  .hero .cta { margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 9px 16px;
+    font-weight: 600; font-size: 14px; text-decoration: none; border: 1px solid transparent; cursor: pointer;
+    font-family: inherit; }
+  .btn.gold { background: var(--gold); color: #1d2320; }
+  .btn.ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.4); }
+  .btn.small { padding: 6px 12px; font-size: 13px; }
+  .btn.line { background: #fff; color: var(--ink); border-color: var(--line); }
+  .btn.line:hover { border-color: var(--green); }
+
+  .filters { position: sticky; top: 0; z-index: 1000; background: rgba(246,243,236,.96);
+    backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); padding: 10px 20px; }
+  .filters .wrap { display: flex; gap: 10px 16px; flex-wrap: wrap; align-items: center; }
+  .seg { display: inline-flex; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
+  .seg button { border: 0; background: transparent; padding: 6px 12px; border-radius: 999px; font: inherit;
+    font-size: 13px; font-weight: 500; color: var(--muted); cursor: pointer; }
+  .seg button[aria-pressed="true"] { background: var(--green); color: #fff; }
+  .filters select, .filters input[type="search"] { font: inherit; font-size: 13px; padding: 7px 10px;
+    border: 1px solid var(--line); border-radius: 999px; background: #fff; color: var(--ink); }
+  .filters input[type="search"] { min-width: 170px; }
+  .range { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
+  .range input { accent-color: var(--green); width: 120px; }
+  .range b { color: var(--ink); min-width: 56px; }
+  .check { font-size: 13px; color: var(--muted); display: inline-flex; gap: 6px; align-items: center; }
+  .check input { accent-color: var(--green); }
+  .viewtabs { display: none; margin-left: auto; }
+
+  main.wrap { padding: 18px 20px 40px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 20px; }
+  #listPane { min-width: 0; }
+  #mapPane { position: sticky; top: 70px; height: calc(100vh - 90px); min-height: 420px; }
+  #map { height: 100%; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--line); }
+
+  .month { margin: 18px 0 8px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--muted); font-family: Inter, sans-serif; font-weight: 600; display: flex; gap: 10px; align-items: center; }
+  .month::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .month:first-child { margin-top: 0; }
+
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow); padding: 14px; display: grid; grid-template-columns: 64px 1fr; gap: 14px;
+    margin-bottom: 12px; scroll-margin-top: 80px; transition: border-color .15s; }
+  .card.hl { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(242,194,48,.35), var(--shadow); }
+  .date { text-align: center; border-radius: 10px; background: var(--paper); border: 1px solid var(--line);
+    padding: 6px 4px; height: fit-content; }
+  .date .dow { font-size: 11px; text-transform: uppercase; color: var(--muted); letter-spacing: .06em; }
+  .date .d { font-family: Fraunces, serif; font-size: 26px; font-weight: 800; line-height: 1; }
+  .date .m { font-size: 12px; font-weight: 600; }
+  .date .multi { font-size: 10px; color: var(--muted); }
+  .card h3 { font-size: 18px; }
+  .card h3 a { color: inherit; text-decoration: none; }
+  .card h3 a:hover { text-decoration: underline; }
+  .host { color: var(--muted); font-size: 13px; margin-top: 2px; }
+  .where { font-size: 13px; margin-top: 6px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .chip { font-size: 12px; padding: 2px 9px; border-radius: 999px; background: var(--paper);
+    border: 1px solid var(--line); white-space: nowrap; }
+  .chip.indoor { background: #e7f0fb; border-color: #c4daf4; color: #174f8f; }
+  .chip.outdoor { background: #e6f3ea; border-color: #c2e1cc; color: #1f6237; }
+  .chip.status { background: #fff6d8; border-color: #f2df9a; color: #6b5308; font-weight: 600; }
+  .chip.warn { background: #fdecea; border-color: #f4c7c2; color: #8f231b; }
+  .chip.new { background: var(--red); border-color: var(--red); color: #fff; font-weight: 600; }
+  .chip.soon { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .notes { font-size: 13px; color: var(--muted); margin-top: 8px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+
+  .empty { background: #fff; border: 1px dashed var(--line); border-radius: var(--radius); padding: 22px;
+    text-align: center; color: var(--muted); }
+
+  section.panel { background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow); padding: 20px; margin-top: 24px; }
+  section.panel h2 { font-size: 24px; margin-bottom: 6px; }
+  .alerts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 14px; }
+  .alert { border: 1px solid var(--line); border-radius: 12px; padding: 14px; background: var(--paper); }
+  .alert h3 { font-size: 17px; margin-bottom: 4px; }
+  .alert p { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+  .alert .actions { margin-top: 0; }
+  .copyrow { display: flex; gap: 6px; margin-top: 8px; }
+  .copyrow input { flex: 1; min-width: 0; font: inherit; font-size: 12px; padding: 6px 8px;
+    border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--muted); }
+  .legend { display: flex; gap: 14px; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
+  .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; vertical-align: -1px; margin-right: 5px; }
+  details.faq { border-top: 1px solid var(--line); padding: 10px 0; }
+  details.faq summary { cursor: pointer; font-weight: 600; }
+  details.faq p { color: var(--muted); font-size: 14px; margin: 6px 0 0; }
+  footer { color: var(--muted); font-size: 13px; padding: 10px 20px 40px; }
+  footer .wrap { border-top: 1px solid var(--line); padding-top: 16px; }
+  footer ul { padding-left: 18px; margin: 6px 0; }
+
+  .pin { width: 26px; height: 26px; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,.4);
+    display: grid; place-items: center; color: #fff; font: 700 11px Inter, sans-serif; }
+  .pin.indoor { background: var(--indoor); }
+  .pin.outdoor { background: var(--outdoor); }
+  .pin.mixed { background: linear-gradient(135deg, var(--indoor) 50%, var(--outdoor) 50%); }
+  .home-pin { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
+    background: radial-gradient(circle, var(--gold) 0 30%, var(--red) 31% 52%, var(--blue) 53% 74%, #222 75%);
+    border: 2px solid #fff; box-shadow: 0 1px 5px rgba(0,0,0,.5); }
+  .leaflet-popup-content { font-family: Inter, sans-serif; font-size: 13px; margin: 12px 14px; }
+  .pop h4 { font-family: Fraunces, serif; margin: 0 0 2px; font-size: 15px; }
+  .pop .ev { padding: 6px 0; border-top: 1px solid #eee; }
+  .pop .ev:first-of-type { border-top: 0; }
+  .pop a { font-weight: 600; }
+
+  @media (max-width: 900px) {
+    main.wrap { grid-template-columns: 1fr; }
+    #mapPane { position: relative; top: 0; height: 70vh; display: none; }
+    body.show-map #mapPane { display: block; }
+    body.show-map #listPane { display: none; }
+    .viewtabs { display: inline-flex; }
+    .alerts { grid-template-columns: 1fr; }
+    .filters input[type="search"] { min-width: 0; flex: 1; }
+    .filters { position: static; }
+  }
+  @media (max-width: 520px) {
+    .card { grid-template-columns: 54px 1fr; gap: 10px; padding: 12px; }
+    .date .d { font-size: 22px; }
+    .filters { padding: 8px 12px; }
+    main.wrap { padding: 14px 12px 30px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Comp Finder</h1>
+    <p>Archery competitions within about an hour's drive of Northampton, gathered from Archery GB, the county societies, club sites and the tournament diaries so you don't have to. Checked every week.</p>
+    <div class="stats" id="stats"></div>
+    <div class="cta">
+      <a class="btn gold" href="#alerts">Get alerts for new comps</a>
+      <a class="btn ghost" href="#faq">How this works</a>
+    </div>
+  </div>
+</header>
+
+<div class="filters" role="region" aria-label="Filters">
+  <div class="wrap">
+    <div class="seg" id="envSeg" role="group" aria-label="Indoor or outdoor">
+      <button data-env="all" aria-pressed="true">All</button>
+      <button data-env="indoor" aria-pressed="false">Indoor</button>
+      <button data-env="outdoor" aria-pressed="false">Outdoor</button>
+    </div>
+    <select id="discSel" aria-label="Discipline">
+      <option value="all">All disciplines</option>
+      <option>Target</option><option>Field</option><option>Clout</option>
+      <option>3D</option><option>Flight</option><option>Other</option>
+    </select>
+    <label class="range">Up to <b id="driveOut">60 min</b>
+      <input type="range" id="driveRange" min="20" max="90" step="5" value="60" aria-label="Maximum drive time in minutes">
+    </label>
+    <label class="check"><input type="checkbox" id="hideRestricted"> Hide members-only (EFAA, juniors etc.)</label>
+    <input type="search" id="q" placeholder="Search club, town, round" aria-label="Search">
+    <div class="seg viewtabs" role="group" aria-label="View">
+      <button data-view="list" aria-pressed="true">List</button>
+      <button data-view="map" aria-pressed="false">Map</button>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+  <div id="listPane">
+    <div id="list" aria-live="polite"></div>
+
+    <section class="panel" id="alerts">
+      <h2>Get told when something new turns up</h2>
+      <p style="margin:0;color:var(--muted)">The list is refreshed once a week. Pick whichever suits you; the calendar one is the least effort.</p>
+      <div class="alerts">
+        <div class="alert">
+          <h3>Calendar</h3>
+          <p>Subscribe once and every comp appears in your phone's calendar, with new ones added automatically.</p>
+          <div class="actions">
+            <a class="btn small gold" id="gcalBtn" target="_blank" rel="noopener">Google Calendar</a>
+            <a class="btn small line" id="webcalBtn">Apple / Outlook</a>
+          </div>
+          <div class="copyrow"><input id="icsUrl" readonly aria-label="Calendar feed address"><button class="btn small line" data-copy="icsUrl">Copy</button></div>
+        </div>
+        <div class="alert">
+          <h3>Email</h3>
+          <p>One short email when new comps are found, never more than once a week. Hit send on the pre-filled email to join; same again to leave.</p>
+          <div class="actions">
+            <a class="btn small gold" id="subBtn">Sign me up</a>
+            <a class="btn small line" id="unsubBtn">Unsubscribe</a>
+          </div>
+        </div>
+        <div class="alert">
+          <h3>RSS</h3>
+          <p>For feed readers, or to plug into the club's own site or a group chat bot.</p>
+          <div class="actions"><a class="btn small line" href="feed.xml">Open feed</a></div>
+          <div class="copyrow"><input id="rssUrl" readonly aria-label="RSS feed address"><button class="btn small line" data-copy="rssUrl">Copy</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="faq">
+      <h2>How this works</h2>
+      <details class="faq" open><summary>Where do the comps come from?</summary>
+        <p>Every week the listings are checked against Archery GB's Find a Competition, the Brighton Bowmen tournament diary, NCAS and the neighbouring county associations (Bedfordshire, Leicestershire and Rutland, Buckinghamshire, Warwickshire, Cambridgeshire), EMAS, the EFAA calendar and the hosting clubs' own pages. Anything within roughly 75 minutes of Northampton goes in; the slider lets you narrow it down.</p></details>
+      <details class="faq"><summary>How accurate are the drive times?</summary>
+        <p>They're estimates from the middle of Northampton, good for "is this worth the trip" rather than planning to the minute. Tap Directions on any comp for a proper route.</p></details>
+      <details class="faq"><summary>Indoor, outdoor, winter and summer?</summary>
+        <p>Indoor or outdoor is where you actually shoot. The season follows the usual archery year: October to March is the winter (indoor) season, April to September the summer (outdoor) season. Field and clout shoots can happen outdoors in winter too, so both are shown.</p></details>
+      <details class="faq"><summary>What do UKRS and WRS mean?</summary>
+        <p>UK Record Status and World Record Status. Scores shot there count for records, rankings and some badges, and the shoot runs under full rules with judges. Non-record shoots are usually more relaxed and great for a first comp.</p></details>
+      <details class="faq"><summary>Always check the organiser's page</summary>
+        <p>Details change, venues move and entries fill up. The link on each comp goes to the organiser or the listing it came from; check there before entering or travelling.</p></details>
+      <details class="faq"><summary>Missing a comp?</summary>
+        <p><a id="missingLink">Send the details</a> and it'll be added in the next weekly update.</p></details>
+    </section>
+  </div>
+
+  <div id="mapPane">
+    <div id="map" role="region" aria-label="Map of competitions"></div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="legend"><span><span class="dot" style="background:var(--indoor)"></span>Indoor</span>
+      <span><span class="dot" style="background:var(--outdoor)"></span>Outdoor</span>
+      <span id="lastChecked"></span></div>
+    <p style="margin:10px 0 4px">Sources checked:</p>
+    <ul id="sources"></ul>
+    <p>Made for Duston Bowmen and friends by <a href="https://neilfletcher.github.io/">Neil Fletcher</a>. Not affiliated with Archery GB or any county association.</p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script>
+(function () {
+  "use strict";
+
+  // Where email sign-ups go. The weekly update reads these from Gmail and sends the alerts.
+  var ALERT_EMAIL = "neil.fletcher+comps@gmail.com";
+  var SITE = "https://neilfletcher.github.io/archery-comps/";
+  var NEW_DAYS = 14;
+
+  var state = { env: "all", disc: "all", maxDrive: 60, hideRestricted: false, q: "" };
+  var data = null, comps = [], map = null, markerLayer = null, radiusCircle = null, home = null;
+
+  var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var DOW = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+
+  function el(tag, attrs, html) {
+    var e = document.createElement(tag);
+    if (attrs) for (var k in attrs) { if (k === "class") e.className = attrs[k]; else e.setAttribute(k, attrs[k]); }
+    if (html != null) e.innerHTML = html;
+    return e;
+  }
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+    return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function parseDate(s) { var p = s.split("-"); return new Date(+p[0], +p[1] - 1, +p[2]); }
+  function todayDate() { var d = new Date(); return new Date(d.getFullYear(), d.getMonth(), d.getDate()); }
+  function daysBetween(a, b) { return Math.round((b - a) / 86400000); }
+
+  function haversineMiles(a, b) {
+    var R = 3958.8, toR = Math.PI / 180;
+    var dLat = (b.lat - a.lat) * toR, dLng = (b.lng - a.lng) * toR;
+    var h = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(a.lat * toR) * Math.cos(b.lat * toR) * Math.sin(dLng / 2) * Math.sin(dLng / 2);
+    return 2 * R * Math.asin(Math.sqrt(h));
+  }
+  function estDrive(c) { return c.driveMins ? +c.driveMins : Math.round(haversineMiles(home, c) * 1.25 / 55 * 60 + 8); }
+  function minsToMetres(m) { return Math.max(0, (m - 8) * 55 / 60 / 1.25) * 1609.34; }
+
+  function season(c) {
+    var m = parseDate(c.date).getMonth() + 1;
+    return (m >= 10 || m <= 3) ? "Winter season" : "Summer season";
+  }
+  function restricted(c) { return !!(c.eligibility && c.eligibility.trim()); }
+
+  function fmtLong(d) { return DOW[d.getDay()] + " " + d.getDate() + " " + MONTHS[d.getMonth()].slice(0, 3) + " " + d.getFullYear(); }
+
+  function filtered() {
+    var q = state.q.trim().toLowerCase();
+    return comps.filter(function (c) {
+      if (state.env !== "all" && c.environment !== state.env) return false;
+      if (state.disc !== "all" && c.discipline !== state.disc) return false;
+      if (c._drive > state.maxDrive) return false;
+      if (state.hideRestricted && restricted(c)) return false;
+      if (q) {
+        var hay = [c.name, c.host, c.town, c.county, c.venue, (c.rounds || []).join(" "), c.discipline, c.status, c.notes].join(" ").toLowerCase();
+        if (hay.indexOf(q) === -1) return false;
+      }
+      return true;
+    });
+  }
+
+  function icsForOne(c) {
+    function e(s) { return String(s || "").replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n"); }
+    function ymd(d) { return d.getFullYear() + String(d.getMonth() + 1).padStart(2, "0") + String(d.getDate()).padStart(2, "0"); }
+    var start = parseDate(c.date), end = parseDate(c.endDate || c.date); end.setDate(end.getDate() + 1);
+    var desc = c.host + "\n" + (c.rounds || []).join(", ") + (c.status ? " (" + c.status + ")" : "") + "\n" + c.url;
+    return ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Comp Finder//EN", "BEGIN:VEVENT",
+      "UID:" + c.id + "@neilfletcher.github.io", "DTSTAMP:" + ymd(new Date()) + "T000000Z",
+      "DTSTART;VALUE=DATE:" + ymd(start), "DTEND;VALUE=DATE:" + ymd(end),
+      "SUMMARY:" + e(c.name), "LOCATION:" + e([c.venue, c.town].filter(Boolean).join(", ")),
+      "DESCRIPTION:" + e(desc), "URL:" + c.url, "END:VEVENT", "END:VCALENDAR"].join("\r\n");
+  }
+
+  function cardHTML(c) {
+    var d = parseDate(c.date), t = todayDate();
+    var until = daysBetween(t, d);
+    var multi = c.endDate && c.endDate !== c.date;
+    var chips = [];
+    if (c._isNew) chips.push('<span class="chip new">New</span>');
+    if (until >= 0 && until <= 14) chips.push('<span class="chip soon">' + (until === 0 ? "Today" : until === 1 ? "Tomorrow" : "In " + until + " days") + '</span>');
+    chips.push('<span class="chip ' + c.environment + '">' + (c.environment === "indoor" ? "Indoor" : "Outdoor") + '</span>');
+    chips.push('<span class="chip">' + esc(season(c)) + '</span>');
+    chips.push('<span class="chip">' + esc(c.discipline) + '</span>');
+    (c.rounds || []).forEach(function (r) { chips.push('<span class="chip">' + esc(r) + '</span>'); });
+    if (c.status) chips.push('<span class="chip status">' + esc(c.status) + '</span>');
+    if (restricted(c)) chips.push('<span class="chip warn">' + esc(c.eligibility) + '</span>');
+    chips.push('<span class="chip">~' + c._drive + ' min drive</span>');
+    var dir = "https://www.google.com/maps/dir/?api=1&destination=" + c.lat + "," + c.lng;
+    return '<div class="date"><div class="dow">' + DOW[d.getDay()] + '</div><div class="d">' + d.getDate() + '</div><div class="m">' +
+        MONTHS[d.getMonth()].slice(0, 3) + '</div>' + (multi ? '<div class="multi">to ' + parseDate(c.endDate).getDate() + ' ' + MONTHS[parseDate(c.endDate).getMonth()].slice(0, 3) + '</div>' : '') + '</div>' +
+      '<div><h3><a href="' + esc(c.url) + '" target="_blank" rel="noopener">' + esc(c.name) + '</a></h3>' +
+      '<div class="host">' + esc(c.host) + '</div>' +
+      '<div class="where">' + esc(c.venue || "") + (c.venue ? ", " : "") + esc(c.town) + ', ' + esc(c.county) + '</div>' +
+      '<div class="chips">' + chips.join("") + '</div>' +
+      (c.notes ? '<div class="notes">' + esc(c.notes) + '</div>' : '') +
+      '<div class="actions">' +
+        '<a class="btn small gold" href="' + esc(c.url) + '" target="_blank" rel="noopener">Details and entry</a>' +
+        '<button class="btn small line" data-map="' + esc(c.id) + '">Show on map</button>' +
+        '<a class="btn small line" href="' + dir + '" target="_blank" rel="noopener">Directions</a>' +
+        '<button class="btn small line" data-ics="' + esc(c.id) + '">Add to calendar</button>' +
+      '</div></div>';
+  }
+
+  function renderList(list) {
+    var box = document.getElementById("list");
+    box.innerHTML = "";
+    if (!list.length) {
+      box.appendChild(el("div", { class: "empty" }, "Nothing matches those filters. Try a longer drive time or switch to <b>All</b>."));
+      return;
+    }
+    var lastKey = "";
+    list.forEach(function (c) {
+      var d = parseDate(c.date), key = d.getFullYear() + "-" + d.getMonth();
+      if (key !== lastKey) { box.appendChild(el("h2", { class: "month" }, MONTHS[d.getMonth()] + " " + d.getFullYear())); lastKey = key; }
+      box.appendChild(el("article", { class: "card", id: "c-" + c.id }, cardHTML(c)));
+    });
+  }
+
+  function renderStats(list) {
+    var t = todayDate();
+    var next = list[0];
+    var indoor = list.filter(function (c) { return c.environment === "indoor"; }).length;
+    var fresh = comps.filter(function (c) { return c._isNew; }).length;
+    var html = '<span class="pill-stat"><b>' + list.length + '</b> upcoming within ' + state.maxDrive + ' min</span>' +
+      '<span class="pill-stat"><b>' + indoor + '</b> indoor, <b>' + (list.length - indoor) + '</b> outdoor</span>';
+    if (next) { var n = daysBetween(t, parseDate(next.date));
+      html += '<span class="pill-stat">Next: <b>' + esc(next.name) + '</b> ' + (n <= 0 ? "today" : "in " + n + (n === 1 ? " day" : " days")) + '</span>'; }
+    if (fresh) html += '<span class="pill-stat"><b>' + fresh + '</b> new in the last fortnight</span>';
+    document.getElementById("stats").innerHTML = html;
+  }
+
+  function initMap() {
+    if (typeof L === "undefined") { document.getElementById("map").innerHTML = '<div class="empty">The map couldn\'t load. The list still works.</div>'; return; }
+    map = L.map("map", { scrollWheelZoom: true }).setView([home.lat, home.lng], 9);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 18, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    L.marker([home.lat, home.lng], { icon: L.divIcon({ className: "", html: '<div class="home-pin"></div>', iconSize: [30, 30], iconAnchor: [15, 15] }), zIndexOffset: 1000 })
+      .addTo(map).bindPopup("<b>Northampton</b><br>Drive times are measured from here.");
+    radiusCircle = L.circle([home.lat, home.lng], { radius: minsToMetres(state.maxDrive), color: "#2f5d46", weight: 1.5, dashArray: "6 6", fill: true, fillOpacity: .04 }).addTo(map);
+    markerLayer = L.layerGroup().addTo(map);
+    map.fitBounds(radiusCircle.getBounds(), { padding: [10, 10] });
+  }
+
+  function renderMap(list) {
+    if (!map) return;
+    markerLayer.clearLayers();
+    radiusCircle.setRadius(minsToMetres(state.maxDrive));
+    var groups = {};
+    list.forEach(function (c) { var k = c.lat.toFixed(3) + "," + c.lng.toFixed(3); (groups[k] = groups[k] || []).push(c); });
+    Object.keys(groups).forEach(function (k) {
+      var g = groups[k], envs = {};
+      g.forEach(function (c) { envs[c.environment] = 1; });
+      var cls = Object.keys(envs).length > 1 ? "mixed" : g[0].environment;
+      var icon = L.divIcon({ className: "", html: '<div class="pin ' + cls + '">' + (g.length > 1 ? g.length : "") + '</div>', iconSize: [26, 26], iconAnchor: [13, 13], popupAnchor: [0, -12] });
+      var html = '<div class="pop"><h4>' + esc(g[0].town) + '</h4><div style="color:#666">~' + g[0]._drive + ' min drive</div>' +
+        g.map(function (c) { return '<div class="ev"><b>' + fmtLong(parseDate(c.date)) + '</b><br>' + esc(c.name) +
+          '<br><span style="color:#666">' + (c.environment === "indoor" ? "Indoor" : "Outdoor") + ', ' + esc(c.discipline) + (c.status ? ", " + esc(c.status) : "") + '</span><br>' +
+          '<a href="#c-' + esc(c.id) + '" data-jump="' + esc(c.id) + '">See in list</a> &middot; <a href="' + esc(c.url) + '" target="_blank" rel="noopener">Details</a></div>'; }).join("") + '</div>';
+      var m = L.marker(k.split(",").map(Number), { icon: icon }).bindPopup(html, { maxWidth: 260 });
+      m._compIds = g.map(function (c) { return c.id; });
+      markerLayer.addLayer(m);
+    });
+  }
+
+  function render() {
+    var list = filtered();
+    document.getElementById("driveOut").textContent = state.maxDrive + " min";
+    renderStats(list);
+    renderList(list);
+    renderMap(list);
+  }
+
+  function setView(v) {
+    document.body.classList.toggle("show-map", v === "map");
+    document.querySelectorAll(".viewtabs button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.view === v)); });
+    if (map) setTimeout(function () { map.invalidateSize(); if (v === "map" && !focusing) map.fitBounds(radiusCircle.getBounds(), { padding: [10, 10] }); }, 50);
+  }
+  var focusing = false;
+
+  function showOnMap(id) {
+    var c = comps.filter(function (x) { return x.id === id; })[0];
+    if (!c || !map) return;
+    focusing = true;
+    if (window.matchMedia("(max-width: 900px)").matches) setView("map");
+    setTimeout(function () { focusing = false; }, 200);
+    map.setView([c.lat, c.lng], 12);
+    markerLayer.eachLayer(function (m) { if (m._compIds.indexOf(id) !== -1) m.openPopup(); });
+  }
+
+  function jumpTo(id) {
+    setView("list");
+    var card = document.getElementById("c-" + id);
+    if (!card) return;
+    card.scrollIntoView({ behavior: "smooth", block: "start" });
+    card.classList.add("hl");
+    setTimeout(function () { card.classList.remove("hl"); }, 2200);
+  }
+
+  function wireAlerts() {
+    var icsHttp = SITE + "competitions.ics";
+    var webcal = icsHttp.replace(/^https:/, "webcal:");
+    document.getElementById("icsUrl").value = icsHttp;
+    document.getElementById("rssUrl").value = SITE + "feed.xml";
+    document.getElementById("webcalBtn").href = webcal;
+    document.getElementById("gcalBtn").href = "https://calendar.google.com/calendar/r?cid=" + encodeURIComponent(webcal);
+    function mail(subject, body) { return "mailto:" + ALERT_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body); }
+    document.getElementById("subBtn").href = mail("Archery comps: subscribe",
+      "Please add me to the email alerts for new archery competitions near Northampton.\n\nJust hit send. You can leave at any time.");
+    document.getElementById("unsubBtn").href = mail("Archery comps: unsubscribe", "Please take me off the archery comps email alerts.");
+    document.getElementById("missingLink").href = mail("Archery comps: missing comp",
+      "Name of the comp:\nDate:\nHost club and venue:\nLink to the prospectus or entry form:\n");
+    document.querySelectorAll("[data-copy]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var inp = document.getElementById(b.dataset.copy);
+        inp.select();
+        (navigator.clipboard ? navigator.clipboard.writeText(inp.value) : Promise.resolve(document.execCommand("copy")))
+          .then(function () { b.textContent = "Copied"; setTimeout(function () { b.textContent = "Copy"; }, 1500); });
+      });
+    });
+  }
+
+  function wireFilters() {
+    document.querySelectorAll("#envSeg button").forEach(function (b) {
+      b.addEventListener("click", function () {
+        state.env = b.dataset.env;
+        document.querySelectorAll("#envSeg button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+        render();
+      });
+    });
+    document.getElementById("discSel").addEventListener("change", function (e) { state.disc = e.target.value; render(); });
+    document.getElementById("driveRange").addEventListener("input", function (e) { state.maxDrive = +e.target.value; render(); });
+    document.getElementById("hideRestricted").addEventListener("change", function (e) { state.hideRestricted = e.target.checked; render(); });
+    document.getElementById("q").addEventListener("input", function (e) { state.q = e.target.value; render(); });
+    document.querySelectorAll(".viewtabs button").forEach(function (b) { b.addEventListener("click", function () { setView(b.dataset.view); }); });
+
+    document.addEventListener("click", function (e) {
+      var t = e.target.closest("[data-map],[data-ics],[data-jump]");
+      if (!t) return;
+      if (t.dataset.map) { showOnMap(t.dataset.map); }
+      else if (t.dataset.jump) { e.preventDefault(); jumpTo(t.dataset.jump); }
+      else if (t.dataset.ics) {
+        var c = comps.filter(function (x) { return x.id === t.dataset.ics; })[0];
+        var blob = new Blob([icsForOne(c)], { type: "text/calendar" });
+        var a = el("a", { href: URL.createObjectURL(blob), download: c.id + ".ics" });
+        document.body.appendChild(a); a.click(); a.remove();
+        if (window.gtag) gtag("event", "add_to_calendar", { comp: c.id });
+      }
+    });
+  }
+
+  function load() {
+    fetch("data/competitions.json?v=" + Date.now()).then(function (r) { return r.json(); }).then(function (doc) {
+      data = doc; home = doc.meta.home;
+      var t = todayDate();
+      comps = doc.competitions.filter(function (c) { return parseDate(c.endDate || c.date) >= t; })
+        .map(function (c) { c._drive = estDrive(c); c._isNew = daysBetween(parseDate(c.added), t) <= NEW_DAYS; return c; })
+        .sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : a._drive - b._drive; });
+      var lc = parseDate(doc.meta.lastChecked);
+      document.getElementById("lastChecked").textContent = "Last checked " + fmtLong(lc);
+      document.getElementById("sources").innerHTML = doc.meta.sourcesChecked.map(function (s) {
+        return '<li><a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.name) + '</a></li>'; }).join("");
+      initMap();
+      render();
+      if (location.hash.indexOf("#c-") === 0) jumpTo(location.hash.slice(3));
+    }).catch(function () {
+      document.getElementById("list").innerHTML = '<div class="empty">Couldn\'t load the competitions just now. Try refreshing.</div>';
+    });
+  }
+
+  wireAlerts();
+  wireFilters();
+  load();
+})();
+</script>
+</body>
+</html>
