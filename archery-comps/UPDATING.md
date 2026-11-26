@@ -49,7 +49,7 @@ One object per competition. Fields:
 | rounds | e.g. `["Portsmouth"]`, `["WA 18m"]`, `["York", "Hereford"]` |
 | status | `UKRS`, `WRS` or `""` |
 | eligibility | `""` if open to all AGB members, else e.g. `"EFAA members only"`, `"Juniors only"` |
-| url | a page that actually shows this comp and how to enter. Check it lists the comp; a club homepage that doesn't mention it is no good. If entry is only via Archery GB, use the AGB listing (find-a-competition/NNNNN if you can find the ID, otherwise https://archerygb.org/competitions/find-a-competition) |
+| url | the comp's OWN page, never a list of many comps. Order of preference: the organiser's event or entry page; the Archery GB listing find-a-competition/NNNNN; the HL Outdoors event page (www.hl-outdoors.co.uk/event/ses-.../, which carries the entry link). Never use the HL or Brighton Bowmen diary list pages, an NCAS calendar page, the ianseo tournament list or a bare club homepage. If nothing exists yet, use the club's own tournaments page and say in notes that entry isn't open yet. |
 | source | where you found it |
 | added | today's date, ONLY for comps not already in the file. Never change `added` on existing entries |
 | notes | one or two short, useful sentences, or `""` |
